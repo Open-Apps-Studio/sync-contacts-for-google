@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; }
+  html, body { width:1290px; height:2796px; overflow:hidden; }
+  body {
+    position:relative;
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    background:linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  }
+  .headline {
+    margin:130px 90px 0; text-align:center; color:#fff;
+    font-size:106px; font-weight:800; letter-spacing:-.02em; line-height:1.07;
+  }
+  .subline {
+    margin:34px 120px 0; text-align:center; color:rgba(255,255,255,.85);
+    font-size:44px; font-weight:500; line-height:1.35; letter-spacing:-.01em;
+  }
+  .phone {
+    position:absolute; top:640px; left:50%; transform:translateX(-50%);
+    width:960px; height:2290px; background:#0d0f14; border-radius:104px; padding:22px;
+    box-shadow:0 60px 140px rgba(6,18,64,.5), inset 0 0 0 3px #3d4049;
+  }
+  .screen {
+    width:100%; height:100%; background:#f2f2f7; border-radius:82px;
+    overflow:hidden; position:relative;
+  }
+  .island {
+    position:absolute; top:26px; left:50%; transform:translateX(-50%);
+    width:242px; height:70px; background:#0d0f14; border-radius:35px; z-index:10;
+  }
+  .statusbar {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:40px 76px 0; height:108px; color:#000;
+  }
+  .sb-time { font-size:37px; font-weight:600; letter-spacing:.01em; }
+  .sb-icons { display:flex; align-items:center; gap:16px; }
+
+  .content { padding:8px 46px 0; }
+  .nav {
+    display:flex; align-items:center; justify-content:center; gap:20px;
+    height:96px; position:relative;
+  }
+  .nav-title { font-size:40px; font-weight:600; color:#111; letter-spacing:-.01em; }
+  .card { background:#fff; border-radius:40px; box-shadow:0 4px 18px rgba(20,30,80,.05); }
+
+  .page-title { margin:44px 6px 0; font-size:62px; font-weight:800; color:#111; letter-spacing:-.02em; }
+  .page-sub   { margin:16px 6px 0; font-size:33px; color:#6b7280; font-weight:500; }
+
+  .guard {
+    margin-top:48px; background:#fff7e6; border-radius:40px; padding:44px;
+    box-shadow:0 0 0 4px #f5b840, 0 14px 34px rgba(200,140,20,.14);
+  }
+  .guard-head { display:flex; align-items:flex-start; gap:26px; }
+  .guard-title { font-size:39px; font-weight:700; color:#8a5a00; line-height:1.25; }
+  .guard-sub { margin-top:14px; font-size:31px; font-weight:500; color:#a97b1e; line-height:1.35; }
+  .guard-btns { display:flex; gap:24px; margin-top:38px; }
+  .gbtn { flex:1; height:104px; border-radius:30px; display:flex; align-items:center; justify-content:center; font-size:37px; font-weight:600; }
+  .gbtn.keep { background:#2563eb; color:#fff; box-shadow:0 10px 24px rgba(37,99,235,.25); }
+  .gbtn.remove { background:#fff; color:#c23b3b; box-shadow:inset 0 0 0 3px #e6d4ae; }
+
+  .sec-label {
+    margin:60px 6px 22px; font-size:29px; font-weight:600; color:#6d6d72;
+    letter-spacing:.06em; text-transform:uppercase;
+  }
+  .snap { }
+  .snap .row {
+    display:flex; align-items:center; gap:30px; padding:36px 44px;
+    border-bottom:2px solid #ececf1;
+  }
+  .snap .row:last-child { border-bottom:none; }
+  .snap-icon { width:80px; height:80px; border-radius:24px; background:#e8effd; flex:none; display:flex; align-items:center; justify-content:center; }
+  .snap-title { font-size:36px; font-weight:600; color:#111; }
+  .snap-sub { margin-top:8px; font-size:30px; color:#8e8e93; font-weight:500; }
+  .restore { margin-left:auto; font-size:32px; font-weight:600; color:#2563eb; flex:none; }
+
+  .foot { margin-top:36px; text-align:center; font-size:30px; color:#8e8e93; font-weight:500; }
+</style>
+</head>
+<body>
+
+<div class="headline">Impossible to lose a&nbsp;contact.</div>
+<div class="subline">Automatic backups. One-tap undo. Deletion&nbsp;guard.</div>
+
+<div class="phone"><div class="screen">
+  <div class="island"></div>
+
+  <div class="statusbar">
+    <div class="sb-time">9:41</div>
+    <div class="sb-icons">
+      <svg width="42" height="28" viewBox="0 0 42 28"><g fill="#000"><rect x="0"  y="16" width="7" height="11" rx="2"/><rect x="11" y="11" width="7" height="16" rx="2"/><rect x="22" y="6"  width="7" height="21" rx="2"/><rect x="33" y="1"  width="7" height="26" rx="2"/></g></svg>
+      <svg width="38" height="28" viewBox="0 0 38 28"><path d="M19 26 3.2 10.2 C7.3 6.2 12.9 3.8 19 3.8 s11.7 2.4 15.8 6.4 L19 26 Z" fill="#000"/></svg>
+      <svg width="62" height="30" viewBox="0 0 62 30"><rect x="1" y="1" width="52" height="28" rx="9" fill="none" stroke="#000" stroke-opacity=".38" stroke-width="2.5"/><rect x="5" y="5" width="44" height="20" rx="5.5" fill="#000"/><path d="M56.5 10 c3 1.2 3 8.8 0 10 Z" fill="#000" fill-opacity=".38"/></svg>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="nav">
+      <svg width="58" height="58" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="50" fill="#f1f4f9"/>
+        <g fill="none" stroke-width="7" stroke-linecap="round">
+          <path d="M19 39 A34 34 0 0 1 50 16" stroke="#4285F4"/>
+          <path d="M50 16 A34 34 0 0 1 81 38" stroke="#EA4335"/>
+          <path d="M82 62 A34 34 0 0 1 51 84" stroke="#FBBC05"/>
+          <path d="M50 84 A34 34 0 0 1 19 61" stroke="#34A853"/>
+        </g>
+        <path d="M84 35 l-8 5 7 5 z" fill="#EA4335"/>
+        <path d="M16 65 l8 -5 -7 -5 z" fill="#34A853"/>
+        <circle cx="50" cy="44" r="11.5" fill="#4285F4"/>
+        <path d="M30 71 c0-11 9-17 20-17 s20 6 20 17 Z" fill="#4285F4"/>
+      </svg>
+      <div class="nav-title">Contacts Sync</div>
+    </div>
+
+    <div class="page-title">Backups</div>
+    <div class="page-sub">A snapshot is saved before every sync.</div>
+
+    <div class="guard">
+      <div class="guard-head">
+        <svg width="66" height="66" viewBox="0 0 100 100" style="flex:none; margin-top:4px;">
+          <path d="M50 8 L96 88 H4 Z" fill="#f5a623" rx="8"/>
+          <rect x="45" y="36" width="10" height="28" rx="5" fill="#fff"/>
+          <circle cx="50" cy="76" r="6.5" fill="#fff"/>
+        </svg>
+        <div>
+          <div class="guard-title">This sync wants to remove 25&nbsp;contacts</div>
+          <div class="guard-sub">Deletion guard paused everything so you can review first.</div>
+        </div>
+      </div>
+      <div class="guard-btns">
+        <div class="gbtn keep">Keep them</div>
+        <div class="gbtn remove">Remove</div>
+      </div>
+    </div>
+
+    <div class="sec-label">Snapshots</div>
+    <div class="card snap">
+      <div class="row">
+        <div class="snap-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9 v4 l2.6 2.6"/><path d="M9 2.5 h6"/></svg></div>
+        <div>
+          <div class="snap-title">Today, 9:41 AM</div>
+          <div class="snap-sub">Before sync &nbsp;&middot;&nbsp; 1,482 contacts</div>
+        </div>
+        <div class="restore">Restore</div>
+      </div>
+      <div class="row">
+        <div class="snap-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9 v4 l2.6 2.6"/><path d="M9 2.5 h6"/></svg></div>
+        <div>
+          <div class="snap-title">Yesterday, 6:02 PM</div>
+          <div class="snap-sub">Before sync &nbsp;&middot;&nbsp; 1,479 contacts</div>
+        </div>
+        <div class="restore">Restore</div>
+      </div>
+      <div class="row">
+        <div class="snap-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9 v4 l2.6 2.6"/><path d="M9 2.5 h6"/></svg></div>
+        <div>
+          <div class="snap-title">Monday, 8:15 AM</div>
+          <div class="snap-sub">Before sync &nbsp;&middot;&nbsp; 1,466 contacts</div>
+        </div>
+        <div class="restore">Restore</div>
+      </div>
+      <div class="row">
+        <div class="snap-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9 v4 l2.6 2.6"/><path d="M9 2.5 h6"/></svg></div>
+        <div>
+          <div class="snap-title">June 28, 7:44 PM</div>
+          <div class="snap-sub">Before sync &nbsp;&middot;&nbsp; 1,431 contacts</div>
+        </div>
+        <div class="restore">Restore</div>
+      </div>
+    </div>
+
+    <div class="foot">Backups are stored privately on this iPhone.</div>
+  </div>
+
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; }
+  html, body { width:1290px; height:2796px; overflow:hidden; }
+  body {
+    position:relative;
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    background:linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  }
+  .headline {
+    margin:130px 90px 0; text-align:center; color:#fff;
+    font-size:106px; font-weight:800; letter-spacing:-.02em; line-height:1.07;
+  }
+  .subline {
+    margin:34px 120px 0; text-align:center; color:rgba(255,255,255,.85);
+    font-size:44px; font-weight:500; line-height:1.35; letter-spacing:-.01em;
+  }
+  .phone {
+    position:absolute; top:640px; left:50%; transform:translateX(-50%);
+    width:960px; height:2290px; background:#0d0f14; border-radius:104px; padding:22px;
+    box-shadow:0 60px 140px rgba(6,18,64,.5), inset 0 0 0 3px #3d4049;
+  }
+  .screen {
+    width:100%; height:100%; background:#f2f2f7; border-radius:82px;
+    overflow:hidden; position:relative;
+  }
+  .island {
+    position:absolute; top:26px; left:50%; transform:translateX(-50%);
+    width:242px; height:70px; background:#0d0f14; border-radius:35px; z-index:10;
+  }
+  .statusbar {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:40px 76px 0; height:108px; color:#000;
+  }
+  .sb-time { font-size:37px; font-weight:600; letter-spacing:.01em; }
+  .sb-icons { display:flex; align-items:center; gap:16px; }
+
+  .content { padding:8px 46px 0; }
+  .nav {
+    display:flex; align-items:center; justify-content:center; gap:20px;
+    height:96px; position:relative;
+  }
+  .nav-title { font-size:40px; font-weight:600; color:#111; letter-spacing:-.01em; }
+  .card { background:#fff; border-radius:40px; box-shadow:0 4px 18px rgba(20,30,80,.05); }
+
+  .page-title { margin:44px 6px 0; font-size:62px; font-weight:800; color:#111; letter-spacing:-.02em; }
+  .page-sub   { margin:16px 6px 0; font-size:33px; color:#6b7280; font-weight:500; }
+
+  .modes { margin-top:52px; display:flex; flex-direction:column; gap:34px; }
+  .mode { padding:48px 44px; display:flex; align-items:center; gap:34px; position:relative; }
+  .mode.sel { box-shadow:0 0 0 5px #2563eb, 0 16px 38px rgba(37,99,235,.16); }
+  .m-badge {
+    width:120px; height:120px; border-radius:32px; flex:none;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .m-badge.two { background:#e8effd; }
+  .m-badge.up  { background:#e6f7ee; }
+  .m-badge.down{ background:#eef1f6; }
+  .m-text { flex:1; }
+  .m-name { font-size:44px; font-weight:700; color:#111; letter-spacing:-.01em; }
+  .m-desc { margin-top:10px; font-size:31px; color:#6b7280; font-weight:500; line-height:1.32; }
+  .m-check {
+    width:64px; height:64px; border-radius:50%; background:#2563eb; flex:none;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .m-ring { width:58px; height:58px; border-radius:50%; border:5px solid #d3d6de; flex:none; }
+  .rec-tag {
+    position:absolute; top:-24px; right:44px;
+    background:#2563eb; color:#fff; font-size:24px; font-weight:700; letter-spacing:.05em;
+    padding:9px 26px; border-radius:999px;
+  }
+  .foot { margin-top:44px; text-align:center; font-size:31px; color:#6b7280; font-weight:500; }
+</style>
+</head>
+<body>
+
+<div class="headline">Sync your way.</div>
+<div class="subline">Two-way, or one direction &mdash; you choose.</div>
+
+<div class="phone"><div class="screen">
+  <div class="island"></div>
+
+  <div class="statusbar">
+    <div class="sb-time">9:41</div>
+    <div class="sb-icons">
+      <svg width="42" height="28" viewBox="0 0 42 28"><g fill="#000"><rect x="0"  y="16" width="7" height="11" rx="2"/><rect x="11" y="11" width="7" height="16" rx="2"/><rect x="22" y="6"  width="7" height="21" rx="2"/><rect x="33" y="1"  width="7" height="26" rx="2"/></g></svg>
+      <svg width="38" height="28" viewBox="0 0 38 28"><path d="M19 26 3.2 10.2 C7.3 6.2 12.9 3.8 19 3.8 s11.7 2.4 15.8 6.4 L19 26 Z" fill="#000"/></svg>
+      <svg width="62" height="30" viewBox="0 0 62 30"><rect x="1" y="1" width="52" height="28" rx="9" fill="none" stroke="#000" stroke-opacity=".38" stroke-width="2.5"/><rect x="5" y="5" width="44" height="20" rx="5.5" fill="#000"/><path d="M56.5 10 c3 1.2 3 8.8 0 10 Z" fill="#000" fill-opacity=".38"/></svg>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="nav">
+      <svg width="58" height="58" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="50" fill="#f1f4f9"/>
+        <g fill="none" stroke-width="7" stroke-linecap="round">
+          <path d="M19 39 A34 34 0 0 1 50 16" stroke="#4285F4"/>
+          <path d="M50 16 A34 34 0 0 1 81 38" stroke="#EA4335"/>
+          <path d="M82 62 A34 34 0 0 1 51 84" stroke="#FBBC05"/>
+          <path d="M50 84 A34 34 0 0 1 19 61" stroke="#34A853"/>
+        </g>
+        <path d="M84 35 l-8 5 7 5 z" fill="#EA4335"/>
+        <path d="M16 65 l8 -5 -7 -5 z" fill="#34A853"/>
+        <circle cx="50" cy="44" r="11.5" fill="#4285F4"/>
+        <path d="M30 71 c0-11 9-17 20-17 s20 6 20 17 Z" fill="#4285F4"/>
+      </svg>
+      <div class="nav-title">Contacts Sync</div>
+    </div>
+
+    <div class="page-title">Sync mode</div>
+    <div class="page-sub">Pick how your contacts stay in step.</div>
+
+    <div class="modes">
+      <div class="card mode sel">
+        <div class="rec-tag">RECOMMENDED</div>
+        <div class="m-badge two">
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4 L3 8 L7 12"/><path d="M3 8 H17"/><path d="M17 20 L21 16 L17 12"/><path d="M21 16 H7"/></svg>
+        </div>
+        <div class="m-text">
+          <div class="m-name">Two-way</div>
+          <div class="m-desc">Changes on either side appear on both.</div>
+        </div>
+        <div class="m-check"><svg width="34" height="34" viewBox="0 0 100 100"><path d="M24 52 L44 72 L78 32" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+
+      <div class="card mode">
+        <div class="m-badge up">
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#34a853" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20 V5"/><path d="M6 11 L12 5 L18 11"/></svg>
+        </div>
+        <div class="m-text">
+          <div class="m-name">iPhone &rarr; Google</div>
+          <div class="m-desc">Google becomes a live backup of your iPhone.</div>
+        </div>
+        <div class="m-ring"></div>
+      </div>
+
+      <div class="card mode">
+        <div class="m-badge down">
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 V19"/><path d="M6 13 L12 19 L18 13"/></svg>
+        </div>
+        <div class="m-text">
+          <div class="m-name">Google &rarr; iPhone</div>
+          <div class="m-desc">Your Google contacts, always on your phone.</div>
+        </div>
+        <div class="m-ring"></div>
+      </div>
+    </div>
+
+    <div class="foot">Change it anytime. Deletions are protected by a safety check.</div>
+  </div>
+
+</div></div>
+
+</body>
+</html>

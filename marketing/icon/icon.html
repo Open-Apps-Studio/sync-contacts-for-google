@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; width: 1024px; height: 1024px; overflow: hidden; }
+</style>
+</head>
+<body>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef2f8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.40" r="0.62">
+      <stop offset="0" stop-color="#4285F4" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#4285F4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#1a3a7a" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Full-bleed background (iOS applies the rounded mask) -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+
+  <g filter="url(#soft)">
+    <!-- Circular sync ring in Google's 4 brand colours (r=322, centre 512,512).
+         Two sweeping arrows; each half of each arrow carries one brand colour. -->
+    <g fill="none" stroke-width="64" stroke-linecap="round">
+      <!-- top arrow: blue (left) -> red (right) -->
+      <path d="M 214 384 A 322 322 0 0 1 512 190" stroke="#4285F4"/>
+      <path d="M 512 190 A 322 322 0 0 1 800 356" stroke="#EA4335"/>
+      <!-- bottom arrow: yellow (right) -> green (left) -->
+      <path d="M 810 640 A 322 322 0 0 1 512 834" stroke="#FBBC05"/>
+      <path d="M 512 834 A 322 322 0 0 1 224 668" stroke="#34A853"/>
+    </g>
+    <!-- Arrowheads: top-right (red), bottom-left (green) -->
+    <path d="M 812 330 L 748 380 L 838 420 Z" fill="#EA4335"/>
+    <path d="M 212 694 L 276 644 L 186 604 Z" fill="#34A853"/>
+
+    <!-- Contact silhouette (head + shoulders) in Google blue -->
+    <g fill="#4285F4">
+      <circle cx="512" cy="454" r="106"/>
+      <path d="M 512 592
+               C 410 592 336 654 324 738
+               C 320 764 341 786 370 786
+               L 654 786
+               C 683 786 704 764 700 738
+               C 688 654 614 592 512 592 Z"/>
+    </g>
+  </g>
+</svg>
+</body>
+</html>
