@@ -1,0 +1,10 @@
+.DS_Store
+ios/SyncEngine/.build/
+ios/ContactsSync.xcodeproj/
+ios/DerivedData/
+backend/node_modules/
+*.p8
+.env
+
+ios/build/
+.context/
