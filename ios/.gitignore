@@ -1,0 +1,5 @@
+ContactsSync.xcodeproj
+DerivedData/
+.build/
+*.xcuserstate
+xcuserdata/

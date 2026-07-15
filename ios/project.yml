@@ -1,0 +1,75 @@
+name: ContactsSync
+options:
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "16.0"
+
+packages:
+  SyncEngine:
+    path: SyncEngine
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+
+targets:
+  ContactsSync:
+    type: application
+    platform: iOS
+    sources:
+      - path: App/Sources
+      - path: App/Resources
+    dependencies:
+      - package: SyncEngine
+    entitlements:
+      path: App/ContactsSync.entitlements
+      properties:
+        aps-environment: production
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Contacts Sync
+        NSContactsUsageDescription: "Contacts Sync reads and writes your contacts so it can two-way sync them with your Google account and merge duplicates. Your contacts stay on your device and in your own Google account — never on our servers."
+        UIBackgroundModes:
+          - remote-notification
+          - fetch
+          - processing
+        BGTaskSchedulerPermittedIdentifiers:
+          - com.openappsstudio.contactssync.refresh
+          - com.openappsstudio.contactssync.reconcile
+        CFBundleURLTypes:
+          - CFBundleURLName: com.openappsstudio.contactssync
+            CFBundleURLSchemes:
+              - com.openappsstudio.contactssync
+              - com.googleusercontent.apps.YOUR_CLIENT_ID
+        UILaunchScreen: {}
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.openappsstudio.contactssync
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "5"
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+    scheme:
+      testTargets:
+        - AdapterIntegrationTests
+
+  AdapterIntegrationTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: App/IntegrationTests
+    dependencies:
+      - package: SyncEngine
+      - target: ContactsSync
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.openappsstudio.contactssync.AdapterIntegrationTests
+        GENERATE_INFOPLIST_FILE: "YES"
+        CODE_SIGN_STYLE: Automatic
+    scheme:
+      testTargets:
+        - AdapterIntegrationTests
