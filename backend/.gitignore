@@ -1,0 +1,6 @@
+node_modules/
+*.p8
+.env
+.env.*
+devices.json
+npm-debug.log*

@@ -1,0 +1,44 @@
+# GitHub Actions stub for deploying backend/ to Azure App Service.
+#
+# To use: copy this file to .github/workflows/deploy-backend.yml at the REPO
+# ROOT (it does nothing while it lives here as a .sample), and add the
+# AZURE_WEBAPP_PUBLISH_PROFILE secret (see azure-deploy.md).
+
+name: Deploy backend
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'backend/**'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-backend
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: contactssync-backend            # <-- your App Service name
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: backend
