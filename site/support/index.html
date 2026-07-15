@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- TODO: DOMAIN — set the production domain once it is chosen, e.g. https://example.com, and update the canonical + og:url below, the support email, and sitemap.xml -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support &amp; FAQ | Free Contacts Sync for Google</title>
+<meta name="description" content="Support and FAQ for Free Contacts Sync for Google: background sync timing, iOS 18 limited contacts access, Google Workspace accounts, sync pauses, backups, and how to reach us.">
+<link rel="canonical" href="/support/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Support &amp; FAQ — Free Contacts Sync for Google">
+<meta property="og:description" content="Background sync timing, iOS 18 limited contacts access, Google Workspace accounts, sync pauses, backups, and how to reach us.">
+<meta property="og:url" content="/support/">
+<meta property="og:site_name" content="Free Contacts Sync for Google">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Support &amp; FAQ — Free Contacts Sync for Google">
+<meta name="twitter:description" content="Background sync timing, iOS 18 limited contacts access, Google Workspace accounts, sync pauses, backups, and how to reach us.">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How quickly do changes sync in the background?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Honestly: typically within the hour, and always instantly when you open the app. iOS decides when background work runs based on battery, charging state, and your usage patterns. We use silent push wake-ups plus iOS background refresh, which is the most any app can legitimately do without hacks like holding a location permission."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does sync sometimes take longer than an hour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Low Power Mode, a phone that hasn't been unlocked in a while, Background App Refresh disabled for the app, or poor connectivity all cause iOS to defer background work. Opening the app always triggers an immediate full sync regardless."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The app says it has limited contacts access (iOS 18). What does that mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Since iOS 18, you can grant an app access to only some contacts. Sync needs to see the whole list to work correctly — otherwise contacts outside the selection would look deleted. Go to Settings, then Privacy & Security, then Contacts, select the app, and choose Full Access. The app detects limited access and will warn you rather than sync incorrectly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with Google Workspace accounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if your Workspace administrator allows third-party apps to access the Google People API. If sign-in fails with an admin-restriction error, your admin needs to allow the app in the Google Admin console under Security, then API controls, then App access control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is sync temporarily paused with a quota message?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google limits how many API requests an app can make. In rare bursts (for example, a first sync of a very large address book, or many users syncing at once) we can brush against that quota, and the app waits and retries automatically. Your data is safe; sync resumes by itself, usually within minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it really free? Will features move behind a paywall later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The app is free: two-way sync, unlimited contacts, backups, deletion guard, everything. There is no subscription and no ads. Because contacts sync device-to-Google directly, our running costs are minimal, which is what makes free sustainable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are my contacts stored? Can you see them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your contacts live in your iPhone/iCloud contacts database and in your Google account. Sync happens directly between your device and Google. We cannot see your contacts — they never reach our servers, which only send anonymous wake-up push notifications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the deletion guard do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a sync would delete an unusually large share of your contacts — which usually means something went wrong upstream, like an accidental mass delete in Google — the app pauses and asks you to confirm before applying the deletions. Combined with automatic local backups, this makes it very hard to lose contacts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I restore contacts from a backup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the app, go to Settings, then Backups, choose a snapshot (one is taken automatically before every sync that makes changes), and tap Restore. Backups are stored on your device only. Google also keeps its own 30-day undo at contacts.google.com under Trash."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I stop syncing or delete my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Turn off sync in the app's settings, or simply delete the app — your contacts stay exactly as they are in iCloud and Google. To erase the little we hold (push token, opt-in telemetry), use Settings, then Delete My Data in the app, or email us. You can also revoke the app's Google access at myaccount.google.com/permissions."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/">Free Contacts Sync <span>for Google</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="/#how-it-works">How it works</a>
+      <a href="/vs-contacts-sync-app/">Compare</a>
+      <a href="/support/">Support</a>
+      <!-- TODO: replace with the real App Store URL when the listing is live -->
+      <a class="btn btn-small" href="/appstore.html#coming-soon">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="guide faq">
+    <div class="container">
+      <h1>Support &amp; FAQ</h1>
+      <!-- TODO: replace with the real support address once the domain is chosen -->
+      <p class="lead">Answers to the questions we get most. Can't find yours? Email <a href="mailto:support@TODO-domain.example">support@TODO-domain.example</a> — a human replies, usually within a day.</p>
+
+      <h2>Sync behavior</h2>
+
+      <details>
+        <summary>How quickly do changes sync in the background?</summary>
+        <div>
+          <p>Honestly: <strong>typically within the hour, and always instantly when you open the app.</strong> iOS decides when background work runs based on battery, charging state, and your usage patterns. We use silent push wake-ups plus iOS background refresh — the most any app can legitimately do without hacks like holding a location permission.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why does sync sometimes take longer than an hour?</summary>
+        <div>
+          <p>Low Power Mode, a phone that hasn't been unlocked in a while, Background App Refresh disabled for the app (check <strong>Settings → General → Background App Refresh</strong>), or poor connectivity all cause iOS to defer background work. Opening the app always triggers an immediate full sync regardless.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>The app says it has limited contacts access (iOS 18). What does that mean?</summary>
+        <div>
+          <p>Since iOS 18, you can grant an app access to only <em>some</em> contacts. Sync needs to see the whole list to work correctly — otherwise contacts outside the selection would look deleted on the other side. Fix: <strong>Settings → Privacy &amp; Security → Contacts → Free Contacts Sync → Full Access</strong>. The app detects limited access and warns you rather than sync incorrectly.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why is sync temporarily paused with a quota message?</summary>
+        <div>
+          <p>Google limits how many API requests an app can make. In rare bursts — a first sync of a very large address book, or many users syncing at once — we can brush against that quota, and the app waits and retries automatically. Your data is safe; sync resumes by itself, usually within minutes.</p>
+        </div>
+      </details>
+
+      <h2>Accounts</h2>
+
+      <details>
+        <summary>Does it work with Google Workspace accounts?</summary>
+        <div>
+          <p>Yes, if your Workspace administrator allows third-party apps to access the Google People API. If sign-in fails with an admin-restriction error, ask your admin to allow the app in the Google Admin console under <strong>Security → API controls → App access control</strong>. Personal Gmail accounts work with no setup.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Is it really free? Will features move behind a paywall later?</summary>
+        <div>
+          <p>The app is free: two-way sync, unlimited contacts, backups, deletion guard — everything. No subscription, no ads. Because contacts sync device-to-Google directly, our running costs are minimal, which is what makes free sustainable.</p>
+        </div>
+      </details>
+
+      <h2>Privacy &amp; safety</h2>
+
+      <details>
+        <summary>Where are my contacts stored? Can you see them?</summary>
+        <div>
+          <p>Your contacts live in your iPhone/iCloud contacts database and in your Google account. Sync happens directly between your device and Google. We cannot see your contacts — they never reach our servers, which only send anonymous wake-up pushes. Full details in the <a href="/privacy/">privacy policy</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What does the deletion guard do?</summary>
+        <div>
+          <p>If a sync would delete an unusually large share of your contacts — which usually means something went wrong upstream, like an accidental mass delete in Google — the app pauses and asks you to confirm before applying the deletions. Combined with automatic local backups, this makes it very hard to lose contacts.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I restore contacts from a backup?</summary>
+        <div>
+          <p>Open the app → <strong>Settings → Backups</strong>, choose a snapshot (one is taken automatically before every sync that makes changes), and tap <strong>Restore</strong>. Backups are stored on your device only. Google also keeps its own 30-day undo at <code>contacts.google.com</code> under Trash.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I stop syncing or delete my data?</summary>
+        <div>
+          <p>Turn off sync in the app's settings, or simply delete the app — your contacts stay exactly as they are in iCloud and Google. To erase the little we hold (push token, opt-in telemetry), use <strong>Settings → Delete My Data</strong> in the app, or email us. You can also revoke the app's Google access anytime at <code>myaccount.google.com/permissions</code>.</p>
+        </div>
+      </details>
+
+      <h2>Contact us</h2>
+      <!-- TODO: replace with the real support address once the domain is chosen -->
+      <p>Email <a href="mailto:support@TODO-domain.example">support@TODO-domain.example</a> with your iOS version and a description of what you expected vs. what happened. Never include contact data in an email — we don't need it and don't want it.</p>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div>
+        <p class="footer-h">Free Contacts Sync for Google</p>
+        <p>Private, two-way sync between iPhone and Google Contacts. Free forever, by Open Apps Studio.</p>
+      </div>
+      <div>
+        <p class="footer-h">Guides</p>
+        <ul>
+          <li><a href="/icloud-to-google-contacts/">iCloud to Google Contacts</a></li>
+          <li><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing</a></li>
+          <li><a href="/transfer-contacts-android-to-iphone-gmail/">Android to iPhone via Gmail</a></li>
+          <li><a href="/merge-duplicate-contacts-iphone/">Merge duplicate contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-h">App</p>
+        <ul>
+          <!-- TODO: replace with the real App Store URL when the listing is live -->
+          <li><a href="/appstore.html#coming-soon">Download on the App Store</a></li>
+          <li><a href="/vs-contacts-sync-app/">Compare with paid apps</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">© 2026 Open Apps Studio. Google, Gmail and Google Contacts are trademarks of Google LLC. Apple, iPhone and iCloud are trademarks of Apple Inc. This app is not affiliated with or endorsed by Google or Apple.</p>
+  </div>
+</footer>
+
+<script>
+var t = document.querySelector('.nav-toggle'), n = document.getElementById('site-nav');
+if (t && n) { t.addEventListener('click', function () { var o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o ? 'true' : 'false'); }); }
+</script>
+
+</body>
+</html>

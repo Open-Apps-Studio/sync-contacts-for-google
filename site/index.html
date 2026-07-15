@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- TODO: DOMAIN — set the production domain once it is chosen, e.g. https://example.com, and update the canonical + og:url below and sitemap.xml -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sync iPhone Contacts with Google — Free | Free Contacts Sync for Google</title>
+<meta name="description" content="Free two-way sync between iPhone and Google Contacts. No contact limit, no subscription, no ads. Your contacts never touch our servers — sync runs privately in the background.">
+<link rel="canonical" href="/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sync iPhone Contacts with Google — Free">
+<meta property="og:description" content="Free two-way sync between iPhone and Google Contacts. No contact limit, no subscription, no ads. Private by design.">
+<meta property="og:url" content="/">
+<meta property="og:site_name" content="Free Contacts Sync for Google">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sync iPhone Contacts with Google — Free">
+<meta name="twitter:description" content="Free two-way sync between iPhone and Google Contacts. No contact limit, no subscription, no ads. Private by design.">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Free Contacts Sync for Google",
+  "operatingSystem": "iOS",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "Free, private, two-way background sync between iPhone contacts and Google Contacts. No contact limit, no subscription, no ads.",
+  "author": {
+    "@type": "Organization",
+    "name": "Open Apps Studio"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the app really free? What's the catch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — free forever, for all your contacts. No subscription, no 40-contact cap, no ads, no locked features. We build small utilities and keep this one free; server costs are tiny because your contacts never pass through our servers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does background sync actually work on iOS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iOS does not let apps run permanently in the background, so we are honest about timing: changes typically sync within the hour via silent push wake-ups and iOS background refresh, and always sync instantly the moment you open the app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do my contacts pass through your servers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Sync happens directly between your device and Google's People API. Our server only sends anonymous wake-up push notifications and stores zero personal data — no contacts, no names, no emails, no Google credentials."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens on the very first sync?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You get a full preview before anything changes: how many contacts will be added, updated, or merged on each side. Nothing is written until you confirm, and a local backup is taken first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a bad sync delete my contacts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The app has a deletion guard: if a sync would delete an unusually large number of contacts, it pauses and asks you first. Automatic local backups are kept so you can restore your contacts at any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with Google Workspace accounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, as long as your Workspace admin allows third-party access to the Google People API. Personal Gmail accounts work out of the box."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/">Free Contacts Sync <span>for Google</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="/#how-it-works">How it works</a>
+      <a href="/vs-contacts-sync-app/">Compare</a>
+      <a href="/support/">Support</a>
+      <!-- TODO: replace with the real App Store URL when the listing is live -->
+      <a class="btn btn-small" href="/appstore.html#coming-soon">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="container">
+      <h1>Sync iPhone Contacts with Google&nbsp;— Free</h1>
+      <p class="lead">True two-way sync between your iPhone contacts and Google Contacts. Runs in the background, keeps both sides identical, and never sends a single contact through our servers.</p>
+      <div class="actions">
+        <!-- TODO: replace with the real App Store URL when the listing is live -->
+        <a class="btn" href="/appstore.html#coming-soon">Download on the App Store</a>
+        <a class="btn btn-secondary" href="#how-it-works">See how it works</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="section-soft" aria-labelledby="why-heading">
+    <div class="container">
+      <h2 id="why-heading">Why people switch to this app</h2>
+      <div class="grid grid-4">
+        <div class="card">
+          <h3>Free forever</h3>
+          <p>All your contacts, both directions, every feature. No 40-contact free cap, no $1.99/week subscription, no ads, ever.</p>
+        </div>
+        <div class="card">
+          <h3>Private by design</h3>
+          <p>Your device talks to Google directly. Our server only sends wake-up pushes and stores zero personal data — not one contact, not one credential.</p>
+        </div>
+        <div class="card">
+          <h3>2-way background sync</h3>
+          <p>Add a contact on your iPhone, it appears in Gmail. Edit one in Google Contacts, it updates on your phone. Both directions, automatically.</p>
+        </div>
+        <div class="card">
+          <h3>Safe by default</h3>
+          <p>Preview every first sync before anything changes, automatic local backups, and a deletion guard that pauses suspicious mass deletions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" aria-labelledby="how-heading">
+    <div class="container">
+      <h2 id="how-heading">How it works</h2>
+      <ol class="steps steps-row">
+        <li>
+          <h3>Sign in with Google</h3>
+          <p>Pick the Google account you want to sync with. The app requests contacts access only — no location, no tracking permissions.</p>
+        </li>
+        <li>
+          <h3>Preview the first sync</h3>
+          <p>See exactly what will happen — contacts added, updated, and matched on each side — before a single change is written.</p>
+        </li>
+        <li>
+          <h3>Forget about it</h3>
+          <p>From then on the app keeps both sides in sync automatically. New contacts, edits, photos, and deletions flow both ways.</p>
+        </li>
+      </ol>
+
+      <h2>Honest answer: how fast is "background" sync?</h2>
+      <p>iOS doesn't let any app run non-stop in the background — including the expensive ones. Here's what actually happens: when something changes in your Google Contacts, our server sends your phone a silent push that wakes the app to sync. Combined with iOS background refresh, <strong>changes typically sync within the hour, and always instantly the moment you open the app</strong>. Any app that promises more than that on iOS is overselling.</p>
+    </div>
+  </section>
+
+  <section class="section-soft faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently asked questions</h2>
+
+      <details>
+        <summary>Is the app really free? What's the catch?</summary>
+        <div>
+          <p>Yes — free forever, for all your contacts. No subscription, no 40-contact cap, no ads, no features held hostage. We build small utilities at Open Apps Studio and keep this one free; our server costs are tiny precisely because your contacts never pass through our servers.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How does background sync actually work on iOS?</summary>
+        <div>
+          <p>iOS doesn't let apps run permanently in the background, so we're honest about timing: changes typically sync within the hour via silent push wake-ups and iOS background refresh, and always sync instantly when you open the app.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Do my contacts pass through your servers?</summary>
+        <div>
+          <p>No. Sync happens directly between your device and Google's People API. Our server only sends anonymous wake-up pushes and stores zero personal data — no contacts, no names, no emails, no Google credentials. See the <a href="/privacy/">privacy policy</a> for the full details.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What happens on the very first sync?</summary>
+        <div>
+          <p>You get a full preview before anything changes: how many contacts will be added, updated, or merged on each side. Nothing is written until you confirm, and a local backup is taken first.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can a bad sync delete my contacts?</summary>
+        <div>
+          <p>The app has a deletion guard: if a sync would delete an unusually large number of contacts, it pauses and asks you before proceeding. Automatic local backups are kept so you can restore at any time.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Does it work with Google Workspace accounts?</summary>
+        <div>
+          <p>Yes, as long as your Workspace admin allows third-party access to the Google People API. Personal Gmail accounts work out of the box. More edge cases are covered on the <a href="/support/">support page</a>.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section aria-labelledby="guides-heading">
+    <div class="container">
+      <h2 id="guides-heading">Guides</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3><a href="/icloud-to-google-contacts/">Move iCloud contacts to Google Contacts</a></h3>
+          <p>The manual vCard export/import method, step by step — plus the automatic way.</p>
+        </div>
+        <div class="card">
+          <h3><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing on iPhone?</a></h3>
+          <p>The four settings that fix it in most cases, from account toggles to fetch schedules.</p>
+        </div>
+        <div class="card">
+          <h3><a href="/transfer-contacts-android-to-iphone-gmail/">Transfer contacts from Android to iPhone with Gmail</a></h3>
+          <p>Switching phones? Your Google account already has your contacts — here's how to use it.</p>
+        </div>
+        <div class="card">
+          <h3><a href="/merge-duplicate-contacts-iphone/">Merge duplicate contacts on iPhone</a></h3>
+          <p>Why duplicates appear, what iOS's built-in merge can and can't do, and how to stop them coming back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div>
+        <p class="footer-h">Free Contacts Sync for Google</p>
+        <p>Private, two-way sync between iPhone and Google Contacts. Free forever, by Open Apps Studio.</p>
+      </div>
+      <div>
+        <p class="footer-h">Guides</p>
+        <ul>
+          <li><a href="/icloud-to-google-contacts/">iCloud to Google Contacts</a></li>
+          <li><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing</a></li>
+          <li><a href="/transfer-contacts-android-to-iphone-gmail/">Android to iPhone via Gmail</a></li>
+          <li><a href="/merge-duplicate-contacts-iphone/">Merge duplicate contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-h">App</p>
+        <ul>
+          <!-- TODO: replace with the real App Store URL when the listing is live -->
+          <li><a href="/appstore.html#coming-soon">Download on the App Store</a></li>
+          <li><a href="/vs-contacts-sync-app/">Compare with paid apps</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">© 2026 Open Apps Studio. Google, Gmail and Google Contacts are trademarks of Google LLC. Apple, iPhone and iCloud are trademarks of Apple Inc. This app is not affiliated with or endorsed by Google or Apple.</p>
+  </div>
+</footer>
+
+<script>
+var t = document.querySelector('.nav-toggle'), n = document.getElementById('site-nav');
+if (t && n) { t.addEventListener('click', function () { var o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o ? 'true' : 'false'); }); }
+</script>
+
+</body>
+</html>

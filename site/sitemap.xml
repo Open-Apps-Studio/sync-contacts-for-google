@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: DOMAIN — replace https://TODO-domain.example with the production domain once chosen (single constant, used in every <loc> below). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://TODO-domain.example/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://TODO-domain.example/icloud-to-google-contacts/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://TODO-domain.example/google-contacts-not-syncing-iphone/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://TODO-domain.example/transfer-contacts-android-to-iphone-gmail/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://TODO-domain.example/merge-duplicate-contacts-iphone/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://TODO-domain.example/vs-contacts-sync-app/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://TODO-domain.example/privacy/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://TODO-domain.example/support/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+</urlset>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- TODO: DOMAIN — set the production domain once it is chosen, e.g. https://example.com, and update the canonical + og:url below, the support email, and sitemap.xml -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | Free Contacts Sync for Google</title>
+<meta name="description" content="Privacy policy for Free Contacts Sync for Google. Your contacts sync directly between your device and Google — we collect only a push token and optional anonymous telemetry, and never your contacts or credentials.">
+<link rel="canonical" href="/privacy/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Privacy Policy — Free Contacts Sync for Google">
+<meta property="og:description" content="Your contacts sync directly between your device and Google. We collect only a push token and optional anonymous telemetry — never your contacts or credentials.">
+<meta property="og:url" content="/privacy/">
+<meta property="og:site_name" content="Free Contacts Sync for Google">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Privacy Policy — Free Contacts Sync for Google">
+<meta name="twitter:description" content="Your contacts sync directly between your device and Google. We collect only a push token and optional anonymous telemetry — never your contacts or credentials.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/">Free Contacts Sync <span>for Google</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="/#how-it-works">How it works</a>
+      <a href="/vs-contacts-sync-app/">Compare</a>
+      <a href="/support/">Support</a>
+      <!-- TODO: replace with the real App Store URL when the listing is live -->
+      <a class="btn btn-small" href="/appstore.html#coming-soon">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="guide">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p class="muted">Effective date: July 15, 2026 · Applies to the <strong>Free Contacts Sync for Google</strong> iOS app and this website, operated by Open Apps Studio ("we", "us").</p>
+
+      <div class="notice">
+        <p><strong>The one-paragraph version:</strong> your contacts sync directly between your device and Google. They never pass through, and are never stored on, our servers. The only data our server holds is an anonymous push notification token; everything else stays on your device or with Google.</p>
+      </div>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li><strong>APNs device token.</strong> An anonymous identifier issued by Apple that lets our server send your device silent "wake up and sync" push notifications. It contains no personal information and is not linked to your name, email, or Google account. It is deleted when you disable sync or delete your data in the app.</li>
+        <li><strong>Anonymous usage telemetry (opt-in only).</strong> If — and only if — you opt in, the app sends anonymous, aggregate events such as "a sync completed" or "a sync failed with error X", plus app version and iOS version. This never includes contact data, account identifiers, or anything that could identify you. You can opt out at any time in the app's settings.</li>
+      </ul>
+
+      <h2>What we never collect</h2>
+      <ul>
+        <li><strong>Your contacts.</strong> Names, phone numbers, emails, photos, notes — none of it ever reaches our servers. Sync traffic flows directly between your device and Google's servers.</li>
+        <li><strong>Your Google credentials.</strong> Sign-in happens through Google's own OAuth flow on your device. We never see your password, and the resulting access token is stored only in your device's Keychain — it is never transmitted to us.</li>
+        <li><strong>Anything else.</strong> No location, no advertising identifiers, no browsing data, no analytics on this website, no cookies, no third-party trackers.</li>
+      </ul>
+
+      <h2>Google user data and Limited Use disclosure</h2>
+      <p>The app accesses Google user data through the Google People API, solely with your consent via Google OAuth, and solely to provide the app's single user-facing feature: two-way synchronization between your device's contacts and your Google Contacts.</p>
+      <p>Free Contacts Sync for Google's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Specifically:</p>
+      <ul>
+        <li>Google user data (your Google Contacts) is processed <strong>on your device only</strong>, used only to provide and improve the contact sync feature you see in the app, and is never transferred to our servers.</li>
+        <li>We do not transfer Google user data to third parties, except as necessary to provide the sync feature itself (i.e., to Apple's Contacts database on your own device at your direction), to comply with applicable law, or as part of a merger or acquisition with prior notice to you.</li>
+        <li>We do not use Google user data for advertising, and we do not sell it — to anyone, ever.</li>
+        <li>No humans read your Google user data. It is technically impossible for us to do so, because it never leaves your device and Google's systems. (Standard exceptions under the policy — your explicit consent for support, security investigation, or legal compliance — could only ever apply to data you send us yourself, since we hold none.)</li>
+        <li>You can revoke the app's access at any time at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.</li>
+      </ul>
+
+      <h2>Where your data lives</h2>
+      <ul>
+        <li><strong>On your device:</strong> sync state, local contact backups made before syncs, your settings, and your Google OAuth token (in the iOS Keychain).</li>
+        <li><strong>With Google:</strong> your Google Contacts, governed by <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.</li>
+        <li><strong>On our server:</strong> your APNs push token and, if you opted in, anonymous telemetry events. Nothing else.</li>
+      </ul>
+
+      <h2>Data deletion</h2>
+      <p>You can delete everything we hold in two ways:</p>
+      <ul>
+        <li><strong>In the app:</strong> Settings → Delete My Data. This removes your push token and any telemetry from our server immediately, and clears local app data. Deleting the app from your iPhone also stops all processing; your contacts remain safely in iCloud and Google, exactly as they were.</li>
+        <li><!-- TODO: replace with the real support address once the domain is chosen --><strong>By email:</strong> write to <a href="mailto:support@TODO-domain.example">support@TODO-domain.example</a> and we will delete any data associated with your device within 30 days. Since we store no identifying information, include the request from the device if possible so we can locate the push token.</li>
+      </ul>
+
+      <h2>Security</h2>
+      <p>All network traffic uses TLS. OAuth tokens are stored in the iOS Keychain and never leave your device. Our push server holds no personal data, which is the best security measure of all: what we don't have can't be breached.</p>
+
+      <h2>Children</h2>
+      <p>The app and site are not directed at children under 13, and we do not knowingly collect any personal information from anyone, children included.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If we change this policy, we will update this page and the effective date above, and material changes will be announced in the app before they take effect. We will never weaken the "contacts never touch our servers" guarantee — it is the design of the product, not just a policy.</p>
+
+      <h2>Contact</h2>
+      <!-- TODO: replace with the real support address once the domain is chosen -->
+      <p>Open Apps Studio · <a href="mailto:support@TODO-domain.example">support@TODO-domain.example</a></p>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div>
+        <p class="footer-h">Free Contacts Sync for Google</p>
+        <p>Private, two-way sync between iPhone and Google Contacts. Free forever, by Open Apps Studio.</p>
+      </div>
+      <div>
+        <p class="footer-h">Guides</p>
+        <ul>
+          <li><a href="/icloud-to-google-contacts/">iCloud to Google Contacts</a></li>
+          <li><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing</a></li>
+          <li><a href="/transfer-contacts-android-to-iphone-gmail/">Android to iPhone via Gmail</a></li>
+          <li><a href="/merge-duplicate-contacts-iphone/">Merge duplicate contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-h">App</p>
+        <ul>
+          <!-- TODO: replace with the real App Store URL when the listing is live -->
+          <li><a href="/appstore.html#coming-soon">Download on the App Store</a></li>
+          <li><a href="/vs-contacts-sync-app/">Compare with paid apps</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">© 2026 Open Apps Studio. Google, Gmail and Google Contacts are trademarks of Google LLC. Apple, iPhone and iCloud are trademarks of Apple Inc. This app is not affiliated with or endorsed by Google or Apple.</p>
+  </div>
+</footer>
+
+<script>
+var t = document.querySelector('.nav-toggle'), n = document.getElementById('site-nav');
+if (t && n) { t.addEventListener('click', function () { var o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o ? 'true' : 'false'); }); }
+</script>
+
+</body>
+</html>

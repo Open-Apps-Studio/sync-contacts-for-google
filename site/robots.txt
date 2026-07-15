@@ -1,0 +1,7 @@
+# Free Contacts Sync for Google
+# TODO: DOMAIN — replace https://TODO-domain.example with the production domain once chosen.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://TODO-domain.example/sitemap.xml
