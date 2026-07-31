@@ -65,7 +65,7 @@ curl localhost:8080/healthz
 | `APNS_KEY_P8` | — | Contents of the `.p8` APNs auth key (PEM). Literal `\n` escapes are accepted, so it can be pasted as a single-line app setting. |
 | `APNS_KEY_PATH` | — | Alternative: path to the `.p8` file. |
 | `APNS_KEY_ID` | — | Key ID of the APNs auth key. |
-| `APNS_TEAM_ID` | `TEAMID1234` | Apple Developer team ID (10 chars). |
+| `APNS_TEAM_ID` | `TEAMID1234` | Apple Developer team ID. |
 | `APNS_TOPIC` | `com.openappsstudio.contactssync` | App bundle id. |
 | `APNS_ENV` | `production` | `production` or `sandbox` (uses `api.sandbox.push.apple.com`). |
 | `PUSH_INTERVAL_MIN` | `20` | Dispatcher scan interval in minutes. |

@@ -7,10 +7,14 @@ import SyncEngine
 /// Presentation anchor for ASWebAuthenticationSession.
 final class ASWebAuthPresenter: NSObject, ASWebAuthenticationPresentationContextProviding {
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-        let window = UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .flatMap { $0.windows }
-            .first { $0.isKeyWindow }
+        let scenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
+        // Prefer the key window, but fall back through the active scene's windows so the
+        // auth sheet always anchors to a real, on-screen window — including iPhone-compat
+        // mode on iPad, where the key-window lookup can momentarily return nil — instead of
+        // a detached empty ASPresentationAnchor() the user can't see or interact with.
+        let window = scenes.flatMap { $0.windows }.first { $0.isKeyWindow }
+            ?? scenes.first { $0.activationState == .foregroundActive }?.windows.first
+            ?? scenes.flatMap { $0.windows }.first
         return window ?? ASPresentationAnchor()
     }
 }
@@ -148,10 +152,29 @@ final class AppState: ObservableObject {
             redirectScheme: AppConfig.oauthRedirectScheme))
         let tokenProvider = TokenProvider(oauth: oauthClient, store: keychain)
         // App Support is always writable inside the app sandbox.
-        let mappingStore = try! MappingStore(path: appSupport.appendingPathComponent("sync.sqlite").path)
+        let dbPath = appSupport.appendingPathComponent("sync.sqlite").path
+        let mappingStore: MappingStore
+        do {
+            mappingStore = try MappingStore(path: dbPath)
+        } catch {
+            // A corrupt/locked database would otherwise crash the app on every launch
+            // with no recovery. Mappings are a rebuildable cache — move the bad file
+            // (and its WAL sidecars) aside and start fresh; the next sync re-derives them.
+            let fm = FileManager.default
+            for suffix in ["", "-wal", "-shm"] { try? fm.removeItem(atPath: dbPath + suffix) }
+            mappingStore = try! MappingStore(path: dbPath)
+        }
         let snapshots = SnapshotManager(directory: appSupport.appendingPathComponent("snapshots"))
         let contactsAdapter = CNContactStoreAdapter()
-        let peopleClient = GooglePeopleClient(tokenProvider: { try await tokenProvider.currentAccessToken() })
+        let peopleClient = GooglePeopleClient(
+            tokenProvider: { try await tokenProvider.currentAccessToken() },
+            tokenRefresher: {
+                // Force a refresh on a mid-sync 401: refresh against the stored refresh
+                // token and adopt the result so the retry reads the new access token.
+                guard let current = keychain.load() else { throw OAuthError.notConnected }
+                let refreshed = try await oauthClient.refresh(tokens: current)
+                try await tokenProvider.adopt(refreshed)
+            })
 
         let box = SettingsBox()
         let limitedBox = LimitedAccessBox()
@@ -335,7 +358,9 @@ final class AppState: ObservableObject {
 
         var result: SyncSummary?
         do {
-            let summary = try await orchestrator.sync(isFirstSync: isFirstSync)
+            // Pass the connected account so the engine resets stale mappings/token
+            // if the user reconnects a *different* Google account (never mixes accounts).
+            let summary = try await orchestrator.sync(isFirstSync: isFirstSync, accountKey: connectionEmail)
             result = summary
             lastSummary = summary
             if let data = try? JSONEncoder().encode(summary) {
@@ -482,10 +507,21 @@ final class AppState: ObservableObject {
 
     static func friendlyMessage(for error: Error) -> String {
         switch error {
-        case OAuthError.notConnected, OAuthError.noRefreshToken, OAuthError.tokenEndpoint:
-            // Grant revoked / password changed / refresh rejected: the local mapping
+        case OAuthError.notConnected, OAuthError.noRefreshToken:
+            // Grant revoked / password changed / no refresh token: the local mapping
             // and connection email stay put; the user just needs to reconnect Google.
             return "Google isn't connected. Sign in again from Settings."
+        case let OAuthError.tokenEndpoint(detail):
+            // The token endpoint refused us. Only a genuine auth failure (invalid_grant
+            // / revoked / bad client) warrants a reconnect prompt; a transient 5xx or
+            // parse hiccup should just retry, not nag the user to sign in again.
+            let lower = detail.lowercased()
+            if lower.contains("invalid_grant") || lower.contains("invalid_client")
+                || lower.contains("unauthorized_client") || lower.contains("invalid_token")
+                || lower.contains("revoked") {
+                return "Google isn't connected. Sign in again from Settings."
+            }
+            return "Couldn't reach Google just now — sync will retry automatically."
         case PeopleAPIError.unauthorized:
             return "Google sign-in expired. Reconnect your account from Settings."
         case PeopleAPIError.rateLimited:

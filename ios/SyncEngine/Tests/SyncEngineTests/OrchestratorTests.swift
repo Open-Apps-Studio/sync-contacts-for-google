@@ -53,6 +53,16 @@ final class FakeRemoteAPI: GooglePeopleAPI, @unchecked Sendable {
     /// If true, the next token-bearing listConnections rejects the token once (as Google
     /// does after ~7 days) so the orchestrator falls back to a full re-list.
     var throwExpiredOnNextTokenList = false
+    /// If true, createContacts returns an empty etag (as Google occasionally does) even
+    /// though the stored person has a real etag — reproduces the empty-etag lockout.
+    var createReturnsEmptyEtag = false
+
+    func getContact(resourceName: String) async throws -> (resourceName: String, etag: String) {
+        guard let existing = people[resourceName] else {
+            throw PeopleAPIError.http(status: 404, message: "")
+        }
+        return (resourceName, existing.etag)
+    }
 
     func listConnections(syncToken: String?) async throws -> RemoteDelta {
         listedSyncTokens.append(syncToken)
@@ -81,14 +91,17 @@ final class FakeRemoteAPI: GooglePeopleAPI, @unchecked Sendable {
             let name = "people/C\(nextID)"
             nextID += 1
             people[name] = ("etag-1", c)
-            return (name, "etag-1")
+            return (name, createReturnsEmptyEtag ? "" : "etag-1")
         }
     }
 
     func updateContact(resourceName: String, etag: String,
                        contact: SyncContact, updateMask: [String]) async throws -> String {
         guard let existing = people[resourceName] else { throw PeopleAPIError.http(status: 404, message: "") }
-        guard existing.etag == etag else { throw PeopleAPIError.staleEtag }
+        // Mirror the real client: an empty stored etag is recovered via getContact so the
+        // update can proceed instead of being permanently rejected as stale.
+        let effectiveEtag = etag.isEmpty ? try await getContact(resourceName: resourceName).etag : etag
+        guard existing.etag == effectiveEtag else { throw PeopleAPIError.staleEtag }
         let newEtag = existing.etag + "'"
         people[resourceName] = (newEtag, contact)
         return newEtag
@@ -154,6 +167,33 @@ final class OrchestratorTests: XCTestCase {
         XCTAssertEqual(try mapping.allMappings().count, 3)
         XCTAssertEqual(remote.people.count, 3)
         XCTAssertEqual(local.contacts.count, 3)
+    }
+
+    func testDifferentAccountResetsMappingsAndNeverDeletesLocal() async throws {
+        // Account A: Ada exists on both the phone and Google account A.
+        local.contacts["L1"] = person("Ada Lovelace", phone: "+1 555 0100")
+        remote.people["people/RA"] = ("eA", person("Ada Lovelace", phone: "5550100"))
+        _ = try await makeOrchestrator().sync(isFirstSync: true, accountKey: "a@example.com")
+        XCTAssertEqual(try mapping.allMappings().count, 1)
+        XCTAssertEqual(try mapping.cursor("google.accountKey"), "a@example.com")
+
+        // The user disconnects and connects a DIFFERENT Google account B whose People
+        // list is entirely different (Ada is not in account B). Ada is still on the phone.
+        remote.people = ["people/RB": ("eB", person("Bob Newman"))]
+        remote.deletedTombstones = []
+        remote.deltaOnly = nil
+
+        let summary = try await makeOrchestrator().sync(accountKey: "b@example.com")
+
+        // The phone's Ada must NOT be deleted just because account B doesn't have her.
+        XCTAssertTrue(local.deletedIDs.isEmpty,
+                      "reconnecting a different account must never delete local contacts")
+        XCTAssertNotNil(local.contacts["L1"], "Ada should still be on the phone")
+        // The stale account-A mapping is gone; state now reflects account B only.
+        XCTAssertNil(try mapping.mapping(forRemoteName: "people/RA"))
+        XCTAssertEqual(try mapping.cursor("google.accountKey"), "b@example.com")
+        // Treated as a fresh first sync for B: Bob is pulled down to the phone.
+        XCTAssertEqual(summary.addedToiPhone, 1)
     }
 
     func testSecondPassIsIdempotent() async throws {
@@ -453,5 +493,28 @@ final class OrchestratorTests: XCTestCase {
         XCTAssertEqual(resumed.addedToGoogle, 50)
         XCTAssertEqual(remote.people.count, 250)
         XCTAssertEqual(try mapping.allMappings().count, 250)
+    }
+
+    /// #3 Empty-etag lockout: a contact created with a blank etag must not be locked out
+    /// of future updates. The stale/empty etag would make Google reject every update as
+    /// staleEtag forever; the client recovers the current etag so the update proceeds.
+    func testEmptyEtagFromCreateDoesNotLockOutUpdates() async throws {
+        remote.createReturnsEmptyEtag = true
+        local.contacts["L1"] = person("Ada Lovelace")
+        _ = try await makeOrchestrator().sync(isFirstSync: true)
+
+        // The mapping was persisted with the empty etag Google handed back.
+        XCTAssertEqual(try mapping.allMappings().first?.remoteEtag, "")
+
+        // Edit locally → a remote update is required, carrying the empty etag.
+        var edited = local.contacts["L1"]!
+        edited.jobTitle = "Mathematician"
+        local.contacts["L1"] = edited
+
+        let summary = try await makeOrchestrator().sync()
+        XCTAssertEqual(summary.updatedOnGoogle, 1)   // update succeeded despite empty etag
+        XCTAssertTrue(remote.people.values.contains { $0.contact.jobTitle == "Mathematician" })
+        // And the mapping now carries a real (non-empty) etag going forward.
+        XCTAssertFalse((try mapping.allMappings().first?.remoteEtag ?? "").isEmpty)
     }
 }

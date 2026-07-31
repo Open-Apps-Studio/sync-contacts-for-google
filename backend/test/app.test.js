@@ -120,14 +120,15 @@ test('DELETE /v1/device/:token removes the device and is idempotent', async () =
   }
 });
 
-test('GET /healthz reports device count and lastDispatchAt', async () => {
+test('GET /healthz reports liveness and lastDispatchAt (no device count / no full scan)', async () => {
   const stamp = '2026-07-15T00:00:00.000Z';
   const { base, close } = await startServer({ stats: () => ({ lastDispatchAt: stamp }) });
   try {
     await postDevice(base, { token: VALID_TOKEN });
     const res = await fetch(`${base}/healthz`);
     assert.equal(res.status, 200);
-    assert.deepEqual(await res.json(), { ok: true, devices: 1, lastDispatchAt: stamp });
+    // Liveness only — device count is intentionally not disclosed (unauthenticated endpoint).
+    assert.deepEqual(await res.json(), { ok: true, lastDispatchAt: stamp });
   } finally {
     await close();
   }

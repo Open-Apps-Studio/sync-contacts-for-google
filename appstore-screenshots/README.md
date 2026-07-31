@@ -1,4 +1,4 @@
-# App Store Screenshots — Free Contacts Sync for Google
+# App Store Screenshots — Sync Contacts for Google
 
 Marketing screenshots (app UI mockups in iPhone frames on brand-blue backgrounds), rendered from HTML at `../marketing/screenshots/*.html`. Every folder holds the same 5 screenshots at an exact App Store Connect dimension.
 
@@ -13,7 +13,7 @@ Marketing screenshots (app UI mockups in iPhone frames on brand-blue backgrounds
 
 The 5 screenshots, in order:
 1. One List on iPhone and Google (dashboard, in-sync)
-2. Free No Catch (comparison vs paid app)
+2. Sync your way (the three sync modes: two-way, iPhone→Google, Google→iPhone) — NOTE: this replaced the old "Free. No catch." price/competitor comparison, which was removed for App Store guideline 2.3.7. Do NOT reintroduce price figures or competitor comparisons.
 3. Preview Before Sync (first-sync preview)
 4. Backups and Deletion Guard (safety)
 5. Private by Design (data-flow diagram)

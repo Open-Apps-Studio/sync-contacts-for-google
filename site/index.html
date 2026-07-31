@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- TODO: DOMAIN — set the production domain once it is chosen, e.g. https://example.com, and update the canonical + og:url below and sitemap.xml -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sync iPhone Contacts with Google — Free | Free Contacts Sync for Google</title>
+<!-- Google Search Console ownership verification for the OAuth authorized domain. Keep this. -->
+<meta name="google-site-verification" content="bGgjLBLHjxUWl6L_wDQYBst7rOH5qvSn3ZiZu4ab53A" />
+<title>Sync iPhone Contacts with Google | Sync Contacts for Google</title>
 <meta name="description" content="Free two-way sync between iPhone and Google Contacts. No contact limit, no subscription, no ads. Your contacts never touch our servers — sync runs privately in the background.">
-<link rel="canonical" href="/">
+<link rel="canonical" href="https://sync.opengrounds.org/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Sync iPhone Contacts with Google — Free">
+<meta property="og:title" content="Sync iPhone Contacts with Google">
 <meta property="og:description" content="Free two-way sync between iPhone and Google Contacts. No contact limit, no subscription, no ads. Private by design.">
 <meta property="og:url" content="/">
-<meta property="og:site_name" content="Free Contacts Sync for Google">
+<meta property="og:site_name" content="Sync Contacts for Google">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sync iPhone Contacts with Google — Free">
+<meta name="twitter:title" content="Sync iPhone Contacts with Google">
 <meta name="twitter:description" content="Free two-way sync between iPhone and Google Contacts. No contact limit, no subscription, no ads. Private by design.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
 <link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Free Contacts Sync for Google",
+  "name": "Sync Contacts for Google",
   "operatingSystem": "iOS",
   "applicationCategory": "UtilitiesApplication",
   "description": "Free, private, two-way background sync between iPhone contacts and Google Contacts. No contact limit, no subscription, no ads.",
   "author": {
     "@type": "Organization",
-    "name": "Open Apps Studio"
+    "name": "Open Grounds Studio"
   },
   "offers": {
     "@type": "Offer",
@@ -96,11 +103,11 @@
 
 <header class="site-header">
   <div class="container nav-wrap">
-    <a class="brand" href="/">Free Contacts Sync <span>for Google</span></a>
+    <a class="brand" href="/"><img src="/favicon-32.png" alt="" width="28" height="28">Sync Contacts <span>for Google</span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <a href="/#how-it-works">How it works</a>
-      <a href="/vs-contacts-sync-app/">Compare</a>
+      <a href="/#faq">FAQ</a>
       <a href="/support/">Support</a>
       <!-- TODO: replace with the real App Store URL when the listing is live -->
       <a class="btn btn-small" href="/appstore.html#coming-soon">Get the app</a>
@@ -109,35 +116,116 @@
 </header>
 
 <main>
-  <div class="hero">
+  <!-- ---------- Hero ---------- -->
+  <div class="hero-blue">
     <div class="container">
-      <h1>Sync iPhone Contacts with Google&nbsp;— Free</h1>
-      <p class="lead">True two-way sync between your iPhone contacts and Google Contacts. Runs in the background, keeps both sides identical, and never sends a single contact through our servers.</p>
-      <div class="actions">
-        <!-- TODO: replace with the real App Store URL when the listing is live -->
-        <a class="btn" href="/appstore.html#coming-soon">Download on the App Store</a>
-        <a class="btn btn-secondary" href="#how-it-works">See how it works</a>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="dot"></span> Free forever · Private by design</span>
+          <h1>Sync iPhone Contacts with Google</h1>
+          <p class="lead">True two-way sync between your iPhone contacts and Google Contacts. It runs quietly in the background, keeps both sides identical, and never sends a single contact through our servers.</p>
+          <div class="hero-actions">
+            <!-- TODO: replace with the real App Store URL when the listing is live -->
+            <a class="btn btn-app" href="/appstore.html#coming-soon" aria-label="Download on the App Store">
+              <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span><small>Download on the</small><strong>App Store</strong></span>
+            </a>
+            <a class="btn btn-secondary" href="#how-it-works">See how it works</a>
+          </div>
+          <ul class="hero-badges">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No subscription</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No ads</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No contact limit</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <div class="device" role="img" aria-label="Sync Contacts for Google dashboard showing iPhone and Google contacts in sync — 1,482 contacts matched">
+            <div class="device-screen">
+              <div class="m-sb"><span>9:41</span><span class="m-island"></span>
+                <span class="m-sb-icons">
+                  <svg viewBox="0 0 24 22" fill="currentColor"><rect x="0" y="14" width="4" height="7" rx="1"/><rect x="6.5" y="10" width="4" height="11" rx="1"/><rect x="13" y="5.5" width="4" height="15.5" rx="1"/><rect x="19.5" y="1" width="4" height="20" rx="1"/></svg>
+                  <svg viewBox="0 0 24 18" fill="currentColor"><path d="M12 3.5c3.9 0 7.5 1.5 10.2 4l-2 2A11.6 11.6 0 0 0 12 6.5 11.6 11.6 0 0 0 3.8 9.5l-2-2A14.5 14.5 0 0 1 12 3.5z"/><path d="M12 9.5c2.3 0 4.4.9 6 2.4l-2 2A5.6 5.6 0 0 0 12 12.5c-1.5 0-3 .6-4 1.4l-2-2A8.6 8.6 0 0 1 12 9.5z"/><path d="M12 15c.9 0 1.7.3 2.3.9L12 18.2 9.7 15.9c.6-.6 1.4-.9 2.3-.9z"/></svg>
+                  <svg viewBox="0 0 30 15" fill="none"><rect x="1" y="1.5" width="24" height="12" rx="3.5" stroke="currentColor" stroke-width="1.3" opacity=".45"/><rect x="3" y="3.5" width="20" height="8" rx="1.8" fill="currentColor"/><path d="M27 5.5v4a2.4 2.4 0 0 0 0-4z" fill="currentColor" opacity=".6"/></svg>
+                </span>
+              </div>
+              <div class="m-head"><img class="m-logo" src="/favicon-32.png" alt="" width="20" height="20"> Contacts Sync
+                <svg class="m-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+              </div>
+              <div class="m-body m-stack">
+                <div class="m-ring-wrap">
+                  <div class="m-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+                </div>
+                <div class="m-status"><div class="m-h1">In sync</div><div class="m-sub">Last synced 2 minutes ago · 1,482 contacts</div></div>
+                <div class="m-card m-acct">
+                  <span class="m-g"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span>
+                  <span class="m-acct-t"><b>arham@gmail.com</b><span>Two-way sync</span></span>
+                  <span class="m-tag">Connected</span>
+                </div>
+                <div class="m-btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v5h-5"/></svg> Sync Now</div>
+                <div class="m-stats">
+                  <div class="m-stat"><span class="m-stat-l"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2"/></svg> On iPhone</span><span class="m-stat-n">1,482</span></div>
+                  <div class="m-stat"><span class="m-stat-l"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.5 2.5 3.8 6 3.8 9.5S14.5 19 12 21.5C9.5 19 8.2 15.5 8.2 12S9.5 5 12 2.5z"/></svg> On Google</span><span class="m-stat-n">1,482</span></div>
+                </div>
+                <div class="m-actgroup">
+                  <div class="m-label">RECENT ACTIVITY</div>
+                  <div class="m-act">
+                    <div class="m-act-row"><span class="m-act-ico add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><span class="m-act-t">Added “Priya Sharma” to Google</span><span class="m-act-time">2h ago</span></div>
+                    <div class="m-act-row"><span class="m-act-ico edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><span class="m-act-t">Updated “Anna Lee” on iPhone</span><span class="m-act-time">5h ago</span></div>
+                    <div class="m-act-row"><span class="m-act-ico add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><span class="m-act-t">Added “Lena Fischer” to iPhone</span><span class="m-act-time">Yesterday</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <section class="section-soft" aria-labelledby="why-heading">
+  <!-- ---------- Trust strip ---------- -->
+  <div class="trust">
     <div class="container">
-      <h2 id="why-heading">Why people switch to this app</h2>
+      <span>
+        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        Built for iPhone
+      </span>
+      <span>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+        Works with Google Contacts
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg>
+        Contacts never touch our servers
+      </span>
+    </div>
+  </div>
+
+  <!-- ---------- Features ---------- -->
+  <section aria-labelledby="why-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow-c">Why switch</span>
+        <h2 id="why-heading">Everything you want from a contacts sync — and nothing you don't</h2>
+        <p>No 40-contact wall, no monthly fee, no ad-riddled interface. Just contacts that stay in sync, both ways.</p>
+      </div>
       <div class="grid grid-4">
-        <div class="card">
+        <div class="card feat">
+          <span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.178 8c-2.343 0-3.868 1.782-5.178 4-1.31 2.218-2.835 4-5.178 4a4 4 0 1 1 0-8c2.343 0 3.868 1.782 5.178 4 1.31 2.218 2.835 4 5.178 4a4 4 0 1 0 0-8z"/></svg></span>
           <h3>Free forever</h3>
-          <p>All your contacts, both directions, every feature. No 40-contact free cap, no $1.99/week subscription, no ads, ever.</p>
+          <p>All your contacts, both directions, every feature. No contact limits, no subscription, no ads — ever.</p>
         </div>
-        <div class="card">
+        <div class="card feat">
+          <span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><circle cx="12" cy="15.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
           <h3>Private by design</h3>
           <p>Your device talks to Google directly. Our server only sends wake-up pushes and stores zero personal data — not one contact, not one credential.</p>
         </div>
-        <div class="card">
-          <h3>2-way background sync</h3>
-          <p>Add a contact on your iPhone, it appears in Gmail. Edit one in Google Contacts, it updates on your phone. Both directions, automatically.</p>
+        <div class="card feat">
+          <span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span>
+          <h3>Two-way, automatic</h3>
+          <p>Add a contact on iPhone, it appears in Gmail. Edit one in Google Contacts, it updates on your phone. Both directions, hands-off.</p>
         </div>
-        <div class="card">
+        <div class="card feat">
+          <span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></span>
           <h3>Safe by default</h3>
           <p>Preview every first sync before anything changes, automatic local backups, and a deletion guard that pauses suspicious mass deletions.</p>
         </div>
@@ -145,9 +233,100 @@
     </div>
   </section>
 
+  <!-- ---------- Showcase ---------- -->
+  <section class="section-soft" aria-labelledby="shots-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow-c">A look inside</span>
+        <h2 id="shots-heading">Built to be trusted with your contacts</h2>
+        <p>Preview every change before it happens, keep automatic on-device backups, and see exactly where your data goes.</p>
+      </div>
+      <div class="devices">
+        <figure>
+          <div class="device" role="img" aria-label="First Sync Preview screen: 214 contacts added to Google, 96 added to iPhone, 41 merged">
+            <div class="device-screen">
+              <div class="m-sb"><span>9:41</span><span class="m-island"></span><span class="m-sb-icons"><svg viewBox="0 0 24 22" fill="currentColor"><rect x="0" y="14" width="4" height="7" rx="1"/><rect x="6.5" y="10" width="4" height="11" rx="1"/><rect x="13" y="5.5" width="4" height="15.5" rx="1"/><rect x="19.5" y="1" width="4" height="20" rx="1"/></svg><svg viewBox="0 0 24 18" fill="currentColor"><path d="M12 3.5c3.9 0 7.5 1.5 10.2 4l-2 2A11.6 11.6 0 0 0 12 6.5 11.6 11.6 0 0 0 3.8 9.5l-2-2A14.5 14.5 0 0 1 12 3.5z"/><path d="M12 9.5c2.3 0 4.4.9 6 2.4l-2 2A5.6 5.6 0 0 0 12 12.5c-1.5 0-3 .6-4 1.4l-2-2A8.6 8.6 0 0 1 12 9.5z"/><path d="M12 15c.9 0 1.7.3 2.3.9L12 18.2 9.7 15.9c.6-.6 1.4-.9 2.3-.9z"/></svg><svg viewBox="0 0 30 15" fill="none"><rect x="1" y="1.5" width="24" height="12" rx="3.5" stroke="currentColor" stroke-width="1.3" opacity=".45"/><rect x="3" y="3.5" width="20" height="8" rx="1.8" fill="currentColor"/><path d="M27 5.5v4a2.4 2.4 0 0 0 0-4z" fill="currentColor" opacity=".6"/></svg></span></div>
+              <div class="m-head"><img class="m-logo" src="/favicon-32.png" alt="" width="20" height="20"> Contacts Sync <svg class="m-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+              <div class="m-body m-stack">
+                <div class="m-hd"><div class="m-h1">First Sync Preview</div><div class="m-desc">Nothing has changed yet. Here’s the plan:</div></div>
+                <div class="m-card m-prev"><span class="m-prev-ico b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></span><span class="m-prev-txt"><b>Added to Google</b><span>Only on your iPhone today</span></span><span class="m-prev-n">214</span></div>
+                <div class="m-card m-prev"><span class="m-prev-ico b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H5"/><path d="m11 6-6 6 6 6"/></svg></span><span class="m-prev-txt"><b>Added to iPhone</b><span>Only in Google today</span></span><span class="m-prev-n">96</span></div>
+                <div class="m-card m-prev"><span class="m-prev-ico p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3-3"/><path d="M20 16H7l3 3"/></svg></span><span class="m-prev-txt"><b>Merged</b><span>Same person on both sides</span></span><span class="m-prev-n">41<small> matches</small></span></div>
+                <div class="m-note-ok"><svg viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/><path d="m8.5 12 2.2 2.2 4.3-4.3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> A backup is saved before we start</div>
+                <div class="m-btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v5h-5"/></svg> Start Sync</div>
+                <div class="m-link">Review every change</div>
+                <div class="m-fine">Estimated time: about a minute</div>
+              </div>
+            </div>
+          </div>
+          <figcaption>Preview before anything syncs<span>Nothing is written until you tap Start.</span></figcaption>
+        </figure>
+
+        <figure>
+          <div class="device" role="img" aria-label="Backups screen with deletion guard warning: this sync wants to remove 25 contacts, paused for review">
+            <div class="device-screen">
+              <div class="m-sb"><span>9:41</span><span class="m-island"></span><span class="m-sb-icons"><svg viewBox="0 0 24 22" fill="currentColor"><rect x="0" y="14" width="4" height="7" rx="1"/><rect x="6.5" y="10" width="4" height="11" rx="1"/><rect x="13" y="5.5" width="4" height="15.5" rx="1"/><rect x="19.5" y="1" width="4" height="20" rx="1"/></svg><svg viewBox="0 0 24 18" fill="currentColor"><path d="M12 3.5c3.9 0 7.5 1.5 10.2 4l-2 2A11.6 11.6 0 0 0 12 6.5 11.6 11.6 0 0 0 3.8 9.5l-2-2A14.5 14.5 0 0 1 12 3.5z"/><path d="M12 9.5c2.3 0 4.4.9 6 2.4l-2 2A5.6 5.6 0 0 0 12 12.5c-1.5 0-3 .6-4 1.4l-2-2A8.6 8.6 0 0 1 12 9.5z"/><path d="M12 15c.9 0 1.7.3 2.3.9L12 18.2 9.7 15.9c.6-.6 1.4-.9 2.3-.9z"/></svg><svg viewBox="0 0 30 15" fill="none"><rect x="1" y="1.5" width="24" height="12" rx="3.5" stroke="currentColor" stroke-width="1.3" opacity=".45"/><rect x="3" y="3.5" width="20" height="8" rx="1.8" fill="currentColor"/><path d="M27 5.5v4a2.4 2.4 0 0 0 0-4z" fill="currentColor" opacity=".6"/></svg></span></div>
+              <div class="m-head"><img class="m-logo" src="/favicon-32.png" alt="" width="20" height="20"> Contacts Sync <svg class="m-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+              <div class="m-body m-stack">
+                <div class="m-hd"><div class="m-h1">Backups</div><div class="m-desc">A snapshot is saved before every sync.</div></div>
+                <div class="m-warn">
+                  <div class="m-warn-top"><svg viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h16.9a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><b>This sync wants to remove 25 contacts</b></div>
+                  <p>Deletion guard paused everything so you can review first.</p>
+                  <div class="m-warn-btns"><a class="keep">Keep them</a><a class="remove">Remove</a></div>
+                </div>
+                <div class="m-actgroup">
+                  <div class="m-label">SNAPSHOTS</div>
+                  <div class="m-snap">
+                    <div class="m-snap-row"><span class="m-snap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="m-snap-t"><b>Today, 9:41 AM</b><span>Before sync · 1,482 contacts</span></span><span class="m-restore">Restore</span></div>
+                    <div class="m-snap-row"><span class="m-snap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="m-snap-t"><b>Yesterday, 6:02 PM</b><span>Before sync · 1,479 contacts</span></span><span class="m-restore">Restore</span></div>
+                    <div class="m-snap-row"><span class="m-snap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="m-snap-t"><b>Monday, 8:15 AM</b><span>Before sync · 1,466 contacts</span></span><span class="m-restore">Restore</span></div>
+                  </div>
+                </div>
+                <div class="m-fine">Backups are stored privately on this iPhone.</div>
+              </div>
+            </div>
+          </div>
+          <figcaption>A deletion guard that has your back<span>Mass deletions pause until you confirm.</span></figcaption>
+        </figure>
+
+        <figure>
+          <div class="device" role="img" aria-label="How your data moves: contacts go directly between your iPhone and Google with no servers in between">
+            <div class="device-screen">
+              <div class="m-sb"><span>9:41</span><span class="m-island"></span><span class="m-sb-icons"><svg viewBox="0 0 24 22" fill="currentColor"><rect x="0" y="14" width="4" height="7" rx="1"/><rect x="6.5" y="10" width="4" height="11" rx="1"/><rect x="13" y="5.5" width="4" height="15.5" rx="1"/><rect x="19.5" y="1" width="4" height="20" rx="1"/></svg><svg viewBox="0 0 24 18" fill="currentColor"><path d="M12 3.5c3.9 0 7.5 1.5 10.2 4l-2 2A11.6 11.6 0 0 0 12 6.5 11.6 11.6 0 0 0 3.8 9.5l-2-2A14.5 14.5 0 0 1 12 3.5z"/><path d="M12 9.5c2.3 0 4.4.9 6 2.4l-2 2A5.6 5.6 0 0 0 12 12.5c-1.5 0-3 .6-4 1.4l-2-2A8.6 8.6 0 0 1 12 9.5z"/><path d="M12 15c.9 0 1.7.3 2.3.9L12 18.2 9.7 15.9c.6-.6 1.4-.9 2.3-.9z"/></svg><svg viewBox="0 0 30 15" fill="none"><rect x="1" y="1.5" width="24" height="12" rx="3.5" stroke="currentColor" stroke-width="1.3" opacity=".45"/><rect x="3" y="3.5" width="20" height="8" rx="1.8" fill="currentColor"/><path d="M27 5.5v4a2.4 2.4 0 0 0 0-4z" fill="currentColor" opacity=".6"/></svg></span></div>
+              <div class="m-head"><img class="m-logo" src="/favicon-32.png" alt="" width="20" height="20"> Contacts Sync <svg class="m-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+              <div class="m-body m-stack">
+                <div class="m-hd"><div class="m-h1">How your data moves</div><div class="m-desc">Directly. With no middleman.</div></div>
+                <div class="m-card m-flow">
+                  <div class="m-flow-row">
+                    <span class="m-flow-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M10 18h4"/></svg>Your iPhone</span>
+                    <span class="m-flow-arrows"><svg viewBox="0 0 60 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h52"/><path d="m49 1 6 3-6 3"/></svg><svg viewBox="0 0 60 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M58 4H6"/><path d="m11 1-6 3 6 3"/></svg></span>
+                    <span class="m-flow-node"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>Google</span>
+                  </div>
+                  <div class="m-flow-cloud"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17.5a4 4 0 0 1-.5-8 6 6 0 0 1 10.9-2.3"/><path d="M17.5 11.5A3.5 3.5 0 0 1 19 18H8"/><path d="M4 3l16 16" stroke="#dc2626"/></svg><div>No servers in between</div></div>
+                </div>
+                <div class="m-checks">
+                  <div class="m-check"><span class="m-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>No account required</b><span>Just sign in to Google — nothing else</span></span></div>
+                  <div class="m-check"><span class="m-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>No data collection</b><span>No analytics, no tracking, no ads</span></span></div>
+                  <div class="m-check"><span class="m-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Backups stay on your phone</b><span>Snapshots never leave this device</span></span></div>
+                </div>
+                <div class="m-info"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/></svg><span><b>Data Not Linked to You</b><span>Your contacts are never collected — they go straight to your Google account.</span></span></div>
+              </div>
+            </div>
+          </div>
+          <figcaption>Your contacts never touch our servers<span>Device-to-Google directly, always.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- How it works ---------- -->
   <section id="how-it-works" aria-labelledby="how-heading">
     <div class="container">
-      <h2 id="how-heading">How it works</h2>
+      <div class="section-head">
+        <span class="eyebrow-c">How it works</span>
+        <h2 id="how-heading">Set it up once in under a minute</h2>
+        <p>Three steps, then it's automatic. No account to create — you sign in with the Google account you already have.</p>
+      </div>
       <ol class="steps steps-row">
         <li>
           <h3>Sign in with Google</h3>
@@ -162,20 +341,29 @@
           <p>From then on the app keeps both sides in sync automatically. New contacts, edits, photos, and deletions flow both ways.</p>
         </li>
       </ol>
+    </div>
+  </section>
 
-      <h2>Honest answer: how fast is "background" sync?</h2>
+  <!-- ---------- Honesty band ---------- -->
+  <section class="band" aria-labelledby="honest-heading">
+    <div class="container">
+      <h2 id="honest-heading">Honest answer: how fast is “background” sync?</h2>
       <p>iOS doesn't let any app run non-stop in the background — including the expensive ones. Here's what actually happens: when something changes in your Google Contacts, our server sends your phone a silent push that wakes the app to sync. Combined with iOS background refresh, <strong>changes typically sync within the hour, and always instantly the moment you open the app</strong>. Any app that promises more than that on iOS is overselling.</p>
     </div>
   </section>
 
-  <section class="section-soft faq" aria-labelledby="faq-heading">
+  <!-- ---------- FAQ ---------- -->
+  <section id="faq" class="faq" aria-labelledby="faq-heading">
     <div class="container">
-      <h2 id="faq-heading">Frequently asked questions</h2>
+      <div class="section-head">
+        <span class="eyebrow-c">FAQ</span>
+        <h2 id="faq-heading">Frequently asked questions</h2>
+      </div>
 
       <details>
         <summary>Is the app really free? What's the catch?</summary>
         <div>
-          <p>Yes — free forever, for all your contacts. No subscription, no 40-contact cap, no ads, no features held hostage. We build small utilities at Open Apps Studio and keep this one free; our server costs are tiny precisely because your contacts never pass through our servers.</p>
+          <p>Yes — free forever, for all your contacts. No subscription, no 40-contact cap, no ads, no features held hostage. We build small utilities at Open Grounds Studio and keep this one free; our server costs are tiny precisely because your contacts never pass through our servers.</p>
         </div>
       </details>
 
@@ -216,9 +404,13 @@
     </div>
   </section>
 
-  <section aria-labelledby="guides-heading">
+  <!-- ---------- Guides ---------- -->
+  <section class="section-soft" aria-labelledby="guides-heading">
     <div class="container">
-      <h2 id="guides-heading">Guides</h2>
+      <div class="section-head">
+        <span class="eyebrow-c">Guides</span>
+        <h2 id="guides-heading">Contacts help &amp; how-tos</h2>
+      </div>
       <div class="grid grid-2">
         <div class="card">
           <h3><a href="/icloud-to-google-contacts/">Move iCloud contacts to Google Contacts</a></h3>
@@ -239,14 +431,30 @@
       </div>
     </div>
   </section>
+
+  <!-- ---------- Final CTA ---------- -->
+  <section class="cta-final" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading">Keep your contacts in sync — for free</h2>
+      <p>One list on your iPhone and in Google, kept identical automatically. Private by design, no subscription, no catch.</p>
+      <div class="actions">
+        <!-- TODO: replace with the real App Store URL when the listing is live -->
+        <a class="btn btn-app" href="/appstore.html#coming-soon" aria-label="Download on the App Store">
+          <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span><small>Download on the</small><strong>App Store</strong></span>
+        </a>
+        <a class="btn btn-secondary" href="/support/">Visit support</a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
   <div class="container">
     <div class="footer-cols">
       <div>
-        <p class="footer-h">Free Contacts Sync for Google</p>
-        <p>Private, two-way sync between iPhone and Google Contacts. Free forever, by Open Apps Studio.</p>
+        <p class="footer-h">Sync Contacts for Google</p>
+        <p>Private, two-way sync between iPhone and Google Contacts. Free forever, by Open Grounds Studio.</p>
       </div>
       <div>
         <p class="footer-h">Guides</p>
@@ -262,13 +470,12 @@
         <ul>
           <!-- TODO: replace with the real App Store URL when the listing is live -->
           <li><a href="/appstore.html#coming-soon">Download on the App Store</a></li>
-          <li><a href="/vs-contacts-sync-app/">Compare with paid apps</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="/privacy/">Privacy policy</a></li>
         </ul>
       </div>
     </div>
-    <p class="footer-legal">© 2026 Open Apps Studio. Google, Gmail and Google Contacts are trademarks of Google LLC. Apple, iPhone and iCloud are trademarks of Apple Inc. This app is not affiliated with or endorsed by Google or Apple.</p>
+    <p class="footer-legal">© 2026 Open Grounds Studio. Google, Gmail and Google Contacts are trademarks of Google LLC. Apple, iPhone and iCloud are trademarks of Apple Inc. This app is not affiliated with or endorsed by Google or Apple.</p>
   </div>
 </footer>
 

@@ -87,8 +87,13 @@ public struct SyncContact: Codable, Equatable, Sendable {
     }
 
     public var isEffectivelyEmpty: Bool {
-        givenName.isEmpty && familyName.isEmpty && organization.isEmpty
+        givenName.isEmpty && familyName.isEmpty && middleName.isEmpty
+            && namePrefix.isEmpty && nameSuffix.isEmpty
+            && nickname.isEmpty && organization.isEmpty
+            && department.isEmpty && jobTitle.isEmpty
             && phones.isEmpty && emails.isEmpty && addresses.isEmpty
+            && urls.isEmpty && imAddresses.isEmpty && relations.isEmpty
+            && birthday == nil && otherDates.isEmpty
     }
 }
 

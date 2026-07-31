@@ -1,5 +1,8 @@
 {
   "trailingSlash": "always",
+  "routes": [
+    { "route": "/vs-contacts-sync-app/*", "redirect": "/", "statusCode": 301 }
+  ],
   "responseOverrides": {
     "404": {
       "rewrite": "/404.html"

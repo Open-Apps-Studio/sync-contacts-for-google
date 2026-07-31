@@ -36,11 +36,11 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<string>6</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>NSContactsUsageDescription</key>
-	<string>Contacts Sync reads and writes your contacts so it can two-way sync them with your Google account and merge duplicates. Your contacts stay on your device and in your own Google account — never on our servers.</string>
+	<string>Sync Contacts for Google reads and writes your contacts so it can two-way sync them with your Google account and merge duplicates. Your contacts stay on your device and in your own Google account — never on our servers.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

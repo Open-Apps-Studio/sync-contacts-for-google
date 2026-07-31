@@ -1,6 +1,7 @@
 #if canImport(Contacts)
 import Foundation
 import Contacts
+import CryptoKit
 
 /// Bridges CNContactStore to the engine's `LocalContactsStore`.
 ///
@@ -155,7 +156,10 @@ public final class CNContactStoreAdapter: LocalContactsStore, @unchecked Sendabl
                              month: month, day: day)
         }
         if cn.imageDataAvailable, let thumb = cn.thumbnailImageData {
-            c.photoHash = "cn:" + String(thumb.hashValue)
+            // Stable across process launches — Swift's hashValue is randomized per
+            // process, which would make the same photo hash differently each launch
+            // and trigger perpetual false "photo changed" churn. SHA-256 is stable.
+            c.photoHash = "cn:" + SHA256.hash(data: thumb).map { String(format: "%02x", $0) }.joined()
         }
         return c
     }

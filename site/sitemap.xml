@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: DOMAIN — replace https://TODO-domain.example with the production domain once chosen (single constant, used in every <loc> below). -->
+<!-- Live domain: https://sync.opengrounds.org (Azure Static Web Apps). If a custom domain is added later, update every <loc> below. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://TODO-domain.example/</loc>
+    <loc>https://sync.opengrounds.org/</loc>
     <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://TODO-domain.example/icloud-to-google-contacts/</loc>
+    <loc>https://sync.opengrounds.org/icloud-to-google-contacts/</loc>
     <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://TODO-domain.example/google-contacts-not-syncing-iphone/</loc>
+    <loc>https://sync.opengrounds.org/google-contacts-not-syncing-iphone/</loc>
     <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://TODO-domain.example/transfer-contacts-android-to-iphone-gmail/</loc>
+    <loc>https://sync.opengrounds.org/transfer-contacts-android-to-iphone-gmail/</loc>
     <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://TODO-domain.example/merge-duplicate-contacts-iphone/</loc>
+    <loc>https://sync.opengrounds.org/merge-duplicate-contacts-iphone/</loc>
     <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://TODO-domain.example/vs-contacts-sync-app/</loc>
+    <loc>https://sync.opengrounds.org/privacy/</loc>
     <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://TODO-domain.example/privacy/</loc>
-    <lastmod>2026-07-15</lastmod>
-  </url>
-  <url>
-    <loc>https://TODO-domain.example/support/</loc>
+    <loc>https://sync.opengrounds.org/support/</loc>
     <lastmod>2026-07-15</lastmod>
   </url>
 </urlset>

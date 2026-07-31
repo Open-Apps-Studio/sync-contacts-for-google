@@ -30,7 +30,7 @@ targets:
       path: App/Info.plist
       properties:
         CFBundleDisplayName: Contacts Sync
-        NSContactsUsageDescription: "Contacts Sync reads and writes your contacts so it can two-way sync them with your Google account and merge duplicates. Your contacts stay on your device and in your own Google account — never on our servers."
+        NSContactsUsageDescription: "Sync Contacts for Google reads and writes your contacts so it can two-way sync them with your Google account and merge duplicates. Your contacts stay on your device and in your own Google account — never on our servers."
         UIBackgroundModes:
           - remote-notification
           - fetch
@@ -50,7 +50,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.openappsstudio.contactssync
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         MARKETING_VERSION: "1.0"
-        CURRENT_PROJECT_VERSION: "5"
+        CURRENT_PROJECT_VERSION: "6"
         TARGETED_DEVICE_FAMILY: "1"
         CODE_SIGN_STYLE: Automatic
     scheme:

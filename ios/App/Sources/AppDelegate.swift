@@ -2,6 +2,24 @@ import UIKit
 import BackgroundTasks
 import Contacts
 
+/// Ensures a BGTask's completion callback runs exactly once. The OS expiration handler
+/// and the work task can both try to complete the task; calling setTaskCompleted twice
+/// is undefined, so this serializes and de-dupes the call behind a lock.
+private final class BGTaskCompletionGuard: @unchecked Sendable {
+    private let lock = NSLock()
+    private var completed = false
+    private let task: BGTask
+
+    init(_ task: BGTask) { self.task = task }
+
+    func complete(success: Bool) {
+        lock.lock(); defer { lock.unlock() }
+        guard !completed else { return }
+        completed = true
+        task.setTaskCompleted(success: success)
+    }
+}
+
 /// Background plumbing: BGTaskScheduler, silent push, APNs registration, and the
 /// CNContactStore change observer. All sync work funnels into AppState.runSync().
 final class AppDelegate: NSObject, UIApplicationDelegate {
@@ -53,18 +71,17 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         Self.scheduleBackgroundTasks()
         AppState.recordBackgroundWake(source: source)
 
+        let completion = BGTaskCompletionGuard(task)
         let work = Task { @MainActor in
             let state = AppState.shared
             if state.phase == .ready && state.settings.automaticSync {
                 await state.runSync()
             }
-            if !Task.isCancelled {
-                task.setTaskCompleted(success: true)
-            }
+            completion.complete(success: !Task.isCancelled)
         }
         task.expirationHandler = {
             work.cancel()
-            task.setTaskCompleted(success: false)
+            completion.complete(success: false)
         }
     }
 

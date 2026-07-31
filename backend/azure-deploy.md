@@ -51,7 +51,7 @@ az webapp config appsettings set --resource-group "$RG" --name "$APP" --settings
   AZURE_TABLES_TABLE=devices \
   APNS_KEY_P8="$APNS_KEY_P8" \
   APNS_KEY_ID=XXXXXXXXXX \
-  APNS_TEAM_ID=<your-team-id> \
+  APNS_TEAM_ID=TEAMID1234 \
   APNS_TOPIC=com.openappsstudio.contactssync \
   APNS_ENV=production \
   PUSH_INTERVAL_MIN=20 \

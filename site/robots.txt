@@ -1,7 +1,7 @@
-# Free Contacts Sync for Google
-# TODO: DOMAIN — replace https://TODO-domain.example with the production domain once chosen.
+# Sync Contacts for Google
+# Live domain: https://sync.opengrounds.org (Azure Static Web Apps). Update here + in sitemap.xml if a custom domain is added later.
 
 User-agent: *
 Allow: /
 
-Sitemap: https://TODO-domain.example/sitemap.xml
+Sitemap: https://sync.opengrounds.org/sitemap.xml

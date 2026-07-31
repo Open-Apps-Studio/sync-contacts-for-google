@@ -27,6 +27,9 @@ public struct RemoteDelta: Sendable {
 public protocol GooglePeopleAPI: Sendable {
     /// Incremental (or, with nil token, full) list of the user's contacts.
     func listConnections(syncToken: String?) async throws -> RemoteDelta
+    /// Fetches a single person's current (resourceName, etag) — used to recover a
+    /// fresh etag when a stored one is missing/empty (empty-etag lockout).
+    func getContact(resourceName: String) async throws -> (resourceName: String, etag: String)
     /// Returns (resourceName, etag) for each created contact, in input order.
     func createContacts(_ contacts: [SyncContact]) async throws -> [(resourceName: String, etag: String)]
     /// Full-person update (etag required for optimistic concurrency).
@@ -39,15 +42,25 @@ public protocol GooglePeopleAPI: Sendable {
 /// the OAuth layer stays separate.
 public final class GooglePeopleClient: GooglePeopleAPI, @unchecked Sendable {
     public typealias AccessTokenProvider = @Sendable () async throws -> String
+    /// Forces a token refresh (e.g. after a 401), updating whatever cache the token
+    /// provider reads from, so the immediate retry picks up a fresh access token.
+    public typealias TokenRefresher = @Sendable () async throws -> Void
 
     private let tokenProvider: AccessTokenProvider
+    private let tokenRefresher: TokenRefresher?
     private let session: URLSession
     private let base = URL(string: "https://people.googleapis.com/v1")!
     public static let createBatchLimit = 200
     public static let deleteBatchLimit = 500
+    /// Never sleep longer than this on a 429; a server Retry-After above it is thrown
+    /// as rateLimited rather than hanging a foreground sync for minutes/hours.
+    public static let maxRetryAfterSeconds = 60
 
-    public init(tokenProvider: @escaping AccessTokenProvider, session: URLSession = .shared) {
+    public init(tokenProvider: @escaping AccessTokenProvider,
+                tokenRefresher: TokenRefresher? = nil,
+                session: URLSession = .shared) {
         self.tokenProvider = tokenProvider
+        self.tokenRefresher = tokenRefresher
         self.session = session
     }
 
@@ -80,6 +93,16 @@ public final class GooglePeopleClient: GooglePeopleAPI, @unchecked Sendable {
         return RemoteDelta(records: records, nextSyncToken: nextSyncToken)
     }
 
+    public func getContact(resourceName: String) async throws -> (resourceName: String, etag: String) {
+        var comps = URLComponents(url: base.appendingPathComponent(resourceName),
+                                  resolvingAgainstBaseURL: false)!
+        comps.queryItems = [URLQueryItem(name: "personFields", value: "metadata")]
+        let json = try await request("GET", comps.url!)
+        let name = (json["resourceName"] as? String) ?? resourceName
+        let etag = (json["etag"] as? String) ?? ""
+        return (name, etag)
+    }
+
     public func createContacts(_ contacts: [SyncContact]) async throws -> [(resourceName: String, etag: String)] {
         var results: [(String, String)] = []
         for chunk in contacts.chunked(into: Self.createBatchLimit) {
@@ -103,6 +126,10 @@ public final class GooglePeopleClient: GooglePeopleAPI, @unchecked Sendable {
 
     public func updateContact(resourceName: String, etag: String,
                               contact: SyncContact, updateMask: [String]) async throws -> String {
+        // Empty-etag lockout: a contact created with a missing etag would send etag:""
+        // here, which Google rejects as staleEtag forever. Recover the current etag once
+        // so the update can proceed instead of failing permanently.
+        let effectiveEtag = etag.isEmpty ? try await getContact(resourceName: resourceName).etag : etag
         var comps = URLComponents(url: base.appendingPathComponent("\(resourceName):updateContact"),
                                   resolvingAgainstBaseURL: false)!
         comps.queryItems = [
@@ -111,7 +138,7 @@ public final class GooglePeopleClient: GooglePeopleAPI, @unchecked Sendable {
                                           .joined(separator: ",")),
             URLQueryItem(name: "personFields", value: "metadata")
         ]
-        let body = GoogleFieldMapper.toPerson(contact, etag: etag)
+        let body = GoogleFieldMapper.toPerson(contact, etag: effectiveEtag)
         let json = try await request("PATCH", comps.url!, body: body)
         return (json["etag"] as? String) ?? ""
     }
@@ -126,7 +153,7 @@ public final class GooglePeopleClient: GooglePeopleAPI, @unchecked Sendable {
     // MARK: - Transport
 
     private func request(_ method: String, _ url: URL, body: [String: Any]? = nil,
-                         attempt: Int = 0) async throws -> [String: Any] {
+                         attempt: Int = 0, refreshed: Bool = false) async throws -> [String: Any] {
         var req = URLRequest(url: url)
         req.httpMethod = method
         req.setValue("Bearer \(try await tokenProvider())", forHTTPHeaderField: "Authorization")
@@ -143,13 +170,24 @@ public final class GooglePeopleClient: GooglePeopleAPI, @unchecked Sendable {
             if data.isEmpty { return [:] }
             return (try? JSONSerialization.jsonObject(with: data) as? [String: Any]) ?? [:]
         case 401:
+            // Access token may have expired mid-sync. Force one refresh and retry once
+            // before surfacing the failure — never loop.
+            if let tokenRefresher, !refreshed {
+                try await tokenRefresher()
+                return try await request(method, url, body: body, attempt: attempt, refreshed: true)
+            }
             throw PeopleAPIError.unauthorized
         case 429:
             let retryAfter = http.value(forHTTPHeaderField: "Retry-After").flatMap(Int.init)
+            // Cap the wait: Google can set Retry-After to minutes/hours, which would hang
+            // a foreground sync. Above the cap we bail out with rateLimited instead.
+            if let retryAfter, retryAfter > Self.maxRetryAfterSeconds {
+                throw PeopleAPIError.rateLimited(retryAfterSeconds: retryAfter)
+            }
             if attempt < 3 {
-                let delay = retryAfter ?? Int(pow(2.0, Double(attempt + 1)))
+                let delay = min(retryAfter ?? Int(pow(2.0, Double(attempt + 1))), Self.maxRetryAfterSeconds)
                 try await Task.sleep(nanoseconds: UInt64(delay) * 1_000_000_000)
-                return try await request(method, url, body: body, attempt: attempt + 1)
+                return try await request(method, url, body: body, attempt: attempt + 1, refreshed: refreshed)
             }
             throw PeopleAPIError.rateLimited(retryAfterSeconds: retryAfter)
         default:

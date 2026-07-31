@@ -50,6 +50,7 @@ public actor SyncOrchestrator {
     }
 
     private static let remoteSyncTokenKey = "google.syncToken"
+    private static let accountKeyKey = "google.accountKey"
 
     // MARK: - Planning types
 
@@ -72,15 +73,35 @@ public actor SyncOrchestrator {
     /// Runs one sync pass. Concurrent calls coalesce (the second returns the first's outcome
     /// conservatively as an empty summary).
     @discardableResult
-    public func sync(isFirstSync: Bool = false) async throws -> SyncSummary {
+    public func sync(isFirstSync: Bool = false, accountKey: String? = nil) async throws -> SyncSummary {
         guard !isSyncing else { return SyncSummary() }
         isSyncing = true
         state = .syncing
         defer { isSyncing = false }
 
+        var firstSync = isFirstSync
+        if let accountKey {
+            let previous = try? deps.store.cursor(Self.accountKeyKey)
+            if let previous, previous != accountKey {
+                // The connected Google account changed. The old account's identity
+                // mappings and sync token are meaningless — and dangerous — for the new
+                // account: stale resourceNames would either duplicate contacts or, worse,
+                // be read as remote deletions and wipe the phone. Reset to a clean
+                // first-sync for the new account instead of mixing the two.
+                try deps.store.deleteAllMappings()
+                try deps.store.clearWorkQueue()
+                try deps.store.setCursor(Self.remoteSyncTokenKey, nil)
+                firstSync = true
+                try? deps.store.log(ActivityEvent(
+                    kind: .syncStarted,
+                    summary: "Connected Google account changed — resetting local sync state"))
+            }
+            try? deps.store.setCursor(Self.accountKeyKey, accountKey)
+        }
+
         try? deps.store.log(ActivityEvent(kind: .syncStarted, summary: "Sync started"))
         do {
-            let plan = try await buildPlan(isFirstSync: isFirstSync)
+            let plan = try await buildPlan(isFirstSync: firstSync)
             let settings = deps.settings()
 
             // Deletion guard — across both directions, before any write.
@@ -165,9 +186,15 @@ public actor SyncOrchestrator {
 
         let storedToken = try deps.store.cursor(Self.remoteSyncTokenKey)
         let delta: RemoteDelta
+        var syncTokenExpired = false
         do {
             delta = try await deps.remote.listConnections(syncToken: isFirstSync ? nil : storedToken)
         } catch PeopleAPIError.expiredSyncToken {
+            // The token was rejected, so we re-fetched the FULL connection list.
+            // Treat this pass as tokenless (below) — otherwise remote deletions that
+            // happened during the token gap are absent from the full list yet never
+            // inferred as deletions, leaving ghost contacts on the phone forever.
+            syncTokenExpired = true
             delta = try await deps.remote.listConnections(syncToken: nil)
         }
         plan.nextSyncToken = delta.nextSyncToken
@@ -187,7 +214,7 @@ public actor SyncOrchestrator {
                 remoteChanged[record.resourceName] = record
             }
         }
-        let hadToken = (storedToken != nil) && !isFirstSync
+        let hadToken = (storedToken != nil) && !isFirstSync && !syncTokenExpired
         plan.remoteTotal = hadToken
             ? mappings.count + remoteChanged.keys.filter { mappingByRemote[$0] == nil }.count - remoteDeleted.count
             : delta.records.filter { !$0.deleted }.count
@@ -322,14 +349,17 @@ public actor SyncOrchestrator {
         var summary = SyncSummary()
         summary.conflicts = plan.conflicts.reduce(0) { $0 + $1.conflicts.count }
 
-        // Safety snapshot before anything destructive.
+        // Safety snapshot before anything destructive. The UI promises "a backup was
+        // already saved on this phone" before deletes/overwrites, so if a snapshot
+        // manager is configured its failure MUST abort the pass — we never proceed to
+        // delete or overwrite contacts with no backup.
         if !plan.deleteLocal.isEmpty || !plan.deleteRemote.isEmpty
             || !plan.updateLocal.isEmpty || !plan.updateRemote.isEmpty {
             let affectedLocal = plan.deleteLocal.map(\.base) + plan.updateLocal.map(\.mapping.base)
             let affectedRemote = plan.deleteRemote.map(\.base) + plan.updateRemote.map(\.mapping.base)
-            try? deps.snapshots?.createSnapshot(reason: "pre-sync",
-                                                localContacts: affectedLocal,
-                                                remoteContacts: affectedRemote)
+            try deps.snapshots?.createSnapshot(reason: "pre-sync",
+                                               localContacts: affectedLocal,
+                                               remoteContacts: affectedRemote)
         }
 
         // Remote writes (sequential per Google's guidance). Create in batches and

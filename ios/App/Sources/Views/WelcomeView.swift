@@ -31,8 +31,8 @@ struct WelcomeView: View {
                            title: "Private — contacts go straight from your phone to Google",
                            detail: "No middleman servers ever see your address book.")
                 BenefitRow(symbol: "infinity",
-                           title: "No contact limit, no subscription, no ads",
-                           detail: "Every feature works for your whole contact list.")
+                           title: "Your whole address book",
+                           detail: "Every feature works across your entire contact list.")
             }
             .padding(.top, 40)
             .padding(.horizontal, 28)

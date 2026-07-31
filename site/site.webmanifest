@@ -1,0 +1,13 @@
+{
+  "name": "Sync Contacts for Google",
+  "short_name": "Sync Contacts",
+  "description": "Free, private, two-way background sync between iPhone contacts and Google Contacts.",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}

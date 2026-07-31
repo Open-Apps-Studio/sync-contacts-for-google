@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 
-const DEFAULT_TEAM_ID = 'TEAMID1234'; // placeholder — set APNS_TEAM_ID to your Apple Developer team ID
+const DEFAULT_TEAM_ID = 'TEAMID1234';
 const DEFAULT_TOPIC = 'com.openappsstudio.contactssync';
 
 function toInt(value, fallback) {

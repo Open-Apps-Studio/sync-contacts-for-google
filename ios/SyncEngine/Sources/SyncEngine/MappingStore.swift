@@ -4,8 +4,9 @@ import Foundation
 /// log, and the resumable work queue. One SQLite file in the app container.
 public final class MappingStore {
     private let db: SQLiteDatabase
-    private let encoder = JSONEncoder()
-    private let decoder = JSONDecoder()
+    // Foundation's JSONEncoder/JSONDecoder are not safe for concurrent use, and this
+    // store is touched from both the SyncOrchestrator actor and the main actor. Use a
+    // fresh coder per call (cheap) rather than sharing one across threads.
 
     public init(path: String) throws {
         db = try SQLiteDatabase(path: path)
@@ -50,7 +51,7 @@ public final class MappingStore {
     // MARK: - Mappings
 
     public func upsert(_ mapping: Mapping) throws {
-        let base = try encoder.encode(mapping.base)
+        let base = try JSONEncoder().encode(mapping.base)
         try db.exec("""
             INSERT INTO mapping (local_id, remote_name, remote_etag, base_json, updated_at)
             VALUES (?, ?, ?, ?, ?)
@@ -92,7 +93,7 @@ public final class MappingStore {
               let etag = row["remote_etag"]?.stringValue,
               let baseData = row["base_json"]?.blobValue,
               let ts = row["updated_at"]?.intValue,
-              let base = try? decoder.decode(SyncContact.self, from: baseData)
+              let base = try? JSONDecoder().decode(SyncContact.self, from: baseData)
         else { return nil }
         return Mapping(localID: localID, remoteResourceName: remoteName, remoteEtag: etag,
                        base: base, updatedAt: Date(timeIntervalSince1970: TimeInterval(ts)))

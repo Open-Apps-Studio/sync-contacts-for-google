@@ -200,3 +200,39 @@ final class VCardTests: XCTestCase {
         XCTAssertEqual(VCard.parse(VCard.serialize([a, b])).count, 2)
     }
 }
+
+// MARK: - isEffectivelyEmpty
+
+final class EffectivelyEmptyTests: XCTestCase {
+
+    func testTrulyEmptyContactIsEffectivelyEmpty() {
+        XCTAssertTrue(SyncContact().isEffectivelyEmpty)
+    }
+
+    /// A nickname-only contact carries real content and must NOT be treated as empty,
+    /// otherwise it would never be created on the other side.
+    func testNicknameOnlyContactIsNotEffectivelyEmpty() {
+        var c = SyncContact()
+        c.nickname = "Ada"
+        XCTAssertFalse(c.isEffectivelyEmpty)
+    }
+
+    /// Same for a URL-only contact (and IM / birthday / other dates).
+    func testUrlOnlyContactIsNotEffectivelyEmpty() {
+        var c = SyncContact()
+        c.urls = [LabeledValue(label: "homepage", value: "https://ada.example")]
+        XCTAssertFalse(c.isEffectivelyEmpty)
+    }
+
+    func testImOnlyContactIsNotEffectivelyEmpty() {
+        var c = SyncContact()
+        c.imAddresses = [LabeledValue(label: "jabber", value: "ada@jabber.example")]
+        XCTAssertFalse(c.isEffectivelyEmpty)
+    }
+
+    func testBirthdayOnlyContactIsNotEffectivelyEmpty() {
+        var c = SyncContact()
+        c.birthday = DateValue(label: "birthday", year: 1815, month: 12, day: 10)
+        XCTAssertFalse(c.isEffectivelyEmpty)
+    }
+}
