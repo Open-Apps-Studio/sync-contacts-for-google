@@ -3,6 +3,12 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "sync.opengrounds.org" }],
+      "destination": "https://sync.openappsstudio.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "sync.opengrounds.org" }],
       "destination": "https://sync.openappsstudio.com/:path*",
