@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Live domain: https://sync.openappsstudio.com (Azure Static Web Apps). If a custom domain is added later, update every <loc> below. -->
+<!-- Live domain: https://sync.openappsstudio.com (Vercel). Update every <loc> if the canonical domain changes. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sync.openappsstudio.com/</loc>
