@@ -826,6 +826,8 @@ summary:focus-visible {
 .site-nav a { border-radius: 999px; padding: .45rem .75rem; }
 .site-nav a:hover { color: var(--text); background: var(--accent-soft); }
 .site-nav .studio-link { color: var(--accent); }
+.site-nav .btn { color: var(--on-accent); background: var(--accent); }
+.site-nav .btn:hover { color: var(--on-accent); background: var(--accent-hover); }
 
 .btn {
   min-height: 48px;
@@ -912,6 +914,7 @@ ol.steps > li,
     --accent: #75a2ff;
     --accent-hover: #9cbbff;
     --accent-soft: #192746;
+    --on-accent: #0b1324;
     --bg: #0e131c;
     --bg-soft: #151c28;
     --text: #f3f1ea;
