@@ -2,6 +2,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": true,
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "sync.opengrounds.org" }],
+      "destination": "https://sync.openappsstudio.com/:path*",
+      "permanent": true
+    },
     { "source": "/vs-contacts-sync-app/:path*", "destination": "/", "permanent": true }
   ],
   "headers": [

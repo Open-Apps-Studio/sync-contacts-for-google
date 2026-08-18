@@ -1,7 +1,7 @@
 # Sync Contacts for Google
-# Live domain: https://sync.opengrounds.org (Azure Static Web Apps). Update here + in sitemap.xml if a custom domain is added later.
+# Live domain: https://sync.openappsstudio.com (Azure Static Web Apps). Update here + in sitemap.xml if a custom domain is added later.
 
 User-agent: *
 Allow: /
 
-Sitemap: https://sync.opengrounds.org/sitemap.xml
+Sitemap: https://sync.openappsstudio.com/sitemap.xml
