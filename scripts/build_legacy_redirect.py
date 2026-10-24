@@ -3,6 +3,7 @@
 import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
+from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'deployment/azure-redirect'
@@ -23,4 +24,9 @@ config = {'routes': routes, 'responseOverrides': {'404': {'rewrite': '/404.html'
 (OUT / 'index.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><title>Website moved</title><link rel="canonical" href="' + ORIGIN + '/"><h1>Our website has moved</h1><p><a href="' + ORIGIN + '/">Visit Sync Contacts for Google</a>.</p></html>\n')
 (OUT / '404.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page not found</title><h1>Page not found</h1><p><a href="' + ORIGIN + '/blog/">Find a contact guide on our current website</a>.</p></html>\n')
 (OUT / 'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: ' + ORIGIN + '/sitemap.xml\n')
+with ZipFile(OUT.with_suffix('.zip'), 'w') as archive:
+    for file in sorted(OUT.iterdir()):
+        info = ZipInfo(file.name, date_time=(2026, 10, 24, 0, 0, 0))
+        info.compress_type = ZIP_DEFLATED
+        archive.writestr(info, file.read_bytes())
 print(f'Built Azure redirect bundle with {len(routes)} routes.')
