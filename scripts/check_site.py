@@ -11,7 +11,8 @@ from pathlib import Path
 import re
 import sys
 from urllib.parse import urlsplit, unquote, parse_qs
-from urllib.request import urlopen, Request
+from urllib.request import urlopen, Request, build_opener, HTTPRedirectHandler
+from urllib.error import HTTPError
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -136,6 +137,8 @@ def check(base_url=None):
         errors.append('Legacy download redirect missing')
     if not any(r['source'] == '/:path*' and r.get('has') == [{'type': 'host', 'value': 'sync-contacts-for-google.vercel.app'}] and r['destination'] == ORIGIN + '/:path*' for r in redirects):
         errors.append('Path-preserving Vercel hostname redirect missing')
+    if not any(r['source'] == '/:path*/' and r.get('has') == [{'type': 'host', 'value': 'sync-contacts-for-google.vercel.app'}] for r in redirects):
+        errors.append('Trailing-slash Vercel hostname redirect missing')
 
     if base_url:
         def remote(item):
@@ -149,6 +152,24 @@ def check(base_url=None):
                 return path + ': ' + str(e)
         with ThreadPoolExecutor(max_workers=6) as pool:
             errors.extend(e for e in pool.map(remote, pages.items()) if e)
+        if base_url.rstrip('/') == ORIGIN:
+            class NoRedirect(HTTPRedirectHandler):
+                def redirect_request(self, *args, **kwargs):
+                    return None
+
+            def redirect_check(path):
+                url = 'https://sync-contacts-for-google.vercel.app' + path
+                try:
+                    response = build_opener(NoRedirect()).open(Request(url, method='HEAD'), timeout=30)
+                except HTTPError as e:
+                    response = e
+                except Exception as e:
+                    return url + ': ' + str(e)
+                if response.code != 308 or response.headers.get('Location') != ORIGIN + path:
+                    return url + ': expected permanent redirect to matching canonical path'
+
+            with ThreadPoolExecutor(max_workers=6) as pool:
+                errors.extend(e for e in pool.map(redirect_check, pages) if e)
     if errors:
         print('\n'.join(errors))
         return 1
