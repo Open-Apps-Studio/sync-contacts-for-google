@@ -1,7 +1,7 @@
 {
   "trailingSlash": "always",
   "routes": [
-    { "route": "/appstore.html", "redirect": "https://apps.apple.com/app/apple-store/id6790962699?pt=128200624&ct=web_legacy_download&mt=8", "statusCode": 301 },
+    { "route": "/appstore.html", "redirect": "https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&ct=web_legacy_download&mt=8", "statusCode": 301 },
     { "route": "/vs-contacts-sync-app/*", "redirect": "/", "statusCode": 301 }
   ],
   "responseOverrides": {
