@@ -30,6 +30,17 @@
       "permanent": true
     },
     {
+      "source": "/:path*/",
+      "has": [
+        {
+          "type": "host",
+          "value": "sync-contacts-for-google.vercel.app"
+        }
+      ],
+      "destination": "https://sync.openappsstudio.com/:path*/",
+      "permanent": true
+    },
+    {
       "source": "/",
       "has": [
         {
@@ -49,6 +60,17 @@
         }
       ],
       "destination": "https://sync.openappsstudio.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/",
+      "has": [
+        {
+          "type": "host",
+          "value": "sync.opengrounds.org"
+        }
+      ],
+      "destination": "https://sync.openappsstudio.com/:path*/",
       "permanent": true
     },
     {
