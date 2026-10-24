@@ -42,22 +42,22 @@
   <article class="guide">
     <div class="container">
       <h1>Privacy Policy</h1>
-      <p class="muted">Effective date: July 15, 2026 · Applies to the <strong>Sync Contacts for Google</strong> iOS app and this website, operated by Open Apps Studio ("we", "us").</p>
+      <p class="muted">Effective date: October 24, 2026 · Applies to the <strong>Sync Contacts for Google</strong> iOS app and this website, operated by Open Apps Studio ("we", "us").</p>
 
       <div class="notice">
-        <p><strong>The one-paragraph version:</strong> your contacts sync directly between your device and Google. They never pass through, and are never stored on, our servers. The only data our server holds is an anonymous push notification token; everything else stays on your device or with Google.</p>
+        <p><strong>The one-paragraph version:</strong> your contacts sync directly between your device and Google. They never pass through, and are never stored on, our servers. Our push service stores a device push token and the scheduling information needed to send background wake-ups. Contact sync data stays on your device and in the accounts you choose.</p>
       </div>
 
       <h2>What we collect</h2>
       <ul>
-        <li><strong>APNs device token.</strong> An anonymous identifier issued by Apple that lets our server send your device silent "wake up and sync" push notifications. It contains no personal information and is not linked to your name, email, or Google account. It is the only data our server holds, and it is deleted when you disable sync or delete your data in the app.</li>
+        <li><strong>APNs device token.</strong> An app-and-device identifier issued by Apple that lets our server send silent "wake up and sync" notifications. We store it with your requested push interval and registration/last-push timestamps. We do not associate it with your name, email, contacts, or Google account, and do not use it for advertising or tracking. The app requests removal when you turn off automatic sync, disconnect Google, or delete app data. Removal requires connectivity; failed requests are kept on the device and retried when you reopen the app. Apple-rejected invalid tokens are also removed by our push service.</li>
       </ul>
 
       <h2>What we never collect</h2>
       <ul>
         <li><strong>Your contacts.</strong> Names, phone numbers, emails, photos, notes — none of it ever reaches our servers. Sync traffic flows directly between your device and Google's servers.</li>
         <li><strong>Your Google credentials.</strong> Sign-in happens through Google's own OAuth flow on your device. We never see your password, and the resulting access token is stored only in your device's Keychain — it is never transmitted to us.</li>
-        <li><strong>Anything else.</strong> No location, no advertising identifiers, no browsing data, no analytics on this website, no cookies, no third-party trackers.</li>
+        <li><strong>No advertising or analytics profiles.</strong> No location, advertising identifiers, client-side analytics, tracking cookies, or third-party trackers. Hosting services may process network metadata such as IP addresses and request logs to deliver and protect the service.</li>
       </ul>
 
       <h2>Google user data and Limited Use disclosure</h2>
@@ -67,7 +67,7 @@
         <li>Google user data (your Google Contacts) is processed <strong>on your device only</strong>, used only to provide and improve the contact sync feature you see in the app, and is never transferred to our servers.</li>
         <li>We do not transfer Google user data to third parties, except as necessary to provide the sync feature itself (i.e., to Apple's Contacts database on your own device at your direction), to comply with applicable law, or as part of a merger or acquisition with prior notice to you.</li>
         <li>We do not use Google user data for advertising, and we do not sell it — to anyone, ever.</li>
-        <li>No humans read your Google user data. It is technically impossible for us to do so, because it never leaves your device and Google's systems. (Standard exceptions under the policy — your explicit consent for support, security investigation, or legal compliance — could only ever apply to data you send us yourself, since we hold none.)</li>
+        <li>No humans read your Google user data. It is technically impossible for us to do so, because it is not sent to our servers. (Standard exceptions under the policy — your explicit consent for support, security investigation, or legal compliance — could only ever apply to data you send us yourself, since we hold none.)</li>
         <li>You can revoke the app's access at any time at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.</li>
       </ul>
 
@@ -75,18 +75,19 @@
       <ul>
         <li><strong>On your device:</strong> sync state, local contact backups made before syncs, your settings, and your Google OAuth token (in the iOS Keychain).</li>
         <li><strong>With Google:</strong> your Google Contacts, governed by <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.</li>
-        <li><strong>On our server:</strong> your APNs push token. Nothing else.</li>
+        <li><strong>On our push server:</strong> your APNs token and scheduling metadata. Platform hosting services may retain operational request logs.</li>
+        <li><strong>In your selected contact account:</strong> contacts written to the iPhone Contacts database may also sync to iCloud or another account provider according to your iPhone settings.</li>
       </ul>
 
       <h2>Data deletion</h2>
       <p>You can delete everything we hold in two ways:</p>
       <ul>
-        <li><strong>In the app:</strong> Settings → Delete all app data. This removes your push token from our server immediately, disconnects Google, and clears all local app data. Deleting the app from your iPhone also stops all processing; your contacts remain safely in iCloud and Google, exactly as they were.</li>
+        <li><strong>In the app:</strong> Settings → Delete all app data. This disconnects Google, clears local sync history, backups and settings, and requests removal of your push token from our server. If the network request fails, the app retains only the pending push-token removal request for retry on a later app open. Deleting the app from your iPhone also stops all processing; your contacts remain safely in iCloud and Google, exactly as they were.</li>
         <li><strong>By email:</strong> write to <a href="mailto:arhamwani765@gmail.com">arhamwani765@gmail.com</a> and we will delete any data associated with your device within 30 days. Since we store no identifying information, include the request from the device if possible so we can locate the push token.</li>
       </ul>
 
       <h2>Security</h2>
-      <p>All network traffic uses TLS. OAuth tokens are stored in the iOS Keychain and never leave your device. Our push server holds no personal data, which is the best security measure of all: what we don't have can't be breached.</p>
+      <p>All network traffic uses TLS. OAuth tokens are stored in the iOS Keychain and sent only to Google to authorize sync, refresh sign-in, or revoke access. Our push service does not receive contacts or Google tokens.</p>
 
       <h2>Children</h2>
       <p>The app and site are not directed at children under 13, and we do not knowingly collect any personal information from anyone, children included.</p>
