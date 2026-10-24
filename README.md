@@ -132,3 +132,31 @@ Editorial basis: Google's people-first content and canonicalization guidance,
 plus Apple/Google product documentation linked inside each guide. The site uses
 static readable HTML, internal links, descriptive titles and accurate schema;
 it does not use fabricated reviews, keyword stuffing, or duplicate city pages.
+
+### Release state — October 24, 2026
+
+- Published and verified: all 29 canonical pages, including 20 new articles;
+  default Vercel hostname redirects for every canonical path; App Store legacy
+  redirect; sitemap and robots.txt; genuine 404 responses.
+- Browser QA: all 29 pages at 390px and 1440px, with no horizontal overflow or
+  uncaught page errors. Mobile navigation and an article without JavaScript
+  passed; light/dark screenshots were captured for inspection.
+- Search Console: the custom-domain URL-prefix property was created and the
+  requested verification tag deployed, preserving the older tag. Ownership
+  verification and sitemap submission remain pending because the desktop
+  browser connection stopped responding. Select the HTML-tag method, verify,
+  then submit `https://sync.openappsstudio.com/sitemap.xml` when access resumes.
+- Legacy Azure host: the separate redirect bundle is prepared, not deployed.
+  SWA CLI 2.1.0 downloaded an x86_64 macOS client that failed with error -86;
+  the documented zip deployment REST endpoints also returned HTTP 405.
+  Deploy from a supported runner with the existing resource credentials. Use
+  the retirement bundle as the working directory and explicitly set
+  `--swa-config-location .`; automatic CLI discovery can pick the main site's
+  configuration instead. Do not point this deployment at the Vercel project.
+- No App Store listing, app build, backend or DNS changes are part of this release.
+
+The prior Vercel deployment for a website rollback is
+`dpl_2WPxbopQpfbUDaKdfDzCACErD4wU`. The verified SEO deployment is
+`dpl_3B4puRTGWTbDB8MusN8XdtVx96fM` (website commit `91e40ff`). Later commits
+package the Azure redirect bundle and strengthen verification; they do not
+change the live Vercel page content.
