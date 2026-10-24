@@ -2,7 +2,7 @@
   "slug": "import-vcf-google-contacts",
   "title": "Import a VCF or vCard file into Google Contacts",
   "seo_title": "Import a VCF or vCard file into Google Contacts",
-  "description": "Import a vCard contact file into Google Contacts and check names, numbers and fields before repeating an import or cleaning up duplicates.",
+  "description": "Import a VCF into Google Contacts, export Apple Contacts as vCard instead of an .abbu archive, and verify the imported names and numbers.",
   "category": "Transfers & imports",
   "answer": "<strong>A .vcf file is a vCard contact file that Google Contacts can import.</strong> Use the account you want to keep as the destination, preserve the original file, and verify a few complete cards before considering the import finished.",
   "published": "2026-10-24",
@@ -12,22 +12,27 @@
     {
       "id": "file",
       "title": "Check the file and the destination",
-      "html": "<p>Confirm that the file actually came from a contacts export. Renaming a document or an Apple Contacts archive to end in .vcf does not convert its contents into vCard format. If your source offers multiple export formats, choose vCard for this workflow.</p><p>A single vCard file can contain many people. Its filename does not tell you how many were exported. Record the source list and expected approximate count before importing so you have something meaningful to compare afterward.</p>"
+      "html": "<p>Start with the file extension and the destination account. A vCard file ends in <strong>.vcf</strong>; it can contain one person or a whole collection. An Apple Contacts archive ends in <strong>.abbu</strong>. These are different formats: changing the filename does not convert an archive into a vCard.</p><p>Record which account or list supplied the file and roughly how many people you expect. If you exported All Contacts on a device with several accounts, the file may overlap with records already in Google. For a more controlled transfer, <a href=\"/blog/export-iphone-contacts/\">export the particular iPhone contact list</a> you intend to move.</p>"
+    },
+    {
+      "id": "apple-archive",
+      "title": "Can you import an Apple Contacts archive into Google?",
+      "html": "<p><strong>Google documents CSV and vCard imports, not Apple’s .abbu archive format.</strong> If the original contacts are still available on your Mac, select the intended cards in Contacts and choose <strong>File → Export → Export vCard</strong>. The separate Contacts Archive export creates an .abbu file instead.</p><p>If you only have the archive, do not casually open it in your everyday Contacts collection. <a href=\"https://support.apple.com/guide/contacts/import-contacts-adrbk1457/mac\">Apple says importing an archive replaces current contact information</a>. Preserve both the archive and your current contacts first; restore it only in a suitable recovery environment, then export the recovered cards as vCard. Ask Apple Support for help if you cannot isolate that recovery from your live accounts.</p><p>If the contacts are also available on iCloud.com, the <a href=\"/icloud-to-google-contacts/\">iCloud-to-Google export route</a> avoids archive restoration entirely. Use the original source whenever possible instead of uploading your address book to an unfamiliar conversion website.</p>"
     },
     {
       "id": "import",
       "title": "Use Google Contacts on the web",
-      "html": "<p>On a computer, open <a href=\"https://contacts.google.com/\">Google Contacts</a>, confirm the account, choose <strong>Import → Select file</strong>, select the .vcf, and complete the import. Wait for it to finish before starting another upload.</p><p>If the destination already contains important records, export those first. This gives you a separate baseline if the incoming file overlaps with your existing collection.</p>"
+      "html": "<p>Before importing, <a href=\"/blog/backup-google-contacts/\">export the existing Google address book</a> if it contains records you need. Keep that baseline separate from the incoming file.</p><ol><li>On a computer, open <a href=\"https://contacts.google.com/\">Google Contacts</a> and confirm the signed-in email address.</li><li>Select <strong>Import</strong> in the side menu, then <strong>Select file</strong>. Expand the menu if it is hidden.</li><li>Choose your .vcf file and select <strong>Import</strong>.</li><li>Wait for the result and check a few expected names before uploading another batch.</li></ol><p>Save the original file unchanged. If your destination already contains some of the same people, plan to review the imported records rather than treating a larger contact count as proof of a clean transfer.</p>"
     },
     {
       "id": "fields",
       "title": "Verify the fields you rely on",
-      "html": "<p>Check more than names. Compare a card with two phone numbers, a card with a postal address, one with notes, and a card containing accents or a non-Latin name. Check that international prefixes and the distinction between mobile and work numbers remain usable.</p><p>Some contact systems represent labels, photos or additional fields differently. If a detail is not where you expected, inspect the full card, including notes, before concluding it was lost. Keep the source available while you compare.</p>"
+      "html": "<p>Use a small verification sample with different kinds of information. The following checks distinguish a useful transfer from an upload that merely finished:</p><ul><li><strong>Identity:</strong> compare one recent contact and one older contact with the originals.</li><li><strong>Numbers:</strong> check a card with both mobile and work numbers, including country codes.</li><li><strong>Text:</strong> inspect accents, non-Latin names, postal addresses and notes you rely on.</li><li><strong>Extra fields:</strong> look for photos and labels, whose representation can differ between systems.</li></ul><p>If a detail seems missing, open the full card and inspect its notes. When exporting from Mac Contacts, the vCard settings also control whether notes and photos are included; Google cannot import a field that was omitted from the file.</p>"
     },
     {
       "id": "repeat",
       "title": "If something is wrong, avoid a blind retry",
-      "html": "<p>First determine whether the problem is the entire file, a specific record, or simply the account you are viewing. Try a small export from the original source with one affected card and one ordinary card. This isolates the issue more clearly than importing the whole collection again.</p><p>If the first import succeeded, repeating it can create overlapping records. Review the imported set and your backup before removing anything. Use the dedicated import-troubleshooting guide for file-size and formatting checks.</p><p>Finally, enable the destination Google account on the iPhone if you want to see its contacts there. Importing a file into Google does not itself configure the phone or establish ongoing synchronization with the original source.</p>"
+      "html": "<p>A failed upload and a completed upload with an unexpected result need different next steps. Start with the <a href=\"/blog/google-contacts-import-problems/\">file-format and import-limit checks</a> if Google rejects the file. If cards appeared, inspect those records before repeating the import.</p><p>For a field problem, make a new small export containing one affected card and one ordinary card. Compare that file with the destination. This narrows the issue without repeatedly adding the entire collection. Keep a short record of filenames and results so you can tell which batches already succeeded.</p><p>If overlapping records remain, use the <a href=\"/blog/duplicate-google-contacts/\">Google duplicate cleanup guide</a>. To see the imported cards on your phone, <a href=\"/blog/add-google-contacts-iphone/\">connect the destination Google account to iPhone Contacts</a>. Importing a file does not itself configure the phone or keep the original Apple address book synchronized.</p>"
     }
   ],
   "related": [
@@ -43,6 +48,14 @@
     {
       "title": "Apple: import and export contacts on iCloud.com",
       "url": "https://support.apple.com/guide/icloud/import-export-and-print-contacts-mmfba748b2/icloud"
+    },
+    {
+      "title": "Apple: export vCards or Contacts archives on Mac",
+      "url": "https://support.apple.com/guide/contacts/export-or-archive-contacts-adrbdcfd32e6/mac"
+    },
+    {
+      "title": "Apple: import an archive and understand replacement behavior",
+      "url": "https://support.apple.com/guide/contacts/import-contacts-adrbk1457/mac"
     }
   ],
   "pillar": {

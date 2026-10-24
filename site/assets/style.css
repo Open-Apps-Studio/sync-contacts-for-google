@@ -892,6 +892,12 @@ ol.steps > li,
 .guide h1 { max-width: 760px; margin-bottom: 1.25rem; }
 .guide .lead { font-size: 1.22rem; line-height: 1.6; }
 .guide h2 { margin-top: 3.5rem; }
+.guide h2[id] { scroll-margin-top: 7rem; }
+.guide-toc { padding: 1.25rem 1.5rem; border: 1px solid var(--border); border-radius: 12px; margin: 2rem 0; }
+.guide-toc ul { margin-bottom: 0; }
+.guide-toc li { margin: .4rem 0; }
+.guide table.compare { min-width: 0; table-layout: fixed; overflow-wrap: anywhere; }
+.guide table.compare caption { padding: .75rem 1rem; font-size: .9rem; }
 .guide .notice,
 .guide .cta-block { margin-top: 2rem; }
 .guide .table-wrap { border: 1px solid var(--border); border-radius: 16px; background: var(--card); }

@@ -1,8 +1,8 @@
 {
   "slug": "duplicate-google-contacts",
-  "title": "Merge duplicate Google Contacts without mixing people",
-  "seo_title": "Merge duplicate Google Contacts without mixing people",
-  "description": "Review Google Contacts duplicate suggestions, distinguish cross-account copies, and verify phone numbers before merging cards.",
+  "title": "How to merge duplicate Google Contacts",
+  "seo_title": "How to merge duplicate Google Contacts",
+  "description": "Merge duplicate Google Contacts, choose cards manually when suggestions are missing, and distinguish Google duplicates from iPhone account copies.",
   "category": "Troubleshooting",
   "answer": "<strong>Use Google Contacts’ Merge &amp; fix for duplicate records within the same Google account.</strong> Review the details first. Two cards with similar names are not always the same person, and cross-account copies need a different approach.",
   "published": "2026-10-24",
@@ -12,22 +12,27 @@
     {
       "id": "source",
       "title": "Identify the duplicate collection",
-      "html": "<p>Open Google Contacts on the web and search for a person who appears twice on the phone. If Google shows only one card, the phone may be displaying records from both Google and iCloud. Merging inside Google will not remove the independent iCloud copy.</p><p>If both duplicates are in Google, compare their numbers, email addresses and notes. Shared household numbers or workplace switchboards can make unrelated people look similar. Decide which information should survive before using a bulk action.</p>"
+      "html": "<p>Open <a href=\"https://contacts.google.com/\">Google Contacts</a> in a browser and search for someone who appears twice on your phone. Check the account email address as well as the person’s name. The next step depends on where the two records actually exist.</p><ul><li><strong>Two records in the same Google account:</strong> review them for merging using the steps below.</li><li><strong>One Google record and one iCloud record:</strong> follow the <a href=\"/merge-duplicate-contacts-iphone/\">iPhone guide to duplicate and linked contacts</a>.</li><li><strong>One record in each of two Google accounts:</strong> decide whether you need separate personal and work copies or a <a href=\"/blog/transfer-contacts-between-google-accounts/\">deliberate account transfer</a>.</li></ul><p>Compare numbers, email addresses and notes. A shared surname or household number is not enough to identify the same person. For example, two family members can use the same home telephone while needing separate mobile numbers and email addresses.</p>"
     },
     {
       "id": "merge",
       "title": "Review suggestions and merge deliberately",
-      "html": "<p>Export a backup, then open <strong>Merge &amp; fix</strong> in Google Contacts. Review available duplicate suggestions and accept the ones you understand. Google also supports selecting specific cards to merge when you need to choose them yourself.</p><p>Google does not merge contacts stored in different Google accounts. If the same person appears across two accounts, first decide whether those copies serve separate personal and work purposes or whether you are planning a deliberate account migration.</p>"
+      "html": "<p><a href=\"/blog/backup-google-contacts/\">Export a backup</a> before making a large change. Start with one pair whose details you recognize.</p><ol><li>Open Google Contacts in the account containing both copies.</li><li>Choose <strong>Merge &amp; fix</strong> from the side menu.</li><li>Review a duplicate suggestion and choose <strong>Merge</strong> if the records belong together.</li><li>Use <strong>Merge all</strong> only after reviewing whether the proposed set is appropriate.</li></ol><p>Keep a note of the person you merged so you can check the result immediately. Reviewing one straightforward pair first is easier than diagnosing an unexpected result after a large cleanup.</p>"
+    },
+    {
+      "id": "no-suggestions",
+      "title": "What if Merge & fix does not suggest the pair?",
+      "html": "<p>Google also lets you choose the records yourself: in the contacts list, select each intended card using its checkbox, then use the <strong>Merge</strong> control at the top right. Review the contents before selecting cards with similar names.</p><p>This applies within one Google account. Google does not merge contacts across different Google accounts. If you cannot find both records on the web, return to the phone’s account-specific lists and identify their sources first. <a href=\"/blog/where-iphone-contacts-stored/\">Finding where iPhone contacts are stored</a> helps separate a display issue from duplicate data in one address book.</p>"
     },
     {
       "id": "check",
       "title": "Inspect the resulting card",
-      "html": "<ol><li>Search for the merged person again.</li><li>Check all phone numbers and email addresses that should remain.</li><li>Review names, organization fields and notes for conflicting details.</li><li>Check the relevant Google list on the iPhone after it refreshes.</li></ol><p>Do a small set first if you have many complex cards. A lower total count is not a quality check; a merged card can still contain an old number you wanted to remove or combine two people you meant to keep separate.</p>"
+      "html": "<ol><li>Search for the merged person again in Google Contacts.</li><li>Compare all phone numbers and email addresses with the source cards or backup.</li><li>Check names, organization details and notes for conflicts.</li><li>Allow the account to refresh on your iPhone, then inspect that Google account’s list.</li></ol><p>If the web copy is correct but the phone still shows an extra person, check the other enabled lists. Repeating a Google merge cannot remove a separate iCloud record. If the Google list itself is stale, use the <a href=\"/google-contacts-not-syncing-iphone/\">iPhone Google Contacts sync checks</a>.</p><p>A lower count alone is not a quality check. A merged card can still contain an obsolete number, or combine two people you intended to keep separate. Validate the information you actually need before moving on to the next group.</p>"
     },
     {
       "id": "prevent",
       "title": "Stop the source of repeated duplicates",
-      "html": "<p>Look for repeated imports, two independent sync tools, or the same contact collection maintained in several accounts. Fix the workflow that recreates copies before merging the same people again.</p><p>For a one-time migration, keep a record of which file and batch you imported. For ongoing synchronization, decide where edits originate and which tool is responsible for moving them. Avoid a cycle that exports and reimports the entire collection for routine updates.</p><p>If a merge was wrong, inspect Google’s Undo changes option and your export before taking another broad action. Account-wide recovery can affect other recent edits, so compare the current state first.</p>"
+      "html": "<p>Record what happened immediately before the duplicates returned. An import, a second sync tool, or edits in another address book can each suggest a different cause.</p><ul><li><strong>After an import:</strong> compare the file with what was already present. Keep a batch log so the same collection is not uploaded twice.</li><li><strong>After syncing:</strong> identify which tools can write contacts and which account supplies new records. Review their previews or history before another run.</li><li><strong>Only in All Contacts:</strong> compare each account separately before deleting a source copy.</li></ul><p>For ongoing updates, agree on where new cards and edits should originate. Exporting and reimporting a complete address book for every small edit makes it harder to distinguish an update from another copy.</p><p>If a merge was wrong, compare your export with Google’s recovery options before making another broad change. Our <a href=\"/blog/restore-deleted-google-contacts/\">Google Contacts recovery guide</a> explains the scope of Undo changes and why recent edits need to be preserved first.</p>"
     }
   ],
   "related": [

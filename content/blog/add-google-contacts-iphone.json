@@ -27,7 +27,7 @@
     {
       "id": "next",
       "title": "Decide where new contacts should be saved",
-      "html": "<p>You can now view Google contacts alongside other accounts. New cards may still be created in iCloud if that is the default destination. Follow the default-account guide below if you want new personal contacts to start in Gmail.</p><p>For an existing iCloud address book, use the dedicated transfer guide. Repeatedly importing the same file is not required to keep the connected Google account current and can make duplicate cleanup harder.</p>"
+      "html": "<p>You can now view Google contacts alongside other accounts. New cards may still be created in iCloud if that is the default destination. Follow the <a href=\"/blog/set-gmail-default-contacts-iphone/\">Gmail default-account guide</a> if you want new personal contacts to start in Gmail.</p><p>For an existing iCloud address book, use the <a href=\"/icloud-to-google-contacts/\">iCloud-to-Google transfer guide</a>. Repeatedly importing the same file is not required to keep the connected Google account current and can make duplicate cleanup harder.</p>"
     }
   ],
   "related": [

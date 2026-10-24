@@ -17,7 +17,7 @@
     {
       "id": "format",
       "title": "Check what the file really contains",
-      "html": "<p>Google supports CSV and vCard imports. A renamed ZIP, PDF, spreadsheet workbook or proprietary contacts archive is not converted by changing its extension. Return to the source application and export a supported format.</p><p>For CSV, inspect the field headings and a few representative rows. For vCard, try re-exporting a small selection from the source rather than manually splitting the file at arbitrary line numbers. One record can span multiple lines, and splitting in the wrong place can damage it.</p>"
+      "html": "<p>Google supports CSV and vCard imports. A renamed ZIP, PDF, spreadsheet workbook or proprietary contacts archive is not converted by changing its extension. Return to the source application and export a supported format. For an Apple .abbu file, see <a href=\"/blog/import-vcf-google-contacts/#apple-archive\">the archive-to-vCard guidance</a> before restoring or converting anything.</p><p>For CSV, inspect the field headings and a few representative rows. For vCard, try re-exporting a small selection from the source rather than manually splitting the file at arbitrary line numbers. One record can span multiple lines, and splitting in the wrong place can damage it.</p>"
     },
     {
       "id": "partial",

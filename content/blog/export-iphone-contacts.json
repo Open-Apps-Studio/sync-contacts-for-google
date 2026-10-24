@@ -17,7 +17,7 @@
     {
       "id": "save",
       "title": "Export and save the file",
-      "html": "<ol><li>Open the Contacts app and go to <strong>Lists</strong> or its sidebar.</li><li>Touch and hold the relevant list, then choose <strong>Export</strong>.</li><li>Select the fields you need and complete the export.</li><li>Choose a save or share destination you control.</li></ol><p>Use a recognizable filename containing the source and date. If your device does not offer the list export interface, the account’s web contact manager may provide an export option; see the iCloud transfer guide for that route.</p>"
+      "html": "<ol><li>Open the Contacts app and go to <strong>Lists</strong> or its sidebar.</li><li>Touch and hold the relevant list, then choose <strong>Export</strong>.</li><li>Select the fields you need and complete the export.</li><li>Choose a save or share destination you control.</li></ol><p>Use a recognizable filename containing the source and date. If your device does not offer the list export interface, the account’s web contact manager may provide an export option; see the <a href=\"/icloud-to-google-contacts/\">iCloud export guide</a> for that route.</p>"
     },
     {
       "id": "check",
@@ -27,7 +27,7 @@
     {
       "id": "store",
       "title": "Keep a copy outside the app or device you may erase",
-      "html": "<p>An export stored only on the phone is vulnerable if that phone is lost or reset. Keep an additional copy in a storage location you can access independently. Avoid publicly shareable links and remove temporary transfer copies when they are no longer needed.</p><p>A contact export is readable personal data, not a harmless settings file. You do not need to upload it to an unknown converter to move it into Google Contacts, which supports vCard imports.</p><p>Label the file as a snapshot. Contacts added afterward will not appear in it, so make a new export before your next major transfer or cleanup.</p>"
+      "html": "<p>An export stored only on the phone is vulnerable if that phone is lost or reset. Keep an additional copy in a storage location you can access independently. Avoid publicly shareable links and remove temporary transfer copies when they are no longer needed.</p><p>A contact export is readable personal data, not a harmless settings file. You do not need to upload it to an unknown converter to move it into Google Contacts, which supports <a href=\"/blog/import-vcf-google-contacts/\">direct vCard imports</a>.</p><p>Label the file as a snapshot. Contacts added afterward will not appear in it, so make a new export before your next major transfer or cleanup.</p>"
     }
   ],
   "related": [
