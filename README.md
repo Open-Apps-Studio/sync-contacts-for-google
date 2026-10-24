@@ -146,17 +146,28 @@ it does not use fabricated reviews, keyword stuffing, or duplicate city pages.
   verification and sitemap submission remain pending because the desktop
   browser connection stopped responding. Select the HTML-tag method, verify,
   then submit `https://sync.openappsstudio.com/sitemap.xml` when access resumes.
-- Legacy Azure host: the separate redirect bundle is prepared, not deployed.
-  SWA CLI 2.1.0 downloaded an x86_64 macOS client that failed with error -86;
-  the documented zip deployment REST endpoints also returned HTTP 405.
-  Deploy from a supported runner with the existing resource credentials. Use
-  the retirement bundle as the working directory and explicitly set
-  `--swa-config-location .`; automatic CLI discovery can pick the main site's
-  configuration instead. Do not point this deployment at the Vercel project.
+- Legacy Azure host: deployed successfully through the manual Linux workflow
+  .github/workflows/deploy-legacy-redirect.yml. Verified 90 live URL checks,
+  including matching permanent redirects for directory/index variants,
+  sitemap, the App Store route, robots.txt and a real 404. The temporary GitHub
+  deployment secret was removed after the run. Future manual deployments need
+  the existing app-scoped Azure token supplied as the repository secret
+  LEGACY_AZURE_REDIRECT_DEPLOY_TOKEN; remove it after deployment. The workflow
+  only accepts the master branch and has no automatic triggers.
+  Run python3 scripts/check_legacy_redirects.py after deployment.
 - No App Store listing, app build, backend or DNS changes are part of this release.
 
-The prior Vercel deployment for a website rollback is
-`dpl_2WPxbopQpfbUDaKdfDzCACErD4wU`. The verified SEO deployment is
-`dpl_3B4puRTGWTbDB8MusN8XdtVx96fM` (website commit `91e40ff`). Later commits
-package the Azure redirect bundle and strengthen verification; they do not
-change the live Vercel page content.
+The live Vercel content is deployment
+dpl_7fiYqE4sULRfK2SmyvUjHFhhHzgt (website commit 676533a). Its prior
+deployment is dpl_3B4puRTGWTbDB8MusN8XdtVx96fM.
+The legacy Azure redirect release is
+[GitHub Actions run 40087112087](https://github.com/Open-Apps-Studio/sync-contacts-for-google/actions/runs/40087112087).
+The Azure rollout did not replace the Vercel website or deploy an API.
+
+Search Console follow-up: its overview is now readable and reports 3 indexed
+and 2 not-indexed URLs for the old Vercel property. This is not the indexing
+status of the 20 new articles. The custom-domain property still requires
+ownership verification; browser automation can read the verification button
+but cannot reliably activate it. Its HTML verification tag is already live.
+Verification, sitemap submission and URL inspection must be confirmed in the
+account before claiming that setup complete.
