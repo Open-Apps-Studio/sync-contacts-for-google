@@ -2,6 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": true,
   "redirects": [
+    { "source": "/appstore.html", "destination": "https://apps.apple.com/app/apple-store/id6790962699?pt=128200624&ct=web_legacy_download&mt=8", "permanent": true },
     {
       "source": "/",
       "has": [{ "type": "host", "value": "sync.opengrounds.org" }],
