@@ -1,0 +1,33 @@
+name: Deploy legacy Azure website redirects
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: legacy-azure-redirect
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Verify the reviewed redirect bundle
+        run: |
+          python3 scripts/build_legacy_redirect.py
+          git diff --exit-code -- deployment/azure-redirect deployment/azure-redirect.zip
+      - name: Deploy only the legacy redirect bundle
+        uses: Azure/static-web-apps-deploy@4d27395796ac319302594769cfe812bd207490b1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.LEGACY_AZURE_REDIRECT_DEPLOY_TOKEN }}
+          action: upload
+          app_location: deployment/azure-redirect
+          config_file_location: deployment/azure-redirect
+          output_location: ""
+          api_location: ""
+          skip_app_build: true
+          skip_api_build: true
+          production_branch: master
