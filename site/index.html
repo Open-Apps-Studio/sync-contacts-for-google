@@ -3,15 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="lEcIZwLfmlCMtx1fGMpwNoDqC-VVpRM-qe93Pgvud8Y">
 <!-- Google Search Console ownership verification for the OAuth authorized domain. Keep this. -->
 <meta name="google-site-verification" content="bGgjLBLHjxUWl6L_wDQYBst7rOH5qvSn3ZiZu4ab53A" />
 <title>Sync iPhone Contacts with Google | Sync Contacts for Google</title>
-<meta name="description" content="Free two-way sync between iPhone and Google Contacts. No contact limit, no subscription, no ads. Your contacts never touch our servers — sync runs privately in the background.">
+<meta name="description" content="Sync iPhone and Google Contacts with a first-sync preview and direction controls. Free, with no ads or subscription. Explore setup and troubleshooting guides.">
 <link rel="canonical" href="https://sync.openappsstudio.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sync iPhone Contacts with Google">
 <meta property="og:description" content="Free two-way sync between iPhone and Google Contacts. No contact limit, no subscription, no ads. Private by design.">
-<meta property="og:url" content="/">
+<meta property="og:url" content="https://sync.openappsstudio.com/">
 <meta property="og:site_name" content="Sync Contacts for Google">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sync iPhone Contacts with Google">
@@ -39,7 +40,9 @@
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
-  }
+  },
+  "url": "https://sync.openappsstudio.com/",
+  "downloadUrl": "https://apps.apple.com/app/sync-contacts-for-google/id6790962699"
 }
 </script>
 <script type="application/ld+json">
@@ -60,7 +63,7 @@
       "name": "How does background sync actually work on iOS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "iOS does not let apps run permanently in the background, so we are honest about timing: changes typically sync within the hour via silent push wake-ups and iOS background refresh, and always sync instantly the moment you open the app."
+        "text": "iOS schedules background execution, so sync timing varies. Open the app and run a sync when you need to check an important change. A working connection and contact permissions are required."
       }
     },
     {
@@ -84,7 +87,7 @@
       "name": "Can a bad sync delete my contacts?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The app has a deletion guard: if a sync would delete an unusually large number of contacts, it pauses and asks you first. Automatic local backups are kept so you can restore your contacts at any time."
+        "text": "The app has a deletion guard: if a sync would delete an unusually large number of contacts, it pauses and asks you first. Local safety snapshots can be exported for manual recovery. Keep an independent backup before major changes."
       }
     },
     {
@@ -109,8 +112,8 @@
       <a class="studio-link" href="https://openappsstudio.com">Open Apps Studio ↗</a>
       <a href="/#how-it-works">How it works</a>
       <a href="/#faq">FAQ</a>
+      <a href="/blog/">Guides</a>
       <a href="/support/">Support</a>
-      <!-- TODO: replace with the real App Store URL when the listing is live -->
       <a class="btn btn-small" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=web_home&amp;mt=8">Get the app</a>
     </nav>
   </div>
@@ -124,9 +127,8 @@
         <div class="hero-copy">
           <span class="eyebrow"><span class="dot"></span> Free forever · Private by design</span>
           <h1>Sync iPhone Contacts with Google</h1>
-          <p class="lead">True two-way sync between your iPhone contacts and Google Contacts. It runs quietly in the background, keeps both sides identical, and never sends a single contact through our servers.</p>
+          <p class="lead">True two-way sync between your iPhone contacts and Google Contacts. Choose how contacts move, review the first sync, and keep your address books up to date. Contact data travels directly between your device and Google.</p>
           <div class="hero-actions">
-            <!-- TODO: replace with the real App Store URL when the listing is live -->
             <a class="btn btn-app" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=web_home&amp;mt=8" aria-label="Download on the App Store">
               <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
               <span><small>Download on the</small><strong>App Store</strong></span>
@@ -240,7 +242,7 @@
       <div class="section-head">
         <span class="eyebrow-c">A look inside</span>
         <h2 id="shots-heading">Built to be trusted with your contacts</h2>
-        <p>Preview every change before it happens, keep automatic on-device backups, and see exactly where your data goes.</p>
+        <p>Preview the first sync, keep on-device safety snapshots, and understand where your data goes.</p>
       </div>
       <div class="devices">
         <figure>
@@ -269,7 +271,7 @@
               <div class="m-sb"><span>9:41</span><span class="m-island"></span><span class="m-sb-icons"><svg viewBox="0 0 24 22" fill="currentColor"><rect x="0" y="14" width="4" height="7" rx="1"/><rect x="6.5" y="10" width="4" height="11" rx="1"/><rect x="13" y="5.5" width="4" height="15.5" rx="1"/><rect x="19.5" y="1" width="4" height="20" rx="1"/></svg><svg viewBox="0 0 24 18" fill="currentColor"><path d="M12 3.5c3.9 0 7.5 1.5 10.2 4l-2 2A11.6 11.6 0 0 0 12 6.5 11.6 11.6 0 0 0 3.8 9.5l-2-2A14.5 14.5 0 0 1 12 3.5z"/><path d="M12 9.5c2.3 0 4.4.9 6 2.4l-2 2A5.6 5.6 0 0 0 12 12.5c-1.5 0-3 .6-4 1.4l-2-2A8.6 8.6 0 0 1 12 9.5z"/><path d="M12 15c.9 0 1.7.3 2.3.9L12 18.2 9.7 15.9c.6-.6 1.4-.9 2.3-.9z"/></svg><svg viewBox="0 0 30 15" fill="none"><rect x="1" y="1.5" width="24" height="12" rx="3.5" stroke="currentColor" stroke-width="1.3" opacity=".45"/><rect x="3" y="3.5" width="20" height="8" rx="1.8" fill="currentColor"/><path d="M27 5.5v4a2.4 2.4 0 0 0 0-4z" fill="currentColor" opacity=".6"/></svg></span></div>
               <div class="m-head"><img class="m-logo" src="/favicon-32.png" alt="" width="20" height="20"> Contacts Sync <svg class="m-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
               <div class="m-body m-stack">
-                <div class="m-hd"><div class="m-h1">Backups</div><div class="m-desc">A snapshot is saved before every sync.</div></div>
+                <div class="m-hd"><div class="m-h1">Backups</div><div class="m-desc">Safety snapshots for manual recovery.</div></div>
                 <div class="m-warn">
                   <div class="m-warn-top"><svg viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h16.9a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><b>This sync wants to remove 25 contacts</b></div>
                   <p>Deletion guard paused everything so you can review first.</p>
@@ -278,9 +280,9 @@
                 <div class="m-actgroup">
                   <div class="m-label">SNAPSHOTS</div>
                   <div class="m-snap">
-                    <div class="m-snap-row"><span class="m-snap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="m-snap-t"><b>Today, 9:41 AM</b><span>Before sync · 1,482 contacts</span></span><span class="m-restore">Restore</span></div>
-                    <div class="m-snap-row"><span class="m-snap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="m-snap-t"><b>Yesterday, 6:02 PM</b><span>Before sync · 1,479 contacts</span></span><span class="m-restore">Restore</span></div>
-                    <div class="m-snap-row"><span class="m-snap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="m-snap-t"><b>Monday, 8:15 AM</b><span>Before sync · 1,466 contacts</span></span><span class="m-restore">Restore</span></div>
+                    <div class="m-snap-row"><span class="m-snap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="m-snap-t"><b>Today, 9:41 AM</b><span>Before sync · 1,482 contacts</span></span><span class="m-restore">Export</span></div>
+                    <div class="m-snap-row"><span class="m-snap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="m-snap-t"><b>Yesterday, 6:02 PM</b><span>Before sync · 1,479 contacts</span></span><span class="m-restore">Export</span></div>
+                    <div class="m-snap-row"><span class="m-snap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="m-snap-t"><b>Monday, 8:15 AM</b><span>Before sync · 1,466 contacts</span></span><span class="m-restore">Export</span></div>
                   </div>
                 </div>
                 <div class="m-fine">Backups are stored privately on this iPhone.</div>
@@ -325,7 +327,7 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow-c">How it works</span>
-        <h2 id="how-heading">Set it up once in under a minute</h2>
+        <h2 id="how-heading">Connect, review, then sync</h2>
         <p>Three steps, then it's automatic. No account to create — you sign in with the Google account you already have.</p>
       </div>
       <ol class="steps steps-row">
@@ -339,7 +341,7 @@
         </li>
         <li>
           <h3>Forget about it</h3>
-          <p>From then on the app keeps both sides in sync automatically. New contacts, edits, photos, and deletions flow both ways.</p>
+          <p>From then on the app keeps both sides in sync automatically. Changes to supported contact fields follow your selected sync direction. Check the sync result when a change matters.</p>
         </li>
       </ol>
     </div>
@@ -349,7 +351,7 @@
   <section class="band" aria-labelledby="honest-heading">
     <div class="container">
       <h2 id="honest-heading">Honest answer: how fast is “background” sync?</h2>
-      <p>iOS doesn't let any app run non-stop in the background — including the expensive ones. Here's what actually happens: when something changes in your Google Contacts, our server sends your phone a silent push that wakes the app to sync. Combined with iOS background refresh, <strong>changes typically sync within the hour, and always instantly the moment you open the app</strong>. Any app that promises more than that on iOS is overselling.</p>
+      <p>iOS controls when apps receive background execution time. <strong>Sync timing varies with system scheduling, power settings and network access.</strong> For an important change, open the app, run a sync and check its result. <a href="/blog/background-contact-sync-iphone/">Understand background contact sync on iPhone</a>.</p>
     </div>
   </section>
 
@@ -371,7 +373,7 @@
       <details>
         <summary>How does background sync actually work on iOS?</summary>
         <div>
-          <p>iOS doesn't let apps run permanently in the background, so we're honest about timing: changes typically sync within the hour via silent push wake-ups and iOS background refresh, and always sync instantly when you open the app.</p>
+          <p>iOS schedules background execution, so sync timing varies. Open the app and run a sync when you need to check an important change. A working connection and contact permissions are required.</p>
         </div>
       </details>
 
@@ -392,7 +394,7 @@
       <details>
         <summary>Can a bad sync delete my contacts?</summary>
         <div>
-          <p>The app has a deletion guard: if a sync would delete an unusually large number of contacts, it pauses and asks you before proceeding. Automatic local backups are kept so you can restore at any time.</p>
+          <p>The app has a deletion guard: if a sync would delete an unusually large number of contacts, it pauses and asks you before proceeding. Local safety snapshots can be exported for manual recovery. Keep an independent backup before major changes.</p>
         </div>
       </details>
 
@@ -411,6 +413,7 @@
       <div class="section-head">
         <span class="eyebrow-c">Guides</span>
         <h2 id="guides-heading">Contacts help &amp; how-tos</h2>
+        <p><a href="/blog/">Browse all 24 guides for iPhone, Google and iCloud contacts →</a></p>
       </div>
       <div class="grid grid-2">
         <div class="card">
@@ -419,7 +422,7 @@
         </div>
         <div class="card">
           <h3><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing on iPhone?</a></h3>
-          <p>The four settings that fix it in most cases, from account toggles to fetch schedules.</p>
+          <p>Check account access, contact lists and the source of a missing update before making changes.</p>
         </div>
         <div class="card">
           <h3><a href="/transfer-contacts-android-to-iphone-gmail/">Transfer contacts from Android to iPhone with Gmail</a></h3>
@@ -437,9 +440,8 @@
   <section class="cta-final" aria-labelledby="cta-heading">
     <div class="container">
       <h2 id="cta-heading">Keep your contacts in sync — for free</h2>
-      <p>One list on your iPhone and in Google, kept identical automatically. Private by design, no subscription, no catch.</p>
+      <p>Connect your iPhone address book with Google, choose a sync direction, and review the first pass. No subscription or ads.</p>
       <div class="actions">
-        <!-- TODO: replace with the real App Store URL when the listing is live -->
         <a class="btn btn-app" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=web_home&amp;mt=8" aria-label="Download on the App Store">
           <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
           <span><small>Download on the</small><strong>App Store</strong></span>
@@ -460,6 +462,7 @@
       <div>
         <p class="footer-h">Guides</p>
         <ul>
+          <li><a href="/blog/">All contact guides</a></li>
           <li><a href="/icloud-to-google-contacts/">iCloud to Google Contacts</a></li>
           <li><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing</a></li>
           <li><a href="/transfer-contacts-android-to-iphone-gmail/">Android to iPhone via Gmail</a></li>
@@ -469,10 +472,10 @@
       <div>
         <p class="footer-h">App</p>
         <ul>
-          <!-- TODO: replace with the real App Store URL when the listing is live -->
           <li><a href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=web_home&amp;mt=8">Download on the App Store</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/about/">About &amp; editorial policy</a></li>
         </ul>
       </div>
     </div>

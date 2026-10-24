@@ -1,0 +1,50 @@
+{
+  "slug": "restore-deleted-google-contacts",
+  "title": "Restore deleted Google Contacts: Trash or Undo changes?",
+  "seo_title": "Restore deleted Google Contacts: Trash or Undo changes?",
+  "description": "Choose between Google Contacts Trash, Undo changes and a saved export, with checks to protect contacts added after the recovery point.",
+  "category": "Backups & recovery",
+  "answer": "<strong>Use Trash for specific recently deleted Google contacts; consider Undo changes for a wider recent mistake.</strong> Google documents a 30-day recovery window for these options. Permanently deleted records and contacts never saved to Google need another recovery source.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_restore_deleted_google_contacts",
+  "sections": [
+    {
+      "id": "diagnose",
+      "title": "Confirm deletion before restoring",
+      "html": "<p>Open Google Contacts on the web with the correct account. Search for a missing person and inspect Trash. If the card is still in the normal web collection, the issue may be an iPhone list filter or connection problem rather than deletion.</p><p>Check other accounts you used recently. Restoring an unrelated account will not recover a card that belonged to iCloud or a different Gmail address. The account inventory guide can help identify the likely source.</p>"
+    },
+    {
+      "id": "trash",
+      "title": "Recover specific contacts from Trash",
+      "html": "<p>In Google Contacts, open <strong>Trash</strong>, select the recoverable cards and choose the recovery action. Review the names and details before restoring a large selection. This targeted approach is easier to inspect when only a few contacts were deleted.</p><p>Google says cards remain recoverable in Trash for 30 days unless permanently deleted earlier. If a card is absent, do not assume an app can reconstruct it: check the original account, timing and any independent export.</p>"
+    },
+    {
+      "id": "undo",
+      "title": "Understand what Undo changes rolls back",
+      "html": "<p><strong>Undo changes</strong> returns the account’s contacts to a selected recent point. It is broader than recovering one person and can affect contacts created or changed after that time. Export the current collection before using it so you have a copy of newer information.</p><p>Choose a recovery point based on when the mistake happened, not merely the oldest option shown. After the operation completes, inspect the affected records and compare newer cards against your current export before deciding what to add back.</p>"
+    },
+    {
+      "id": "after",
+      "title": "Verify the web result before the phone",
+      "html": "<p>First confirm the recovered cards in Google Contacts. Then check the connected account on the iPhone. If the web result is correct but the phone is not, switch to sync troubleshooting instead of repeating recovery.</p><p>If another tool caused repeated deletions or merges, pause further bulk work until you understand its behavior. Keep the original export and a note of the recovery time. Avoid importing every available backup into the same account at once; that can turn a missing-contact problem into a duplicate-contact problem.</p><p>Where no recoverable record or backup exists, recovery cannot be promised. Be wary of services claiming they can restore any permanently deleted address book.</p>"
+    }
+  ],
+  "related": [
+    "backup-google-contacts",
+    "restore-icloud-contacts",
+    "iphone-contacts-missing-after-adding-gmail"
+  ],
+  "sources": [
+    {
+      "title": "Google: recover deleted contacts and undo changes",
+      "url": "https://support.google.com/contacts/answer/7280886?co=GENIE.Platform%3DDesktop&hl=en"
+    }
+  ],
+  "pillar": {
+    "path": "/google-contacts-not-syncing-iphone/",
+    "title": "Google contacts not syncing on iPhone?"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

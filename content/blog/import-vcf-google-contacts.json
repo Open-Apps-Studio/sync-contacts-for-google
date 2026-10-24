@@ -1,0 +1,54 @@
+{
+  "slug": "import-vcf-google-contacts",
+  "title": "Import a VCF or vCard file into Google Contacts",
+  "seo_title": "Import a VCF or vCard file into Google Contacts",
+  "description": "Import a vCard contact file into Google Contacts and check names, numbers and fields before repeating an import or cleaning up duplicates.",
+  "category": "Transfers & imports",
+  "answer": "<strong>A .vcf file is a vCard contact file that Google Contacts can import.</strong> Use the account you want to keep as the destination, preserve the original file, and verify a few complete cards before considering the import finished.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_import_vcf_google_contacts",
+  "sections": [
+    {
+      "id": "file",
+      "title": "Check the file and the destination",
+      "html": "<p>Confirm that the file actually came from a contacts export. Renaming a document or an Apple Contacts archive to end in .vcf does not convert its contents into vCard format. If your source offers multiple export formats, choose vCard for this workflow.</p><p>A single vCard file can contain many people. Its filename does not tell you how many were exported. Record the source list and expected approximate count before importing so you have something meaningful to compare afterward.</p>"
+    },
+    {
+      "id": "import",
+      "title": "Use Google Contacts on the web",
+      "html": "<p>On a computer, open <a href=\"https://contacts.google.com/\">Google Contacts</a>, confirm the account, choose <strong>Import → Select file</strong>, select the .vcf, and complete the import. Wait for it to finish before starting another upload.</p><p>If the destination already contains important records, export those first. This gives you a separate baseline if the incoming file overlaps with your existing collection.</p>"
+    },
+    {
+      "id": "fields",
+      "title": "Verify the fields you rely on",
+      "html": "<p>Check more than names. Compare a card with two phone numbers, a card with a postal address, one with notes, and a card containing accents or a non-Latin name. Check that international prefixes and the distinction between mobile and work numbers remain usable.</p><p>Some contact systems represent labels, photos or additional fields differently. If a detail is not where you expected, inspect the full card, including notes, before concluding it was lost. Keep the source available while you compare.</p>"
+    },
+    {
+      "id": "repeat",
+      "title": "If something is wrong, avoid a blind retry",
+      "html": "<p>First determine whether the problem is the entire file, a specific record, or simply the account you are viewing. Try a small export from the original source with one affected card and one ordinary card. This isolates the issue more clearly than importing the whole collection again.</p><p>If the first import succeeded, repeating it can create overlapping records. Review the imported set and your backup before removing anything. Use the dedicated import-troubleshooting guide for file-size and formatting checks.</p><p>Finally, enable the destination Google account on the iPhone if you want to see its contacts there. Importing a file into Google does not itself configure the phone or establish ongoing synchronization with the original source.</p>"
+    }
+  ],
+  "related": [
+    "export-iphone-contacts",
+    "google-contacts-import-problems",
+    "duplicate-google-contacts"
+  ],
+  "sources": [
+    {
+      "title": "Google: import contacts and fix import problems",
+      "url": "https://support.google.com/contacts/answer/15147365?hl=en"
+    },
+    {
+      "title": "Apple: import and export contacts on iCloud.com",
+      "url": "https://support.apple.com/guide/icloud/import-export-and-print-contacts-mmfba748b2/icloud"
+    }
+  ],
+  "pillar": {
+    "path": "/icloud-to-google-contacts/",
+    "title": "Move iCloud contacts to Google"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

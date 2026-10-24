@@ -1,0 +1,54 @@
+{
+  "slug": "backup-google-contacts",
+  "title": "Back up Google Contacts before a transfer or cleanup",
+  "seo_title": "Back up Google Contacts before a transfer or cleanup",
+  "description": "Export a dated Google Contacts backup, verify the file, and keep an independent recovery copy before importing, merging or deleting contacts.",
+  "category": "Backups & recovery",
+  "answer": "<strong>Export Google Contacts and keep a dated copy outside the address book you are about to change.</strong> Sync makes changes travel between devices; an independent export preserves a point in time.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_backup_google_contacts",
+  "sections": [
+    {
+      "id": "when",
+      "title": "Back up before changes that affect many people",
+      "html": "<p>Useful checkpoints include moving to a different Gmail account, importing a large file, merging duplicates, or connecting a tool that can update contacts. Make the backup before the operation, not after you discover a problem.</p><p>If you manage multiple Google accounts, back up the source and destination separately. Name each file with the account role and date so you will not confuse an old source export with the destination’s pre-import state.</p>"
+    },
+    {
+      "id": "export",
+      "title": "Make the export",
+      "html": "<p>Open <a href=\"https://contacts.google.com/\">Google Contacts</a> on a computer and confirm the signed-in account. Use <strong>Export</strong>, select the intended contacts and choose a suitable format. Google CSV is useful for a later Google import; vCard can be useful when moving to other contact applications.</p><p>For a broad safety copy, make sure the scope covers the full collection you intend to protect rather than only a search result or a label. Save the export somewhere you can find again without depending on the phone you are replacing.</p>"
+    },
+    {
+      "id": "verify",
+      "title": "Give the backup a quick integrity check",
+      "html": "<ol><li>Check the filename, file size and storage location.</li><li>Inspect a recent card and a card with several phone or email fields.</li><li>Confirm that names and international numbers look correct.</li><li>Record which account and collection the file represents.</li></ol><p>Do not edit your only backup in a spreadsheet. Make a working copy if you need to clean data; automatic formatting can change values. A backup you accidentally modified is a weaker recovery point.</p>"
+    },
+    {
+      "id": "restore",
+      "title": "Plan the recovery before you need it",
+      "html": "<p>Importing a backup usually adds records to a destination; it should not be assumed to restore every aspect of an account exactly or remove later duplicates. If the problem is a recent deletion, check Google’s built-in recovery options before reimporting the entire backup.</p><p>Keep both the before-change file and a verified after-change file until the migration has settled. Store them privately and delete obsolete extra copies when appropriate for your own retention needs.</p><p>There is no single backup interval that suits everyone. At minimum, create a fresh snapshot before a large operation and after adding information you would not be able to reconstruct easily.</p>"
+    }
+  ],
+  "related": [
+    "restore-deleted-google-contacts",
+    "sync-vs-backup-contacts",
+    "transfer-contacts-between-google-accounts"
+  ],
+  "sources": [
+    {
+      "title": "Google: export, back up or restore contacts",
+      "url": "https://support.google.com/contacts/answer/7199294?co=GENIE.Platform%3DDesktop&hl=en"
+    },
+    {
+      "title": "Google: recover deleted contacts and undo changes",
+      "url": "https://support.google.com/contacts/answer/7280886?co=GENIE.Platform%3DDesktop&hl=en"
+    }
+  ],
+  "pillar": {
+    "path": "/icloud-to-google-contacts/",
+    "title": "Move iCloud contacts to Google"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

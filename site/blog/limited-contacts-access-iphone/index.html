@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Limited Contacts access on iPhone: why an app sees fewer</title>
+<meta name="description" content="Understand Limited and Full Contacts access on iPhone, check which people an app can read, and distinguish permission limits from missing cloud data.">
+<link rel="canonical" href="https://sync.openappsstudio.com/blog/limited-contacts-access-iphone/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Limited Contacts access on iPhone: why an app sees fewer">
+<meta property="og:description" content="Understand Limited and Full Contacts access on iPhone, check which people an app can read, and distinguish permission limits from missing cloud data.">
+<meta property="og:url" content="https://sync.openappsstudio.com/blog/limited-contacts-access-iphone/">
+<meta property="og:site_name" content="Sync Contacts for Google">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Limited Contacts access on iPhone: why an app sees fewer">
+<meta name="twitter:description" content="Understand Limited and Full Contacts access on iPhone, check which people an app can read, and distinguish permission limits from missing cloud data.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/blog.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "@id": "https://sync.openappsstudio.com/blog/limited-contacts-access-iphone/#article", "headline": "Limited Contacts access on iPhone: why an app sees fewer", "description": "Understand Limited and Full Contacts access on iPhone, check which people an app can read, and distinguish permission limits from missing cloud data.", "mainEntityOfPage": "https://sync.openappsstudio.com/blog/limited-contacts-access-iphone/", "url": "https://sync.openappsstudio.com/blog/limited-contacts-access-iphone/", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "inLanguage": "en", "articleSection": "Troubleshooting", "author": {"@type": "Organization", "name": "Open Apps Studio", "url": "https://sync.openappsstudio.com/about/"}, "publisher": {"@type": "Organization", "name": "Open Apps Studio", "url": "https://openappsstudio.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sync.openappsstudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://sync.openappsstudio.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Limited Contacts access on iPhone: why an app sees fewer", "item": "https://sync.openappsstudio.com/blog/limited-contacts-access-iphone/"}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/"><img src="/favicon-32.png" alt="" width="28" height="28">Sync Contacts <span>for Google</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a class="studio-link" href="https://openappsstudio.com">Open Apps Studio ↗</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog/">Guides</a>
+      <a href="/support/">Support</a>
+      <a class="btn btn-small" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_limited_contacts_access_iphone&amp;mt=8">Get the app</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content"><article class="blog-article container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Guides</a><span aria-hidden="true">/</span><span aria-current="page">Limited Contacts access on iPhone: why an app sees fewer</span></nav>
+<header class="article-header"><p class="eyebrow">Troubleshooting</p><h1>Limited Contacts access on iPhone: why an app sees fewer</h1><p class="article-meta">By <a href="/about/">Open Apps Studio</a> · Updated <time datetime="2026-10-24">2026-10-24</time> · 2 min read</p></header>
+<div class="article-layout"><div class="article-body">
+<div class="answer-box"><p><strong>With Limited Contacts access, an app can work only with the contacts you selected.</strong> A smaller contact count inside a sync app can therefore be a permission boundary rather than a lost address book.</p></div>
+<nav class="article-toc" aria-label="On this page"><p><strong>On this page</strong></p><ol><li><a href="#meaning">Understand the two separate permissions</a></li><li><a href="#review">Review access without granting more than you need</a></li><li><a href="#test">Test one allowed and one unavailable card</a></li><li><a href="#boundaries">Do not interpret inaccessible as deleted</a></li></ol></nav>
+<section class="article-section" aria-labelledby="meaning"><h2 id="meaning">Understand the two separate permissions</h2><p>A contacts sync app may need permission to access the iPhone address book and separate permission to access a Google account. Approving Google sign-in does not automatically grant access to every local card, and local contact permission does not choose the correct Google account.</p><p>Keep those checks separate when diagnosing a partial result. One side may contain the right records while the app is allowed to read only a subset on the other side.</p></section><section class="article-section" aria-labelledby="review"><h2 id="review">Review access without granting more than you need</h2><p>Open <strong>Settings → Privacy &amp; Security → Contacts</strong>, select the app, and review its contact access. Where Limited Access is selected, use the selected-contact controls to inspect or change the permitted people.</p><p>If your intention is to work with a small group, limited access may be appropriate. If you expect the app to process your whole address book, compare that expectation with the permission you granted. Read the app’s privacy information before expanding access.</p></section><section class="article-section" aria-labelledby="test"><h2 id="test">Test one allowed and one unavailable card</h2><ol><li>Choose a harmless card you know the app is allowed to access.</li><li>Compare it with a card outside the current permitted selection.</li><li>Refresh the app’s view after any permission change.</li><li>Review the proposed sync changes before confirming a large operation.</li></ol><p>This controlled comparison is more useful than repeatedly signing out of Google. If the allowed card works and the other does not, you have a concrete explanation for the difference.</p></section><section class="article-section" aria-labelledby="boundaries"><h2 id="boundaries">Do not interpret inaccessible as deleted</h2><p>An app failing to see a card is not proof that the card has been removed from the phone or cloud account. Check the system Contacts app and the appropriate web address book directly.</p><p>After changing permissions, do not assume every sync tool handles a reduced contact set in the same way. Review its preview and behavior, especially if it can propagate deletions. If the proposed changes are surprising, stop that sync and preserve an export before troubleshooting further.</p><p>For a support report, describe the permission level, account and visible counts without sending personal contact details. The important information is which part of the workflow can see which records.</p></section>
+<aside class="sources" aria-labelledby="sources-heading"><h2 id="sources-heading">Sources &amp; further help</h2><p>Official references checked on 2026-10-24. Menu labels can vary by software version and account policy.</p><ul><li><a href="https://support.apple.com/guide/iphone/control-access-to-your-contacts-iph9536aa9a5/ios">Apple: control access to contacts on iPhone</a></li></ul><p>Published by the makers of Sync Contacts for Google. Our guides include built-in methods; an app is optional. <a href="/about/#editorial">How we maintain these guides</a>.</p></aside>
+</div><aside class="article-sidebar" aria-label="Related guidance"><div class="sidebar-inner"><h2>Keep reading</h2><ul><li><a href="/blog/where-iphone-contacts-stored/">Where are my iPhone contacts actually stored?</a></li><li><a href="/blog/new-iphone-contacts-not-in-gmail/">New iPhone contacts not showing in Gmail?</a></li><li><a href="/blog/background-contact-sync-iphone/">Why iPhone contact sync can be delayed in the background</a></li></ul><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing on iPhone?</a><div class="cta-block"><h2>Need ongoing iPhone–Google sync?</h2><p>Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books.</p><a class="btn" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_limited_contacts_access_iphone&amp;mt=8">View on the App Store</a></div><a href="/blog/">Browse all guides →</a></div></aside></div></article></main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div>
+        <p class="footer-h">Sync Contacts for Google</p>
+        <p>Private, two-way sync between iPhone and Google Contacts. Free forever, by Open Apps Studio.</p>
+      </div>
+      <div>
+        <p class="footer-h">Guides</p>
+        <ul>
+          <li><a href="/blog/">All contact guides</a></li>
+          <li><a href="/icloud-to-google-contacts/">iCloud to Google Contacts</a></li>
+          <li><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing</a></li>
+          <li><a href="/transfer-contacts-android-to-iphone-gmail/">Android to iPhone via Gmail</a></li>
+          <li><a href="/merge-duplicate-contacts-iphone/">Merge duplicate contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-h">App</p>
+        <ul>
+          <li><a href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_limited_contacts_access_iphone&amp;mt=8">Download on the App Store</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/about/">About &amp; editorial policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">© 2026 Open Apps Studio. Google, Gmail and Google Contacts are trademarks of Google LLC. Apple, iPhone and iCloud are trademarks of Apple Inc. This app is not affiliated with or endorsed by Google or Apple.</p>
+  </div>
+</footer>
+<script src="/assets/navigation.js" defer></script>
+</body>
+</html>

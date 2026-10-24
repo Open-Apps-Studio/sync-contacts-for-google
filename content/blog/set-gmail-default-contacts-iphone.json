@@ -1,0 +1,50 @@
+{
+  "slug": "set-gmail-default-contacts-iphone",
+  "title": "Set Gmail as your default contacts account on iPhone",
+  "seo_title": "Set Gmail as your default contacts account on iPhone",
+  "description": "Save new iPhone contacts to Gmail by changing the default account. Learn what happens to existing iCloud contacts and how to verify the setting.",
+  "category": "Setup & accounts",
+  "answer": "<strong>Choose Gmail as the Default Account in iPhone Contacts settings to send newly created contacts there by default.</strong> Existing cards stay in their current accounts; this setting is not a migration tool.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_set_gmail_default_contacts_iphon",
+  "sections": [
+    {
+      "id": "why",
+      "title": "When this setting solves the problem",
+      "html": "<p>This is useful when older Google contacts already appear on your phone, but people you recently added only appear in iCloud. The phone can display several address books together while saving new cards to just one default account.</p><p>Choose the destination you intend to keep using across devices. For example, if you use Google Contacts in a browser and plan to move between iPhone and Android, saving new personal cards in the same Google account makes them easier to locate later.</p>"
+    },
+    {
+      "id": "change",
+      "title": "Change the default destination",
+      "html": "<ol><li>Make sure your Google account is connected with Contacts enabled.</li><li>Open <strong>Settings → Apps → Contacts → Default Account</strong>.</li><li>Select the Gmail account you want to use.</li></ol><p>If you cannot find the setting, check which contact accounts are enabled. Search Settings for Contacts if your iOS version uses a different menu arrangement. With more than one Google account, verify the email address instead of relying on a similar account label.</p>"
+    },
+    {
+      "id": "test",
+      "title": "Test with a new card",
+      "html": "<p>Create a new card named something recognizable, such as “Contact account test,” from the ordinary Contacts view. Give it a harmless note so you can distinguish it from a real person. Check the matching account on Google Contacts in a browser.</p><p>Next, create a card using the workflow you normally use, such as saving a caller from the Phone app. Confirm that card reaches the same destination. Apps with their own contact-saving behavior or an explicitly selected account can behave differently from the general default.</p><p>Remove your test cards once the result is clear. Do not use a real important contact for repeated delete-and-recreate tests.</p>"
+    },
+    {
+      "id": "existing",
+      "title": "Handle older contacts separately",
+      "html": "<p>Changing the default does not relocate your existing iCloud cards or combine duplicate records. Before moving older contacts, export the source address book and decide whether you want a one-time copy or ongoing synchronization.</p><p>A useful checkpoint is to compare three cards: one older Google contact, one older iCloud contact, and the new test card. Their locations explain whether you need a transfer, a sync repair, or simply this default-account change.</p>"
+    }
+  ],
+  "related": [
+    "add-google-contacts-iphone",
+    "new-iphone-contacts-not-in-gmail",
+    "sync-vs-backup-contacts"
+  ],
+  "sources": [
+    {
+      "title": "Apple: manage contacts accounts on iPhone",
+      "url": "https://support.apple.com/en-us/111793"
+    }
+  ],
+  "pillar": {
+    "path": "/icloud-to-google-contacts/",
+    "title": "Move iCloud contacts to Google"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "google-contacts-import-problems",
+  "title": "Google Contacts import failed? Check these causes",
+  "seo_title": "Google Contacts import failed? Check these causes",
+  "description": "Diagnose failed CSV or vCard imports, Google’s contact limits, missing fields and partial results before retrying the same file.",
+  "category": "Troubleshooting",
+  "answer": "<strong>Check the file format, batch size, account capacity and actual imported records before retrying.</strong> A rejected upload and a successful import with unexpected fields need different fixes.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_google_contacts_import_problems",
+  "sections": [
+    {
+      "id": "limits",
+      "title": "Check Google’s documented limits",
+      "html": "<p>Google lists importing more than <strong>3,000 contacts at once</strong> and reaching <strong>25,000 contacts</strong> in the account among causes of import problems. For larger CSV collections, split the work into smaller batches while preserving the header row.</p><p>Before reducing a collection, export a backup. Do not delete important cards just to make an import fit. If the account is near capacity, first determine whether the source contains duplicates, obsolete data, or contacts that belong in a different account.</p>"
+    },
+    {
+      "id": "format",
+      "title": "Check what the file really contains",
+      "html": "<p>Google supports CSV and vCard imports. A renamed ZIP, PDF, spreadsheet workbook or proprietary contacts archive is not converted by changing its extension. Return to the source application and export a supported format.</p><p>For CSV, inspect the field headings and a few representative rows. For vCard, try re-exporting a small selection from the source rather than manually splitting the file at arbitrary line numbers. One record can span multiple lines, and splitting in the wrong place can damage it.</p>"
+    },
+    {
+      "id": "partial",
+      "title": "Separate partial imports from missing fields",
+      "html": "<p>If some cards appeared, write down what succeeded before taking another action. Check the signed-in account and search for several expected names. Inspect the full card if a phone number or note seems absent from the list preview.</p><p>Use a two-record diagnostic file: one ordinary card and one that failed or lost a field. If only the complex card has a problem, investigate that source record. If neither imports, focus on the file format and account rather than deleting the destination address book.</p>"
+    },
+    {
+      "id": "retry",
+      "title": "Retry once you can explain the change",
+      "html": "<p>A useful retry changes something specific: a corrected header, a smaller batch, a clean export, or the correct account. Uploading the same file repeatedly without checking the outcome can create duplicate copies and make the original failure harder to reconstruct.</p><p>Keep a short batch log with filenames, approximate counts and results. After the final import, verify important fields and export the destination as a new baseline. If the problem persists, report the exact error and a description of the source format to support; avoid attaching a full real address book to an initial support request.</p>"
+    }
+  ],
+  "related": [
+    "import-vcf-google-contacts",
+    "import-csv-google-contacts",
+    "backup-google-contacts"
+  ],
+  "sources": [
+    {
+      "title": "Google: import contacts and fix import problems",
+      "url": "https://support.google.com/contacts/answer/15147365?hl=en"
+    }
+  ],
+  "pillar": {
+    "path": "/icloud-to-google-contacts/",
+    "title": "Move iCloud contacts to Google"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

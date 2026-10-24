@@ -1,0 +1,54 @@
+{
+  "slug": "icloud-vs-google-contacts",
+  "title": "iCloud vs Google Contacts: choose your main address book",
+  "seo_title": "iCloud vs Google Contacts: choose your main address book",
+  "description": "Compare iCloud and Google Contacts for iPhone use, cross-platform access, transfers and backups without creating two competing address books.",
+  "category": "Setup & accounts",
+  "answer": "<strong>Choose a main address book based on where you need to use your contacts.</strong> iCloud is closely integrated with Apple devices; Google Contacts is useful across Google services and connected phones. An iPhone can display both without making their contents identical.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_icloud_vs_google_contacts",
+  "sections": [
+    {
+      "id": "compare",
+      "title": "Compare the work you need each account to do",
+      "html": "<div class=\"table-wrap\"><table class=\"compare\"><thead><tr><th scope=\"col\">Your need</th><th scope=\"col\">What to consider</th></tr></thead><tbody><tr><th scope=\"row\">Mostly Apple devices</th><td>iCloud can keep an Apple address book available across those devices.</td></tr><tr><th scope=\"row\">Google services and mixed phones</th><td>A Google address book keeps the same account accessible when switching device platforms.</td></tr><tr><th scope=\"row\">Work directory</th><td>Your organization may control the account and what can be copied.</td></tr><tr><th scope=\"row\">Independent backup</th><td>Either choice still benefits from an exported copy kept separately.</td></tr></tbody></table></div><p>The practical question is not which brand is better. It is which account you will check when a number goes missing, and where you want new cards to be saved.</p>"
+    },
+    {
+      "id": "single",
+      "title": "Use one primary account when you can",
+      "html": "<p>If there is no reason to maintain separate copies, pick one primary destination and set the phone’s default accordingly. You can still keep a work account separate and visible. This reduces uncertainty about which card to update.</p><p>For example, a personal Google address book plus a separately managed work directory is a different situation from two independently edited copies of every personal contact. The first preserves a useful boundary; the second needs a clear synchronization plan.</p>"
+    },
+    {
+      "id": "both",
+      "title": "If you need both, define the relationship",
+      "html": "<p>A one-time export makes a copy at a moment in time. It does not establish an ongoing relationship between the two accounts. Connecting both accounts to iPhone Contacts also does not, by itself, turn one account into a mirror of the other.</p><p>For ongoing synchronization, decide which directions should carry changes and what should happen to deletions. Review a small sample first. Avoid running several independent tools on the same records until you understand what each one writes.</p>"
+    },
+    {
+      "id": "switch",
+      "title": "Switch with a reversible checklist",
+      "html": "<ol><li>Export the address book you are moving and keep the original file.</li><li>Copy the intended contacts into the destination once.</li><li>Check a card with several numbers, one with notes, and one with non-English text.</li><li>Set the destination for future contacts and test a newly created card.</li><li>Keep the original account available until you have verified the result.</li></ol><p>Do not combine this change with a large duplicate cleanup. Separating the transfer from cleanup makes mistakes easier to diagnose and reverse.</p>"
+    }
+  ],
+  "related": [
+    "where-iphone-contacts-stored",
+    "set-gmail-default-contacts-iphone",
+    "sync-vs-backup-contacts"
+  ],
+  "sources": [
+    {
+      "title": "Apple: keep contacts up to date with iCloud",
+      "url": "https://support.apple.com/guide/icloud/what-you-can-do-with-icloud-and-contacts-mm79e57c3594/icloud"
+    },
+    {
+      "title": "Google: sync contacts with iPhone or iPad",
+      "url": "https://support.google.com/contacts/answer/2753077?co=GENIE.Platform%3DiOS&hl=en"
+    }
+  ],
+  "pillar": {
+    "path": "/icloud-to-google-contacts/",
+    "title": "Move iCloud contacts to Google"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact sync vs backup: why you need both</title>
+<meta name="description" content="Understand how contact synchronization, exports and recovery differ so a deletion or phone change does not leave you without a usable copy.">
+<link rel="canonical" href="https://sync.openappsstudio.com/blog/sync-vs-backup-contacts/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Contact sync vs backup: why you need both">
+<meta property="og:description" content="Understand how contact synchronization, exports and recovery differ so a deletion or phone change does not leave you without a usable copy.">
+<meta property="og:url" content="https://sync.openappsstudio.com/blog/sync-vs-backup-contacts/">
+<meta property="og:site_name" content="Sync Contacts for Google">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Contact sync vs backup: why you need both">
+<meta name="twitter:description" content="Understand how contact synchronization, exports and recovery differ so a deletion or phone change does not leave you without a usable copy.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/blog.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "@id": "https://sync.openappsstudio.com/blog/sync-vs-backup-contacts/#article", "headline": "Contact sync vs backup: why you need both", "description": "Understand how contact synchronization, exports and recovery differ so a deletion or phone change does not leave you without a usable copy.", "mainEntityOfPage": "https://sync.openappsstudio.com/blog/sync-vs-backup-contacts/", "url": "https://sync.openappsstudio.com/blog/sync-vs-backup-contacts/", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "inLanguage": "en", "articleSection": "Backups & recovery", "author": {"@type": "Organization", "name": "Open Apps Studio", "url": "https://sync.openappsstudio.com/about/"}, "publisher": {"@type": "Organization", "name": "Open Apps Studio", "url": "https://openappsstudio.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sync.openappsstudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://sync.openappsstudio.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Contact sync vs backup: why you need both", "item": "https://sync.openappsstudio.com/blog/sync-vs-backup-contacts/"}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/"><img src="/favicon-32.png" alt="" width="28" height="28">Sync Contacts <span>for Google</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a class="studio-link" href="https://openappsstudio.com">Open Apps Studio ↗</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog/">Guides</a>
+      <a href="/support/">Support</a>
+      <a class="btn btn-small" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_sync_vs_backup_contacts&amp;mt=8">Get the app</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content"><article class="blog-article container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Guides</a><span aria-hidden="true">/</span><span aria-current="page">Contact sync vs backup: why you need both</span></nav>
+<header class="article-header"><p class="eyebrow">Backups &amp; recovery</p><h1>Contact sync vs backup: why you need both</h1><p class="article-meta">By <a href="/about/">Open Apps Studio</a> · Updated <time datetime="2026-10-24">2026-10-24</time> · 2 min read</p></header>
+<div class="article-layout"><div class="article-body">
+<div class="answer-box"><p><strong>Sync keeps connected copies current; a backup preserves a recoverable point in time.</strong> A deletion can travel through a sync relationship, so a second connected device is not necessarily an independent backup.</p></div>
+<nav class="article-toc" aria-label="On this page"><p><strong>On this page</strong></p><ol><li><a href="#difference">Compare the jobs, not just the copies</a></li><li><a href="#example">Walk through a common failure</a></li><li><a href="#routine">Build a small, practical routine</a></li><li><a href="#recovery">Choose the least broad recovery that solves the problem</a></li></ol></nav>
+<section class="article-section" aria-labelledby="difference"><h2 id="difference">Compare the jobs, not just the copies</h2><div class="table-wrap"><table class="compare"><thead><tr><th scope="col">Method</th><th scope="col">Main purpose</th><th scope="col">Main limitation</th></tr></thead><tbody><tr><th scope="row">Synchronization</th><td>Keep current records aligned.</td><td>Unwanted edits may also propagate.</td></tr><tr><th scope="row">Exported snapshot</th><td>Preserve the selected data at export time.</td><td>Later additions are not included.</td></tr><tr><th scope="row">Provider recovery</th><td>Recover eligible recent changes or archives.</td><td>Depends on available history and the provider’s rules.</td></tr></tbody></table></div><p>These tools complement each other. A useful contact setup makes everyday updates convenient and still leaves a separate route back after a mistake.</p></section><section class="article-section" aria-labelledby="example"><h2 id="example">Walk through a common failure</h2><p>Suppose a contact is synchronized between a cloud account and two phones. You delete the wrong person on one phone. Seeing that person on the other phone a moment later does not mean it will stay there: the deletion may not have arrived yet.</p><p>A saved export from before the mistake is different. It is a file that is not automatically rewritten by the contact sync. Its weakness is age: if the person’s number changed after the export, that newer number may not be in the snapshot.</p></section><section class="article-section" aria-labelledby="routine"><h2 id="routine">Build a small, practical routine</h2><ol><li>Name one primary address book for ordinary edits.</li><li>Keep connected devices synchronized with that account.</li><li>Export a dated copy before a transfer, bulk merge or new sync setup.</li><li>Store the export somewhere independent of the device you might erase.</li><li>Know which provider’s recovery page applies to your contacts.</li></ol><p>Test the backup by checking a few representative records. You do not need to import it into your live account just to prove the file exists.</p></section><section class="article-section" aria-labelledby="recovery"><h2 id="recovery">Choose the least broad recovery that solves the problem</h2><p>If one Google contact was deleted, targeted recovery may be enough. If a whole iCloud collection changed, an archived version may be relevant. If a card is simply hidden by an account filter, neither restore is necessary.</p><p>App-local safety copies can help with specific operations, but check what they contain and where they are stored. A copy inside an app should not be assumed to survive deleting the app or losing the device. Export important recovery data before making those changes.</p><p>Before a large operation, ask two concrete questions: where is the current authoritative copy, and where is the independent before-change copy? If both answers point to the same live account, add a separate export first.</p></section>
+<aside class="sources" aria-labelledby="sources-heading"><h2 id="sources-heading">Sources &amp; further help</h2><p>Official references checked on 2026-10-24. Menu labels can vary by software version and account policy.</p><ul><li><a href="https://support.apple.com/guide/icloud/what-you-can-do-with-icloud-and-contacts-mm79e57c3594/icloud">Apple: keep contacts up to date with iCloud</a></li><li><a href="https://support.google.com/contacts/answer/7199294?co=GENIE.Platform%3DDesktop&amp;hl=en">Google: export, back up or restore contacts</a></li></ul><p>Published by the makers of Sync Contacts for Google. Our guides include built-in methods; an app is optional. <a href="/about/#editorial">How we maintain these guides</a>.</p></aside>
+</div><aside class="article-sidebar" aria-label="Related guidance"><div class="sidebar-inner"><h2>Keep reading</h2><ul><li><a href="/blog/backup-google-contacts/">Back up Google Contacts before a transfer or cleanup</a></li><li><a href="/blog/export-iphone-contacts/">Export iPhone contacts to a VCF file</a></li><li><a href="/blog/restore-deleted-google-contacts/">Restore deleted Google Contacts: Trash or Undo changes?</a></li></ul><a href="/icloud-to-google-contacts/">Move iCloud contacts to Google</a><div class="cta-block"><h2>Need ongoing iPhone–Google sync?</h2><p>Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books.</p><a class="btn" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_sync_vs_backup_contacts&amp;mt=8">View on the App Store</a></div><a href="/blog/">Browse all guides →</a></div></aside></div></article></main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div>
+        <p class="footer-h">Sync Contacts for Google</p>
+        <p>Private, two-way sync between iPhone and Google Contacts. Free forever, by Open Apps Studio.</p>
+      </div>
+      <div>
+        <p class="footer-h">Guides</p>
+        <ul>
+          <li><a href="/blog/">All contact guides</a></li>
+          <li><a href="/icloud-to-google-contacts/">iCloud to Google Contacts</a></li>
+          <li><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing</a></li>
+          <li><a href="/transfer-contacts-android-to-iphone-gmail/">Android to iPhone via Gmail</a></li>
+          <li><a href="/merge-duplicate-contacts-iphone/">Merge duplicate contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-h">App</p>
+        <ul>
+          <li><a href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_sync_vs_backup_contacts&amp;mt=8">Download on the App Store</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/about/">About &amp; editorial policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">© 2026 Open Apps Studio. Google, Gmail and Google Contacts are trademarks of Google LLC. Apple, iPhone and iCloud are trademarks of Apple Inc. This app is not affiliated with or endorsed by Google or Apple.</p>
+  </div>
+</footer>
+<script src="/assets/navigation.js" defer></script>
+</body>
+</html>

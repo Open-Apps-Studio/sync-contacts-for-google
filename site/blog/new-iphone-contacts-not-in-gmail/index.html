@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New iPhone contacts not showing in Gmail?</title>
+<meta name="description" content="Trace a newly saved iPhone contact to its account, distinguish Gmail suggestions from saved contacts, and fix the right part of the sync path.">
+<link rel="canonical" href="https://sync.openappsstudio.com/blog/new-iphone-contacts-not-in-gmail/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="New iPhone contacts not showing in Gmail?">
+<meta property="og:description" content="Trace a newly saved iPhone contact to its account, distinguish Gmail suggestions from saved contacts, and fix the right part of the sync path.">
+<meta property="og:url" content="https://sync.openappsstudio.com/blog/new-iphone-contacts-not-in-gmail/">
+<meta property="og:site_name" content="Sync Contacts for Google">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="New iPhone contacts not showing in Gmail?">
+<meta name="twitter:description" content="Trace a newly saved iPhone contact to its account, distinguish Gmail suggestions from saved contacts, and fix the right part of the sync path.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/blog.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "@id": "https://sync.openappsstudio.com/blog/new-iphone-contacts-not-in-gmail/#article", "headline": "New iPhone contacts not showing in Gmail?", "description": "Trace a newly saved iPhone contact to its account, distinguish Gmail suggestions from saved contacts, and fix the right part of the sync path.", "mainEntityOfPage": "https://sync.openappsstudio.com/blog/new-iphone-contacts-not-in-gmail/", "url": "https://sync.openappsstudio.com/blog/new-iphone-contacts-not-in-gmail/", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "inLanguage": "en", "articleSection": "Troubleshooting", "author": {"@type": "Organization", "name": "Open Apps Studio", "url": "https://sync.openappsstudio.com/about/"}, "publisher": {"@type": "Organization", "name": "Open Apps Studio", "url": "https://openappsstudio.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sync.openappsstudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://sync.openappsstudio.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "New iPhone contacts not showing in Gmail?", "item": "https://sync.openappsstudio.com/blog/new-iphone-contacts-not-in-gmail/"}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/"><img src="/favicon-32.png" alt="" width="28" height="28">Sync Contacts <span>for Google</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a class="studio-link" href="https://openappsstudio.com">Open Apps Studio ↗</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog/">Guides</a>
+      <a href="/support/">Support</a>
+      <a class="btn btn-small" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_new_iphone_contacts_not_in_gmail&amp;mt=8">Get the app</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content"><article class="blog-article container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Guides</a><span aria-hidden="true">/</span><span aria-current="page">New iPhone contacts not showing in Gmail?</span></nav>
+<header class="article-header"><p class="eyebrow">Troubleshooting</p><h1>New iPhone contacts not showing in Gmail?</h1><p class="article-meta">By <a href="/about/">Open Apps Studio</a> · Updated <time datetime="2026-10-24">2026-10-24</time> · 2 min read</p></header>
+<div class="article-layout"><div class="article-body">
+<div class="answer-box"><p><strong>Find the account that received the new card before changing sync settings.</strong> If older Google contacts work but new iPhone cards never reach Google, the destination for new contacts is a useful first check.</p></div>
+<nav class="article-toc" aria-label="On this page"><p><strong>On this page</strong></p><ol><li><a href="#trace">Follow one newly created contact</a></li><li><a href="#gmail">Separate Gmail suggestions from saved cards</a></li><li><a href="#route">Choose the correct fix</a></li><li><a href="#verify">Verify both creation and editing</a></li></ol></nav>
+<section class="article-section" aria-labelledby="trace"><h2 id="trace">Follow one newly created contact</h2><p>Choose a card added recently and locate it in the iPhone’s account-specific lists. Then search for it in Google Contacts on the web while signed in to the exact account you expect to receive it.</p><p>If the card exists only in iCloud, the Google connection may be working perfectly: it was never given that record. If it exists in Google on the web but not on another device, focus on the receiving device. If it exists in a different Google account, correct the destination before testing again.</p></section><section class="article-section" aria-labelledby="gmail"><h2 id="gmail">Separate Gmail suggestions from saved cards</h2><p>The names Gmail suggests while composing a message can come from previous interactions as well as deliberately saved contacts. A person appearing in autocomplete is not a reliable test that their full phone card is in your main Google contact collection.</p><p>Use Google Contacts itself for verification. Inspect whether the card has the number and fields you need. This avoids “fixing” iPhone sync when the real issue is that an email suggestion never contained a saved phone number.</p></section><section class="article-section" aria-labelledby="route"><h2 id="route">Choose the correct fix</h2><ul><li><strong>New cards go to iCloud:</strong> change the default account for future cards and separately transfer existing ones if needed.</li><li><strong>Cards exist in Google on the web:</strong> troubleshoot the phone’s connected account and visible list.</li><li><strong>Cards depend on a third-party app:</strong> check its contact access, selected Google account and sync result.</li><li><strong>Only work records are missing:</strong> distinguish personal saved contacts from directory search.</li></ul><p>A default-account change does not retroactively move the card you used for diagnosis. Retest with a new sample after changing the setting.</p></section><section class="article-section" aria-labelledby="verify"><h2 id="verify">Verify both creation and editing</h2><p>Create one harmless test card in the intended account and confirm it on the web. Then change one nonessential field and confirm that update. This separates a successful one-time copy from a working update path.</p><p>Record which application created the card. If saving from one app works but another does not, investigate that app’s behavior rather than resetting the entire contact account. Once the result is understood, remove the sample and keep a note of the account used for future personal contacts.</p></section>
+<aside class="sources" aria-labelledby="sources-heading"><h2 id="sources-heading">Sources &amp; further help</h2><p>Official references checked on 2026-10-24. Menu labels can vary by software version and account policy.</p><ul><li><a href="https://support.google.com/contacts/answer/7345608">Google: contacts saved from interactions and suggestions</a></li><li><a href="https://support.apple.com/en-us/111793">Apple: manage contacts accounts on iPhone</a></li></ul><p>Published by the makers of Sync Contacts for Google. Our guides include built-in methods; an app is optional. <a href="/about/#editorial">How we maintain these guides</a>.</p></aside>
+</div><aside class="article-sidebar" aria-label="Related guidance"><div class="sidebar-inner"><h2>Keep reading</h2><ul><li><a href="/blog/set-gmail-default-contacts-iphone/">Set Gmail as your default contacts account on iPhone</a></li><li><a href="/blog/add-google-contacts-iphone/">How to add Google Contacts to your iPhone</a></li><li><a href="/blog/limited-contacts-access-iphone/">Limited Contacts access on iPhone: why an app sees fewer</a></li></ul><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing on iPhone?</a><div class="cta-block"><h2>Need ongoing iPhone–Google sync?</h2><p>Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books.</p><a class="btn" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_new_iphone_contacts_not_in_gmail&amp;mt=8">View on the App Store</a></div><a href="/blog/">Browse all guides →</a></div></aside></div></article></main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div>
+        <p class="footer-h">Sync Contacts for Google</p>
+        <p>Private, two-way sync between iPhone and Google Contacts. Free forever, by Open Apps Studio.</p>
+      </div>
+      <div>
+        <p class="footer-h">Guides</p>
+        <ul>
+          <li><a href="/blog/">All contact guides</a></li>
+          <li><a href="/icloud-to-google-contacts/">iCloud to Google Contacts</a></li>
+          <li><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing</a></li>
+          <li><a href="/transfer-contacts-android-to-iphone-gmail/">Android to iPhone via Gmail</a></li>
+          <li><a href="/merge-duplicate-contacts-iphone/">Merge duplicate contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-h">App</p>
+        <ul>
+          <li><a href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_new_iphone_contacts_not_in_gmail&amp;mt=8">Download on the App Store</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/about/">About &amp; editorial policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">© 2026 Open Apps Studio. Google, Gmail and Google Contacts are trademarks of Google LLC. Apple, iPhone and iCloud are trademarks of Apple Inc. This app is not affiliated with or endorsed by Google or Apple.</p>
+  </div>
+</footer>
+<script src="/assets/navigation.js" defer></script>
+</body>
+</html>

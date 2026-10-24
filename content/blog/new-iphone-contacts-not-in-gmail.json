@@ -1,0 +1,54 @@
+{
+  "slug": "new-iphone-contacts-not-in-gmail",
+  "title": "New iPhone contacts not showing in Gmail?",
+  "seo_title": "New iPhone contacts not showing in Gmail?",
+  "description": "Trace a newly saved iPhone contact to its account, distinguish Gmail suggestions from saved contacts, and fix the right part of the sync path.",
+  "category": "Troubleshooting",
+  "answer": "<strong>Find the account that received the new card before changing sync settings.</strong> If older Google contacts work but new iPhone cards never reach Google, the destination for new contacts is a useful first check.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_new_iphone_contacts_not_in_gmail",
+  "sections": [
+    {
+      "id": "trace",
+      "title": "Follow one newly created contact",
+      "html": "<p>Choose a card added recently and locate it in the iPhone’s account-specific lists. Then search for it in Google Contacts on the web while signed in to the exact account you expect to receive it.</p><p>If the card exists only in iCloud, the Google connection may be working perfectly: it was never given that record. If it exists in Google on the web but not on another device, focus on the receiving device. If it exists in a different Google account, correct the destination before testing again.</p>"
+    },
+    {
+      "id": "gmail",
+      "title": "Separate Gmail suggestions from saved cards",
+      "html": "<p>The names Gmail suggests while composing a message can come from previous interactions as well as deliberately saved contacts. A person appearing in autocomplete is not a reliable test that their full phone card is in your main Google contact collection.</p><p>Use Google Contacts itself for verification. Inspect whether the card has the number and fields you need. This avoids “fixing” iPhone sync when the real issue is that an email suggestion never contained a saved phone number.</p>"
+    },
+    {
+      "id": "route",
+      "title": "Choose the correct fix",
+      "html": "<ul><li><strong>New cards go to iCloud:</strong> change the default account for future cards and separately transfer existing ones if needed.</li><li><strong>Cards exist in Google on the web:</strong> troubleshoot the phone’s connected account and visible list.</li><li><strong>Cards depend on a third-party app:</strong> check its contact access, selected Google account and sync result.</li><li><strong>Only work records are missing:</strong> distinguish personal saved contacts from directory search.</li></ul><p>A default-account change does not retroactively move the card you used for diagnosis. Retest with a new sample after changing the setting.</p>"
+    },
+    {
+      "id": "verify",
+      "title": "Verify both creation and editing",
+      "html": "<p>Create one harmless test card in the intended account and confirm it on the web. Then change one nonessential field and confirm that update. This separates a successful one-time copy from a working update path.</p><p>Record which application created the card. If saving from one app works but another does not, investigate that app’s behavior rather than resetting the entire contact account. Once the result is understood, remove the sample and keep a note of the account used for future personal contacts.</p>"
+    }
+  ],
+  "related": [
+    "set-gmail-default-contacts-iphone",
+    "add-google-contacts-iphone",
+    "limited-contacts-access-iphone"
+  ],
+  "sources": [
+    {
+      "title": "Google: contacts saved from interactions and suggestions",
+      "url": "https://support.google.com/contacts/answer/7345608"
+    },
+    {
+      "title": "Apple: manage contacts accounts on iPhone",
+      "url": "https://support.apple.com/en-us/111793"
+    }
+  ],
+  "pillar": {
+    "path": "/google-contacts-not-syncing-iphone/",
+    "title": "Google contacts not syncing on iPhone?"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

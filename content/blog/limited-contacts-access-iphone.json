@@ -1,0 +1,50 @@
+{
+  "slug": "limited-contacts-access-iphone",
+  "title": "Limited Contacts access on iPhone: why an app sees fewer",
+  "seo_title": "Limited Contacts access on iPhone: why an app sees fewer",
+  "description": "Understand Limited and Full Contacts access on iPhone, check which people an app can read, and distinguish permission limits from missing cloud data.",
+  "category": "Troubleshooting",
+  "answer": "<strong>With Limited Contacts access, an app can work only with the contacts you selected.</strong> A smaller contact count inside a sync app can therefore be a permission boundary rather than a lost address book.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_limited_contacts_access_iphone",
+  "sections": [
+    {
+      "id": "meaning",
+      "title": "Understand the two separate permissions",
+      "html": "<p>A contacts sync app may need permission to access the iPhone address book and separate permission to access a Google account. Approving Google sign-in does not automatically grant access to every local card, and local contact permission does not choose the correct Google account.</p><p>Keep those checks separate when diagnosing a partial result. One side may contain the right records while the app is allowed to read only a subset on the other side.</p>"
+    },
+    {
+      "id": "review",
+      "title": "Review access without granting more than you need",
+      "html": "<p>Open <strong>Settings → Privacy &amp; Security → Contacts</strong>, select the app, and review its contact access. Where Limited Access is selected, use the selected-contact controls to inspect or change the permitted people.</p><p>If your intention is to work with a small group, limited access may be appropriate. If you expect the app to process your whole address book, compare that expectation with the permission you granted. Read the app’s privacy information before expanding access.</p>"
+    },
+    {
+      "id": "test",
+      "title": "Test one allowed and one unavailable card",
+      "html": "<ol><li>Choose a harmless card you know the app is allowed to access.</li><li>Compare it with a card outside the current permitted selection.</li><li>Refresh the app’s view after any permission change.</li><li>Review the proposed sync changes before confirming a large operation.</li></ol><p>This controlled comparison is more useful than repeatedly signing out of Google. If the allowed card works and the other does not, you have a concrete explanation for the difference.</p>"
+    },
+    {
+      "id": "boundaries",
+      "title": "Do not interpret inaccessible as deleted",
+      "html": "<p>An app failing to see a card is not proof that the card has been removed from the phone or cloud account. Check the system Contacts app and the appropriate web address book directly.</p><p>After changing permissions, do not assume every sync tool handles a reduced contact set in the same way. Review its preview and behavior, especially if it can propagate deletions. If the proposed changes are surprising, stop that sync and preserve an export before troubleshooting further.</p><p>For a support report, describe the permission level, account and visible counts without sending personal contact details. The important information is which part of the workflow can see which records.</p>"
+    }
+  ],
+  "related": [
+    "where-iphone-contacts-stored",
+    "new-iphone-contacts-not-in-gmail",
+    "background-contact-sync-iphone"
+  ],
+  "sources": [
+    {
+      "title": "Apple: control access to contacts on iPhone",
+      "url": "https://support.apple.com/guide/iphone/control-access-to-your-contacts-iph9536aa9a5/ios"
+    }
+  ],
+  "pillar": {
+    "path": "/google-contacts-not-syncing-iphone/",
+    "title": "Google contacts not syncing on iPhone?"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

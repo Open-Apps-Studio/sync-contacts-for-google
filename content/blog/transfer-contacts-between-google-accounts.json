@@ -1,0 +1,54 @@
+{
+  "slug": "transfer-contacts-between-google-accounts",
+  "title": "Move contacts from one Google account to another",
+  "seo_title": "Move contacts from one Google account to another",
+  "description": "Transfer contacts between Gmail accounts with a deliberate export and import, then check new-contact settings and prevent duplicate copies.",
+  "category": "Transfers & imports",
+  "answer": "<strong>Export the intended contacts from the source Google account and import them into the destination account.</strong> This creates a copy. It does not merge the two accounts or redirect future changes automatically.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_transfer_contacts_between_google",
+  "sections": [
+    {
+      "id": "prepare",
+      "title": "Name the source and destination first",
+      "html": "<p>Write down the complete email addresses for the old and new accounts. Similar profile photos and abbreviated names make it easy to export from, or import into, the wrong account. Use separate browser profiles or clearly separated windows if that helps keep the roles obvious.</p><p>Check whether the source contains contacts you are allowed to move. A company address book should not be treated as a personal collection simply because you can view it. Export the existing destination too if it already holds important cards.</p>"
+    },
+    {
+      "id": "move",
+      "title": "Export, switch accounts, then import",
+      "html": "<ol><li>Open Google Contacts in the source account and select the intended contacts.</li><li>Use <strong>Export</strong> and choose <strong>Google CSV</strong>.</li><li>Save the file with a name that identifies its source and date.</li><li>Switch to the destination account, then use <strong>Import</strong> to select that file.</li></ol><p>Keep the original export as a recovery copy. Do not modify the file in a spreadsheet unless there is a specific problem to correct; automatic number formatting can change phone numbers.</p>"
+    },
+    {
+      "id": "compare",
+      "title": "Compare the copied records before cleanup",
+      "html": "<p>Search for several people in the destination and check their details. Include a contact with more than one email address, one with an international phone number, and one you added recently. Review any duplicate suggestions before accepting them.</p><p>If only a portion was copied, investigate which contacts were selected for export. A second full import can obscure the original problem by adding another set of overlapping cards.</p>"
+    },
+    {
+      "id": "future",
+      "title": "Point future work at the new account",
+      "html": "<p>On the iPhone, connect the destination account and choose it for new contacts if that is your goal. An old card still visible under the source account does not mean it has moved. Editing that source card later will not update the independent imported copy.</p><p>Keep the old account available until the destination is verified. If you want to remove it from the phone, first distinguish hiding its contacts from deleting its cloud records. Do not delete the source collection just to reduce a combined view’s count.</p><p>This workflow is for a one-time account move. If you need two accounts to stay aligned, define which account owns the records and evaluate a separate ongoing process.</p>"
+    }
+  ],
+  "related": [
+    "backup-google-contacts",
+    "duplicate-google-contacts",
+    "set-gmail-default-contacts-iphone"
+  ],
+  "sources": [
+    {
+      "title": "Google: import contacts and fix import problems",
+      "url": "https://support.google.com/contacts/answer/15147365?hl=en"
+    },
+    {
+      "title": "Google: export, back up or restore contacts",
+      "url": "https://support.google.com/contacts/answer/7199294?co=GENIE.Platform%3DDesktop&hl=en"
+    }
+  ],
+  "pillar": {
+    "path": "/icloud-to-google-contacts/",
+    "title": "Move iCloud contacts to Google"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

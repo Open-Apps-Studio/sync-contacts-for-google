@@ -8,3 +8,6 @@ backend/node_modules/
 
 ios/build/
 .context/
+
+__pycache__/
+.vercel/

@@ -70,3 +70,65 @@ This repository ships with **placeholder** identifiers only — the Google OAuth
 ## License
 
 [MIT](LICENSE). "Google", "Google Contacts", and related marks are trademarks of Google LLC; this project is independent and not endorsed by or affiliated with Google.
+
+## Website SEO and publishing
+
+The production website is https://sync.openappsstudio.com, hosted on Vercel in
+`sync-contacts-for-google`. The production source is
+`Open-Apps-Studio/sync-contacts-for-google`, branch `master`, deployed from `site/`
+using the Vercel CLI. There is no automatic Git deployment integration.
+
+The October 24, 2026 website update adds 20 distinct articles under `/blog/`, a
+categorized guide hub and an editorial/about page. The four established guide
+URLs are preserved and refreshed. Content covers setup/accounts, transfers and
+imports, backups/recovery, and troubleshooting. These are intent-led topics,
+not claims of measured keyword volume or guaranteed rankings. App Store title,
+subtitle, keywords and screenshots are outside this website change.
+
+Article sources are editable JSON files in `content/blog/`. Each includes the
+search title, description, direct answer, sections, related guides, official
+references, publication/update dates and a unique Apple campaign token.
+Generated HTML is checked in so production needs no runtime or build service.
+Edit a source file, update its date only for a substantive revision, and run:
+
+```bash
+python3 scripts/build_blog.py
+python3 scripts/check_site.py
+python3 -m http.server 8765 --directory site
+```
+
+The builder generates the 20 articles, guide hub, robots.txt and canonical
+sitemap. Other existing pages remain hand-authored. The checker validates
+internal links/fragments, metadata, article/breadcrumb JSON-LD, campaign links,
+verification-tag preservation, redirects and exact sitemap coverage. It can
+also compare every deployed page with the local source:
+
+```bash
+python3 scripts/check_site.py --base-url https://sync.openappsstudio.com
+```
+
+Deploy from the verified production checkout and its existing Vercel project
+binding, using `vercel deploy --prod --yes` from `site/`. Check the custom domain,
+the four original guide URLs, `/blog/`, the legacy App Store redirect, a genuine
+404, and default-host redirects after release. Never deploy the separate
+`deployment/azure-redirect/` retirement bundle to Vercel. Rebuild that bundle
+with `python3 scripts/build_legacy_redirect.py` when canonical paths change.
+
+Measurement: use the canonical custom-domain property in Search Console for
+indexing, selected canonicals, queries, clicks, impressions and CTR. Compare
+28-day periods by page and country; keep the older Vercel property as migration
+context. Its observed three-month baseline on October 24 was 10 clicks, about
+2,970 impressions, 0.3% CTR and average position 41.9. This is not a baseline for
+the new articles or the custom domain. Preserve existing Apple campaign tokens;
+new article tokens are in the content files. Apple may withhold campaign results
+below its reporting thresholds, so missing campaign data does not prove zero
+visits. No client-side analytics or tracking cookies were added.
+
+Search Console verification and sitemap submission are account actions, not
+something the build script can prove. Check the actual property status after
+publishing. A submitted sitemap does not guarantee indexing or rankings.
+
+Editorial basis: Google's people-first content and canonicalization guidance,
+plus Apple/Google product documentation linked inside each guide. The site uses
+static readable HTML, internal links, descriptive titles and accurate schema;
+it does not use fabricated reviews, keyword stuffing, or duplicate city pages.

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Import CSV contacts into Google without losing numbers</title>
+<meta name="description" content="Prepare a contact CSV using Google’s template, protect international phone numbers, and test a small import before moving the full address book.">
+<link rel="canonical" href="https://sync.openappsstudio.com/blog/import-csv-google-contacts/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Import CSV contacts into Google without losing numbers">
+<meta property="og:description" content="Prepare a contact CSV using Google’s template, protect international phone numbers, and test a small import before moving the full address book.">
+<meta property="og:url" content="https://sync.openappsstudio.com/blog/import-csv-google-contacts/">
+<meta property="og:site_name" content="Sync Contacts for Google">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Import CSV contacts into Google without losing numbers">
+<meta name="twitter:description" content="Prepare a contact CSV using Google’s template, protect international phone numbers, and test a small import before moving the full address book.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/blog.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "@id": "https://sync.openappsstudio.com/blog/import-csv-google-contacts/#article", "headline": "Import CSV contacts into Google without losing numbers", "description": "Prepare a contact CSV using Google’s template, protect international phone numbers, and test a small import before moving the full address book.", "mainEntityOfPage": "https://sync.openappsstudio.com/blog/import-csv-google-contacts/", "url": "https://sync.openappsstudio.com/blog/import-csv-google-contacts/", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "inLanguage": "en", "articleSection": "Transfers & imports", "author": {"@type": "Organization", "name": "Open Apps Studio", "url": "https://sync.openappsstudio.com/about/"}, "publisher": {"@type": "Organization", "name": "Open Apps Studio", "url": "https://openappsstudio.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sync.openappsstudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://sync.openappsstudio.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Import CSV contacts into Google without losing numbers", "item": "https://sync.openappsstudio.com/blog/import-csv-google-contacts/"}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/"><img src="/favicon-32.png" alt="" width="28" height="28">Sync Contacts <span>for Google</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a class="studio-link" href="https://openappsstudio.com">Open Apps Studio ↗</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog/">Guides</a>
+      <a href="/support/">Support</a>
+      <a class="btn btn-small" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_import_csv_google_contacts&amp;mt=8">Get the app</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content"><article class="blog-article container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Guides</a><span aria-hidden="true">/</span><span aria-current="page">Import CSV contacts into Google without losing numbers</span></nav>
+<header class="article-header"><p class="eyebrow">Transfers &amp; imports</p><h1>Import CSV contacts into Google without losing numbers</h1><p class="article-meta">By <a href="/about/">Open Apps Studio</a> · Updated <time datetime="2026-10-24">2026-10-24</time> · 2 min read</p></header>
+<div class="article-layout"><div class="article-body">
+<div class="answer-box"><p><strong>Use Google’s contact-import template and keep phone numbers as text.</strong> A CSV is a table, so its column names and formatting determine whether contact details land in the intended fields.</p></div>
+<nav class="article-toc" aria-label="On this page"><p><strong>On this page</strong></p><ol><li><a href="#template">Start with the official field layout</a></li><li><a href="#numbers">Protect phone numbers while editing</a></li><li><a href="#pilot">Import a representative sample first</a></li><li><a href="#check">Check completeness without relying only on totals</a></li></ol></nav>
+<section class="article-section" aria-labelledby="template"><h2 id="template">Start with the official field layout</h2><p>Get the current template from Google’s import documentation linked below. Retain its header row and put each person’s details into the matching columns. Avoid inventing column names or putting several unrelated values into one cell and expecting the importer to guess.</p><p>If your contacts already came from Google, a fresh Google CSV export is usually a better starting point than rebuilding the file from scratch. If you are converting a different source, keep that untouched source alongside the working copy.</p></section><section class="article-section" aria-labelledby="numbers"><h2 id="numbers">Protect phone numbers while editing</h2><p>Phone numbers are identifiers, not quantities. A spreadsheet can strip a leading zero, interpret a plus sign, or display a long value in scientific notation. Format phone-number columns as text before entering or pasting values.</p><p>Compare the saved CSV with the original records, not only the spreadsheet’s display. Include an international number and a number with a leading zero in your test. Do not “normalize” every country’s numbers with one rule unless you know the correct country context.</p><p>Also check the character encoding when saving. Names with accents or non-Latin characters should remain legible when the CSV is reopened.</p></section><section class="article-section" aria-labelledby="pilot"><h2 id="pilot">Import a representative sample first</h2><ol><li>Create a small sample containing ordinary and complex records.</li><li>Import it into the intended Google account using the web interface.</li><li>Inspect names, phone numbers, email fields and notes on the resulting cards.</li><li>Correct the working file if fields are misplaced before importing the remainder.</li></ol><p>Track which sample records are already present so the full import does not silently add another copy. Keep the sample distinct enough to identify without altering real important contacts.</p></section><section class="article-section" aria-labelledby="check"><h2 id="check">Check completeness without relying only on totals</h2><p>A row count is useful, but blank rows, repeated people and multi-value fields can make totals misleading. Check individual cards and any extra fields you depend on. If the source contains birthdays, addresses or custom notes, include those in your sample.</p><p>A successful upload means the file was accepted; it does not prove that every column mapped as you intended. Once verified, keep the final CSV as a dated migration record. For ongoing updates, edit the destination address book or use a deliberate sync workflow rather than repeatedly uploading the same spreadsheet.</p></section>
+<aside class="sources" aria-labelledby="sources-heading"><h2 id="sources-heading">Sources &amp; further help</h2><p>Official references checked on 2026-10-24. Menu labels can vary by software version and account policy.</p><ul><li><a href="https://support.google.com/contacts/answer/15147365?hl=en">Google: import contacts and fix import problems</a></li></ul><p>Published by the makers of Sync Contacts for Google. Our guides include built-in methods; an app is optional. <a href="/about/#editorial">How we maintain these guides</a>.</p></aside>
+</div><aside class="article-sidebar" aria-label="Related guidance"><div class="sidebar-inner"><h2>Keep reading</h2><ul><li><a href="/blog/import-vcf-google-contacts/">Import a VCF or vCard file into Google Contacts</a></li><li><a href="/blog/google-contacts-import-problems/">Google Contacts import failed? Check these causes</a></li><li><a href="/blog/transfer-contacts-between-google-accounts/">Move contacts from one Google account to another</a></li></ul><a href="/icloud-to-google-contacts/">Move iCloud contacts to Google</a><div class="cta-block"><h2>Need ongoing iPhone–Google sync?</h2><p>Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books.</p><a class="btn" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_import_csv_google_contacts&amp;mt=8">View on the App Store</a></div><a href="/blog/">Browse all guides →</a></div></aside></div></article></main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div>
+        <p class="footer-h">Sync Contacts for Google</p>
+        <p>Private, two-way sync between iPhone and Google Contacts. Free forever, by Open Apps Studio.</p>
+      </div>
+      <div>
+        <p class="footer-h">Guides</p>
+        <ul>
+          <li><a href="/blog/">All contact guides</a></li>
+          <li><a href="/icloud-to-google-contacts/">iCloud to Google Contacts</a></li>
+          <li><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing</a></li>
+          <li><a href="/transfer-contacts-android-to-iphone-gmail/">Android to iPhone via Gmail</a></li>
+          <li><a href="/merge-duplicate-contacts-iphone/">Merge duplicate contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-h">App</p>
+        <ul>
+          <li><a href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=blog_import_csv_google_contacts&amp;mt=8">Download on the App Store</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/about/">About &amp; editorial policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">© 2026 Open Apps Studio. Google, Gmail and Google Contacts are trademarks of Google LLC. Apple, iPhone and iCloud are trademarks of Apple Inc. This app is not affiliated with or endorsed by Google or Apple.</p>
+  </div>
+</footer>
+<script src="/assets/navigation.js" defer></script>
+</body>
+</html>

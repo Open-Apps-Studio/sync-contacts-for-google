@@ -1,32 +1,110 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Live domain: https://sync.openappsstudio.com (Vercel). Update every <loc> if the canonical domain changes. -->
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sync.openappsstudio.com/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <loc>https://sync.openappsstudio.com/about/</loc>
   </url>
   <url>
-    <loc>https://sync.openappsstudio.com/icloud-to-google-contacts/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <loc>https://sync.openappsstudio.com/blog/add-google-contacts-iphone/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/background-contact-sync-iphone/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/backup-google-contacts/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/duplicate-google-contacts/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/export-iphone-contacts/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/google-contacts-import-problems/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/google-workspace-contacts-iphone/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/icloud-vs-google-contacts/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/import-csv-google-contacts/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/import-vcf-google-contacts/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/</loc>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/iphone-contacts-missing-after-adding-gmail/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/iphone-contacts-to-android/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/limited-contacts-access-iphone/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/new-iphone-contacts-not-in-gmail/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/restore-deleted-google-contacts/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/restore-icloud-contacts/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/set-gmail-default-contacts-iphone/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/sync-vs-backup-contacts/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/transfer-contacts-between-google-accounts/</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/blog/where-iphone-contacts-stored/</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://sync.openappsstudio.com/google-contacts-not-syncing-iphone/</loc>
-    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://sync.openappsstudio.com/transfer-contacts-android-to-iphone-gmail/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <loc>https://sync.openappsstudio.com/icloud-to-google-contacts/</loc>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/</loc>
   </url>
   <url>
     <loc>https://sync.openappsstudio.com/merge-duplicate-contacts-iphone/</loc>
-    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
     <loc>https://sync.openappsstudio.com/privacy/</loc>
-    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
     <loc>https://sync.openappsstudio.com/support/</loc>
-    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://sync.openappsstudio.com/transfer-contacts-android-to-iphone-gmail/</loc>
   </url>
 </urlset>

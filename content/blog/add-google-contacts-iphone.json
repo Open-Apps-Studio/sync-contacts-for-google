@@ -1,0 +1,54 @@
+{
+  "slug": "add-google-contacts-iphone",
+  "title": "How to add Google Contacts to your iPhone",
+  "seo_title": "How to add Google Contacts to your iPhone",
+  "description": "Add your Google account to iPhone Contacts, check the right list, and confirm changes sync without importing your address book again.",
+  "category": "Setup & accounts",
+  "answer": "<strong>To show Google contacts on an iPhone, add your Google account in Settings and enable Contacts.</strong> This connects an existing Google address book. It does not automatically copy contacts from iCloud into Google.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_add_google_contacts_iphone",
+  "sections": [
+    {
+      "id": "before",
+      "title": "Check the address book you want to connect",
+      "html": "<p>Open <a href=\"https://contacts.google.com/\">Google Contacts</a> in a browser and confirm the signed-in email address. Pick a contact with a recognizable name and phone number to use as your test. If the contact is missing there, connecting the account to your phone will not create it.</p><p>Keep this distinction in mind if you have several Gmail addresses: signing in to Gmail for email and connecting an account to Apple Contacts are separate setup choices. You need the address book that actually contains your people.</p>"
+    },
+    {
+      "id": "connect",
+      "title": "Connect the account in Settings",
+      "html": "<ol><li>Open <strong>Settings → Apps → Contacts → Contacts Accounts</strong>. On older iOS versions, Contacts may appear directly in Settings.</li><li>Choose <strong>Add Account → Google</strong>, then complete Google sign-in.</li><li>Enable <strong>Contacts</strong> for that account and finish the setup.</li><li>Open Apple Contacts and select the Google account under <strong>Lists</strong>.</li></ol><p>If the account is already listed in Settings, check its Contacts switch instead of adding it a second time. Managed devices may restrict which accounts you can connect.</p>"
+    },
+    {
+      "id": "verify",
+      "title": "Verify a real contact, then a small edit",
+      "html": "<p>Find your test contact in the Google list on the phone. Make a harmless change to a test card in Google Contacts on the web, reopen Contacts on the iPhone, and check for the change. Allow time for the account to refresh; a successful email sign-in alone is not proof that contacts sync is working.</p><p>If the Google list is empty, compare the exact account addresses on the web and phone first. If the list contains contacts but a particular person is missing, search that person on the web before changing more settings.</p>"
+    },
+    {
+      "id": "next",
+      "title": "Decide where new contacts should be saved",
+      "html": "<p>You can now view Google contacts alongside other accounts. New cards may still be created in iCloud if that is the default destination. Follow the default-account guide below if you want new personal contacts to start in Gmail.</p><p>For an existing iCloud address book, use the dedicated transfer guide. Repeatedly importing the same file is not required to keep the connected Google account current and can make duplicate cleanup harder.</p>"
+    }
+  ],
+  "related": [
+    "set-gmail-default-contacts-iphone",
+    "where-iphone-contacts-stored",
+    "icloud-vs-google-contacts"
+  ],
+  "sources": [
+    {
+      "title": "Apple: manage contacts accounts on iPhone",
+      "url": "https://support.apple.com/en-us/111793"
+    },
+    {
+      "title": "Google: sync contacts with iPhone or iPad",
+      "url": "https://support.google.com/contacts/answer/2753077?co=GENIE.Platform%3DiOS&hl=en"
+    }
+  ],
+  "pillar": {
+    "path": "/google-contacts-not-syncing-iphone/",
+    "title": "Google contacts not syncing on iPhone?"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

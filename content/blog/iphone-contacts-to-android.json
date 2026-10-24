@@ -1,0 +1,54 @@
+{
+  "slug": "iphone-contacts-to-android",
+  "title": "Transfer iPhone contacts to Android using Google",
+  "seo_title": "Transfer iPhone contacts to Android using Google",
+  "description": "Move iPhone contacts to Android through a Google account, check which contacts need copying, and verify the transfer before retiring your old phone.",
+  "category": "Transfers & imports",
+  "answer": "<strong>If your iPhone contacts are already in Google, connect that same account on Android.</strong> If they live in iCloud or another account, copy the intended cards to Google first. A device change and an address-book migration are separate steps.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_iphone_contacts_to_android",
+  "sections": [
+    {
+      "id": "locate",
+      "title": "Find out whether a transfer is needed",
+      "html": "<p>Before opening any migration tool, sign in to Google Contacts on the web. Look for a few important people and compare their phone numbers with the iPhone. If those cards already match, exporting them from the iPhone and importing them again adds unnecessary work.</p><p>If only some people appear, inspect the iPhone’s account lists. You may have an older Google address book and newer contacts saved to iCloud. Move the missing source collection deliberately rather than assuming the entire phone belongs to one account.</p>"
+    },
+    {
+      "id": "copy",
+      "title": "Copy the missing source collection once",
+      "html": "<p>For iCloud contacts, follow the existing iCloud-to-Google guide linked below. For another visible iPhone list, use the iPhone export guide to save a vCard and then import it into the destination Google account.</p><p>Keep the original export unchanged. Choose a personal account you expect to retain, not a temporary work address you may lose access to. Avoid sending the contact file through an unrelated online conversion service: the export itself contains personal information.</p>"
+    },
+    {
+      "id": "android",
+      "title": "Connect Android and verify the result",
+      "html": "<ol><li>Add the destination Google account to the Android phone using its account settings.</li><li>Enable contact synchronization for that account if it is not already enabled.</li><li>Open the phone’s Contacts app and select the correct account or list.</li><li>Compare several cards with Google Contacts on the web, including one with multiple numbers.</li><li>Create a harmless test card in the intended account and check it on the web.</li></ol><p>Android menus differ by manufacturer. If the web copy is complete but the phone looks empty, work on account visibility and sync settings instead of importing another file.</p>"
+    },
+    {
+      "id": "finish",
+      "title": "Keep the old phone until the checks pass",
+      "html": "<p>Check an emergency contact, a recent addition, a card with an international number, and one containing notes. An equal total count is not enough to prove every field survived the move.</p><p>Once the destination is verified, decide which account should receive new Android contacts. Preserve your export separately before resetting or trading in the iPhone. If both phones will remain in use, choose an ongoing sync arrangement rather than repeating the migration every week.</p>"
+    }
+  ],
+  "related": [
+    "where-iphone-contacts-stored",
+    "export-iphone-contacts",
+    "import-vcf-google-contacts"
+  ],
+  "sources": [
+    {
+      "title": "Google: sync contacts with iPhone or iPad",
+      "url": "https://support.google.com/contacts/answer/2753077?co=GENIE.Platform%3DiOS&hl=en"
+    },
+    {
+      "title": "Apple: export contacts on iPhone",
+      "url": "https://support.apple.com/en-ie/guide/iphone/iph075ddebf2/ios"
+    }
+  ],
+  "pillar": {
+    "path": "/transfer-contacts-android-to-iphone-gmail/",
+    "title": "Transfer Android contacts to iPhone"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

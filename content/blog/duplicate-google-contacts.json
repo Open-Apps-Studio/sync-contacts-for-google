@@ -1,0 +1,54 @@
+{
+  "slug": "duplicate-google-contacts",
+  "title": "Merge duplicate Google Contacts without mixing people",
+  "seo_title": "Merge duplicate Google Contacts without mixing people",
+  "description": "Review Google Contacts duplicate suggestions, distinguish cross-account copies, and verify phone numbers before merging cards.",
+  "category": "Troubleshooting",
+  "answer": "<strong>Use Google Contacts’ Merge &amp; fix for duplicate records within the same Google account.</strong> Review the details first. Two cards with similar names are not always the same person, and cross-account copies need a different approach.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_duplicate_google_contacts",
+  "sections": [
+    {
+      "id": "source",
+      "title": "Identify the duplicate collection",
+      "html": "<p>Open Google Contacts on the web and search for a person who appears twice on the phone. If Google shows only one card, the phone may be displaying records from both Google and iCloud. Merging inside Google will not remove the independent iCloud copy.</p><p>If both duplicates are in Google, compare their numbers, email addresses and notes. Shared household numbers or workplace switchboards can make unrelated people look similar. Decide which information should survive before using a bulk action.</p>"
+    },
+    {
+      "id": "merge",
+      "title": "Review suggestions and merge deliberately",
+      "html": "<p>Export a backup, then open <strong>Merge &amp; fix</strong> in Google Contacts. Review available duplicate suggestions and accept the ones you understand. Google also supports selecting specific cards to merge when you need to choose them yourself.</p><p>Google does not merge contacts stored in different Google accounts. If the same person appears across two accounts, first decide whether those copies serve separate personal and work purposes or whether you are planning a deliberate account migration.</p>"
+    },
+    {
+      "id": "check",
+      "title": "Inspect the resulting card",
+      "html": "<ol><li>Search for the merged person again.</li><li>Check all phone numbers and email addresses that should remain.</li><li>Review names, organization fields and notes for conflicting details.</li><li>Check the relevant Google list on the iPhone after it refreshes.</li></ol><p>Do a small set first if you have many complex cards. A lower total count is not a quality check; a merged card can still contain an old number you wanted to remove or combine two people you meant to keep separate.</p>"
+    },
+    {
+      "id": "prevent",
+      "title": "Stop the source of repeated duplicates",
+      "html": "<p>Look for repeated imports, two independent sync tools, or the same contact collection maintained in several accounts. Fix the workflow that recreates copies before merging the same people again.</p><p>For a one-time migration, keep a record of which file and batch you imported. For ongoing synchronization, decide where edits originate and which tool is responsible for moving them. Avoid a cycle that exports and reimports the entire collection for routine updates.</p><p>If a merge was wrong, inspect Google’s Undo changes option and your export before taking another broad action. Account-wide recovery can affect other recent edits, so compare the current state first.</p>"
+    }
+  ],
+  "related": [
+    "backup-google-contacts",
+    "transfer-contacts-between-google-accounts",
+    "where-iphone-contacts-stored"
+  ],
+  "sources": [
+    {
+      "title": "Google: merge duplicate contacts",
+      "url": "https://support.google.com/contacts/answer/7078226?co=GENIE.Platform%3DDesktop&hl=en"
+    },
+    {
+      "title": "Google: recover deleted contacts and undo changes",
+      "url": "https://support.google.com/contacts/answer/7280886?co=GENIE.Platform%3DDesktop&hl=en"
+    }
+  ],
+  "pillar": {
+    "path": "/merge-duplicate-contacts-iphone/",
+    "title": "Merge duplicate contacts on iPhone"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

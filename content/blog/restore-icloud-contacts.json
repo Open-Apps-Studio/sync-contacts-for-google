@@ -1,0 +1,50 @@
+{
+  "slug": "restore-icloud-contacts",
+  "title": "Restore iCloud contacts from an archived version",
+  "seo_title": "Restore iCloud contacts from an archived version",
+  "description": "Recover iCloud contacts using Data Recovery, understand the account-wide effect, and verify the restored cards before resuming other contact changes.",
+  "category": "Backups & recovery",
+  "answer": "<strong>Use iCloud’s Data Recovery to restore an available archived contact version.</strong> This applies to contacts stored in iCloud. It does not recover a separate Google address book or guarantee that a suitable archive exists.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_restore_icloud_contacts",
+  "sections": [
+    {
+      "id": "source",
+      "title": "Check that iCloud is the right recovery source",
+      "html": "<p>Look for the missing cards on iCloud.com and in the iCloud list on the iPhone. If a card remains on the web but not on the phone, investigate visibility or synchronization before restoring an archive.</p><p>If the contact belonged to Google, use Google’s recovery tools instead. The combined Contacts view can make the original account easy to forget, particularly after adding a new email account or switching the default destination.</p>"
+    },
+    {
+      "id": "archive",
+      "title": "Choose an archive deliberately",
+      "html": "<p>On a tablet or computer, open iCloud.com and find <strong>Data Recovery → Restore Contacts</strong>. Review the available archive dates and choose a version from before the unwanted change.</p><p>Apple explains that the current contact version is archived before restoration. Recent deletions can take up to 24 hours to appear in an archive. If no suitable archive is available, check your independent exports instead of assuming the recovery screen contains a complete history.</p>"
+    },
+    {
+      "id": "scope",
+      "title": "Allow the restoration to finish",
+      "html": "<p>This operation restores an account-level version, not just the one card you had in mind. The restored collection becomes available to devices using iCloud Contacts. Wait for the process to complete before editing the address book; Apple warns that changes made during restoration are not saved.</p><p>If possible, make an export of your current information beforehand. It gives you a separate reference for people added after the archive date and helps distinguish the intended recovery from changes you may need to reapply.</p>"
+    },
+    {
+      "id": "verify",
+      "title": "Compare the recovered collection carefully",
+      "html": "<ol><li>Check the recovered contact on iCloud.com.</li><li>Review other cards changed around the same time.</li><li>Look for recently added people who may not be in the older version.</li><li>Check the iCloud list on the phone once the web result is correct.</li></ol><p>Do not immediately run a large import, a duplicate merge and a two-way sync on top of the restoration. Verify one stage at a time so you can explain any difference.</p><p>If you maintain independent Google copies, restoring iCloud does not by itself define what should happen to those copies. Review your sync direction and the proposed changes before reconnecting a workflow that modifies both address books.</p>"
+    }
+  ],
+  "related": [
+    "restore-deleted-google-contacts",
+    "export-iphone-contacts",
+    "where-iphone-contacts-stored"
+  ],
+  "sources": [
+    {
+      "title": "Apple: restore an archived contacts version",
+      "url": "https://support.apple.com/guide/icloud/restore-contacts-mm1d9cfdb498/icloud"
+    }
+  ],
+  "pillar": {
+    "path": "/icloud-to-google-contacts/",
+    "title": "Move iCloud contacts to Google"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

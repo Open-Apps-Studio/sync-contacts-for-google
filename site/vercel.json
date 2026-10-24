@@ -2,30 +2,85 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": true,
   "redirects": [
-    { "source": "/appstore.html", "destination": "https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&ct=web_legacy_download&mt=8", "permanent": true },
+    {
+      "source": "/appstore.html",
+      "destination": "https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&ct=web_legacy_download&mt=8",
+      "permanent": true
+    },
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "sync.opengrounds.org" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "sync-contacts-for-google.vercel.app"
+        }
+      ],
       "destination": "https://sync.openappsstudio.com/",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "sync.opengrounds.org" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "sync-contacts-for-google.vercel.app"
+        }
+      ],
       "destination": "https://sync.openappsstudio.com/:path*",
       "permanent": true
     },
-    { "source": "/vs-contacts-sync-app/:path*", "destination": "/", "permanent": true }
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "sync.opengrounds.org"
+        }
+      ],
+      "destination": "https://sync.openappsstudio.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "sync.opengrounds.org"
+        }
+      ],
+      "destination": "https://sync.openappsstudio.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/vs-contacts-sync-app/:path*",
+      "destination": "/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "geolocation=(), camera=(), microphone=()" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; manifest-src 'self'" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), camera=(), microphone=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; manifest-src 'self'"
+        }
       ]
     }
   ]

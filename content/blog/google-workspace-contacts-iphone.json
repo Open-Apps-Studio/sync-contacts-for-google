@@ -1,0 +1,54 @@
+{
+  "slug": "google-workspace-contacts-iphone",
+  "title": "Google Workspace contacts on iPhone: personal vs directory",
+  "seo_title": "Google Workspace contacts on iPhone: personal vs directory",
+  "description": "Understand Google Workspace personal contacts, company directory search and admin restrictions before troubleshooting contacts on an iPhone.",
+  "category": "Setup & accounts",
+  "answer": "<strong>Workspace personal contacts and your company directory are different collections.</strong> Adding a work account can expose your saved contacts, while directory entries may require a search. An absent company-wide list is not automatically a sync failure.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_google_workspace_contacts_iphone",
+  "sections": [
+    {
+      "id": "types",
+      "title": "Identify which contact collection you mean",
+      "html": "<p>Start by checking whether the missing person is a contact you saved yourself or an employee you can find through the organization’s directory. Google documents that directory contacts are searched on mobile rather than appearing as a complete browsable list.</p><p>This matters for expectations: a personal contact export is not a company directory export. A contacts app that works with your personal records should not be assumed to copy every employee or shared company contact.</p>"
+    },
+    {
+      "id": "check",
+      "title": "Check the account and one saved contact",
+      "html": "<ol><li>Open Google Contacts in a browser while signed in to the work account.</li><li>Find one contact you have explicitly saved, rather than only a directory search result.</li><li>Confirm the same work account is connected on the phone and that Contacts is enabled where permitted.</li><li>Look for the saved card in the work account’s list on the iPhone.</li></ol><p>If the saved card appears but a directory member does not, investigate directory search and organization policy before removing the account. If no saved cards appear, the account connection itself deserves attention.</p>"
+    },
+    {
+      "id": "policy",
+      "title": "Recognize administrator restrictions",
+      "html": "<p>A work account can be subject to device-management requirements, approved-app rules, or restrictions on access to Google data. If sign-in or consent is blocked, capture the exact error message and ask the administrator which setup is supported.</p><p>Do not try to bypass those rules by copying the entire address book to a personal Gmail account. Moving work contact data is a separate decision from making an approved work account visible on your phone.</p>"
+    },
+    {
+      "id": "support",
+      "title": "Give support a useful problem report",
+      "html": "<p>Include your iOS version, whether the issue affects saved contacts or directory search, whether the same card appears on the web, and the text of any access error. Avoid sending real contact exports unless the support channel explicitly needs them and you have permission.</p><p>For a third-party sync app, first confirm that the organization permits that app and its requested contact access. If your aim is simply to find colleagues, the approved directory-search workflow may already solve it.</p>"
+    }
+  ],
+  "related": [
+    "add-google-contacts-iphone",
+    "where-iphone-contacts-stored",
+    "limited-contacts-access-iphone"
+  ],
+  "sources": [
+    {
+      "title": "Google: Workspace contacts and directory on mobile",
+      "url": "https://support.google.com/a/users/answer/7559344?hl=en"
+    },
+    {
+      "title": "Google: sync contacts with iPhone or iPad",
+      "url": "https://support.google.com/contacts/answer/2753077?co=GENIE.Platform%3DiOS&hl=en"
+    }
+  ],
+  "pillar": {
+    "path": "/google-contacts-not-syncing-iphone/",
+    "title": "Google contacts not syncing on iPhone?"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "For permitted personal-contact synchronization, review the app’s requested access and your organization’s rules first. Company directory replication is a separate requirement."
+}

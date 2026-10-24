@@ -1,0 +1,172 @@
+{
+  "routes": [
+    {
+      "route": "/appstore.html",
+      "redirect": "https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&ct=web_legacy_download&mt=8",
+      "statusCode": 301
+    },
+    {
+      "route": "/about/index.html",
+      "redirect": "https://sync.openappsstudio.com/about/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/add-google-contacts-iphone/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/add-google-contacts-iphone/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/background-contact-sync-iphone/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/background-contact-sync-iphone/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/backup-google-contacts/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/backup-google-contacts/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/duplicate-google-contacts/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/duplicate-google-contacts/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/export-iphone-contacts/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/export-iphone-contacts/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/google-contacts-import-problems/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/google-contacts-import-problems/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/google-workspace-contacts-iphone/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/google-workspace-contacts-iphone/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/icloud-vs-google-contacts/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/icloud-vs-google-contacts/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/import-csv-google-contacts/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/import-csv-google-contacts/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/import-vcf-google-contacts/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/import-vcf-google-contacts/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/iphone-contacts-missing-after-adding-gmail/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/iphone-contacts-missing-after-adding-gmail/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/iphone-contacts-to-android/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/iphone-contacts-to-android/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/limited-contacts-access-iphone/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/limited-contacts-access-iphone/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/new-iphone-contacts-not-in-gmail/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/new-iphone-contacts-not-in-gmail/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/restore-deleted-google-contacts/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/restore-deleted-google-contacts/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/restore-icloud-contacts/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/restore-icloud-contacts/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/set-gmail-default-contacts-iphone/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/set-gmail-default-contacts-iphone/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/sync-vs-backup-contacts/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/sync-vs-backup-contacts/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/transfer-contacts-between-google-accounts/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/transfer-contacts-between-google-accounts/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/where-iphone-contacts-stored/index.html",
+      "redirect": "https://sync.openappsstudio.com/blog/where-iphone-contacts-stored/",
+      "statusCode": 301
+    },
+    {
+      "route": "/google-contacts-not-syncing-iphone/index.html",
+      "redirect": "https://sync.openappsstudio.com/google-contacts-not-syncing-iphone/",
+      "statusCode": 301
+    },
+    {
+      "route": "/icloud-to-google-contacts/index.html",
+      "redirect": "https://sync.openappsstudio.com/icloud-to-google-contacts/",
+      "statusCode": 301
+    },
+    {
+      "route": "/index.html",
+      "redirect": "https://sync.openappsstudio.com/",
+      "statusCode": 301
+    },
+    {
+      "route": "/merge-duplicate-contacts-iphone/index.html",
+      "redirect": "https://sync.openappsstudio.com/merge-duplicate-contacts-iphone/",
+      "statusCode": 301
+    },
+    {
+      "route": "/privacy/index.html",
+      "redirect": "https://sync.openappsstudio.com/privacy/",
+      "statusCode": 301
+    },
+    {
+      "route": "/support/index.html",
+      "redirect": "https://sync.openappsstudio.com/support/",
+      "statusCode": 301
+    },
+    {
+      "route": "/transfer-contacts-android-to-iphone-gmail/index.html",
+      "redirect": "https://sync.openappsstudio.com/transfer-contacts-android-to-iphone-gmail/",
+      "statusCode": 301
+    },
+    {
+      "route": "/sitemap.xml",
+      "redirect": "https://sync.openappsstudio.com/sitemap.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/vs-contacts-sync-app/*",
+      "redirect": "https://sync.openappsstudio.com/",
+      "statusCode": 301
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html"
+    }
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff"
+  }
+}

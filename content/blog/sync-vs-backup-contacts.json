@@ -1,0 +1,54 @@
+{
+  "slug": "sync-vs-backup-contacts",
+  "title": "Contact sync vs backup: why you need both",
+  "seo_title": "Contact sync vs backup: why you need both",
+  "description": "Understand how contact synchronization, exports and recovery differ so a deletion or phone change does not leave you without a usable copy.",
+  "category": "Backups & recovery",
+  "answer": "<strong>Sync keeps connected copies current; a backup preserves a recoverable point in time.</strong> A deletion can travel through a sync relationship, so a second connected device is not necessarily an independent backup.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_sync_vs_backup_contacts",
+  "sections": [
+    {
+      "id": "difference",
+      "title": "Compare the jobs, not just the copies",
+      "html": "<div class=\"table-wrap\"><table class=\"compare\"><thead><tr><th scope=\"col\">Method</th><th scope=\"col\">Main purpose</th><th scope=\"col\">Main limitation</th></tr></thead><tbody><tr><th scope=\"row\">Synchronization</th><td>Keep current records aligned.</td><td>Unwanted edits may also propagate.</td></tr><tr><th scope=\"row\">Exported snapshot</th><td>Preserve the selected data at export time.</td><td>Later additions are not included.</td></tr><tr><th scope=\"row\">Provider recovery</th><td>Recover eligible recent changes or archives.</td><td>Depends on available history and the provider’s rules.</td></tr></tbody></table></div><p>These tools complement each other. A useful contact setup makes everyday updates convenient and still leaves a separate route back after a mistake.</p>"
+    },
+    {
+      "id": "example",
+      "title": "Walk through a common failure",
+      "html": "<p>Suppose a contact is synchronized between a cloud account and two phones. You delete the wrong person on one phone. Seeing that person on the other phone a moment later does not mean it will stay there: the deletion may not have arrived yet.</p><p>A saved export from before the mistake is different. It is a file that is not automatically rewritten by the contact sync. Its weakness is age: if the person’s number changed after the export, that newer number may not be in the snapshot.</p>"
+    },
+    {
+      "id": "routine",
+      "title": "Build a small, practical routine",
+      "html": "<ol><li>Name one primary address book for ordinary edits.</li><li>Keep connected devices synchronized with that account.</li><li>Export a dated copy before a transfer, bulk merge or new sync setup.</li><li>Store the export somewhere independent of the device you might erase.</li><li>Know which provider’s recovery page applies to your contacts.</li></ol><p>Test the backup by checking a few representative records. You do not need to import it into your live account just to prove the file exists.</p>"
+    },
+    {
+      "id": "recovery",
+      "title": "Choose the least broad recovery that solves the problem",
+      "html": "<p>If one Google contact was deleted, targeted recovery may be enough. If a whole iCloud collection changed, an archived version may be relevant. If a card is simply hidden by an account filter, neither restore is necessary.</p><p>App-local safety copies can help with specific operations, but check what they contain and where they are stored. A copy inside an app should not be assumed to survive deleting the app or losing the device. Export important recovery data before making those changes.</p><p>Before a large operation, ask two concrete questions: where is the current authoritative copy, and where is the independent before-change copy? If both answers point to the same live account, add a separate export first.</p>"
+    }
+  ],
+  "related": [
+    "backup-google-contacts",
+    "export-iphone-contacts",
+    "restore-deleted-google-contacts"
+  ],
+  "sources": [
+    {
+      "title": "Apple: keep contacts up to date with iCloud",
+      "url": "https://support.apple.com/guide/icloud/what-you-can-do-with-icloud-and-contacts-mm79e57c3594/icloud"
+    },
+    {
+      "title": "Google: export, back up or restore contacts",
+      "url": "https://support.google.com/contacts/answer/7199294?co=GENIE.Platform%3DDesktop&hl=en"
+    }
+  ],
+  "pillar": {
+    "path": "/icloud-to-google-contacts/",
+    "title": "Move iCloud contacts to Google"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

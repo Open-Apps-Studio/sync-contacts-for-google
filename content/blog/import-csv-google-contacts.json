@@ -1,0 +1,50 @@
+{
+  "slug": "import-csv-google-contacts",
+  "title": "Import CSV contacts into Google without losing numbers",
+  "seo_title": "Import CSV contacts into Google without losing numbers",
+  "description": "Prepare a contact CSV using Google’s template, protect international phone numbers, and test a small import before moving the full address book.",
+  "category": "Transfers & imports",
+  "answer": "<strong>Use Google’s contact-import template and keep phone numbers as text.</strong> A CSV is a table, so its column names and formatting determine whether contact details land in the intended fields.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_import_csv_google_contacts",
+  "sections": [
+    {
+      "id": "template",
+      "title": "Start with the official field layout",
+      "html": "<p>Get the current template from Google’s import documentation linked below. Retain its header row and put each person’s details into the matching columns. Avoid inventing column names or putting several unrelated values into one cell and expecting the importer to guess.</p><p>If your contacts already came from Google, a fresh Google CSV export is usually a better starting point than rebuilding the file from scratch. If you are converting a different source, keep that untouched source alongside the working copy.</p>"
+    },
+    {
+      "id": "numbers",
+      "title": "Protect phone numbers while editing",
+      "html": "<p>Phone numbers are identifiers, not quantities. A spreadsheet can strip a leading zero, interpret a plus sign, or display a long value in scientific notation. Format phone-number columns as text before entering or pasting values.</p><p>Compare the saved CSV with the original records, not only the spreadsheet’s display. Include an international number and a number with a leading zero in your test. Do not “normalize” every country’s numbers with one rule unless you know the correct country context.</p><p>Also check the character encoding when saving. Names with accents or non-Latin characters should remain legible when the CSV is reopened.</p>"
+    },
+    {
+      "id": "pilot",
+      "title": "Import a representative sample first",
+      "html": "<ol><li>Create a small sample containing ordinary and complex records.</li><li>Import it into the intended Google account using the web interface.</li><li>Inspect names, phone numbers, email fields and notes on the resulting cards.</li><li>Correct the working file if fields are misplaced before importing the remainder.</li></ol><p>Track which sample records are already present so the full import does not silently add another copy. Keep the sample distinct enough to identify without altering real important contacts.</p>"
+    },
+    {
+      "id": "check",
+      "title": "Check completeness without relying only on totals",
+      "html": "<p>A row count is useful, but blank rows, repeated people and multi-value fields can make totals misleading. Check individual cards and any extra fields you depend on. If the source contains birthdays, addresses or custom notes, include those in your sample.</p><p>A successful upload means the file was accepted; it does not prove that every column mapped as you intended. Once verified, keep the final CSV as a dated migration record. For ongoing updates, edit the destination address book or use a deliberate sync workflow rather than repeatedly uploading the same spreadsheet.</p>"
+    }
+  ],
+  "related": [
+    "import-vcf-google-contacts",
+    "google-contacts-import-problems",
+    "transfer-contacts-between-google-accounts"
+  ],
+  "sources": [
+    {
+      "title": "Google: import contacts and fix import problems",
+      "url": "https://support.google.com/contacts/answer/15147365?hl=en"
+    }
+  ],
+  "pillar": {
+    "path": "/icloud-to-google-contacts/",
+    "title": "Move iCloud contacts to Google"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

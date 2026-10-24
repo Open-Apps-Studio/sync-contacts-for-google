@@ -1,0 +1,54 @@
+{
+  "slug": "export-iphone-contacts",
+  "title": "Export iPhone contacts to a VCF file",
+  "seo_title": "Export iPhone contacts to a VCF file",
+  "description": "Save an iPhone contact list as a vCard file, choose the fields to include, and keep a usable copy before transferring or editing contacts.",
+  "category": "Backups & recovery",
+  "answer": "<strong>In Contacts, open Lists, touch and hold the list you need, then choose Export.</strong> Select the fields to include and save or share the resulting contact file. Export the relevant account list rather than assuming All Contacts represents one source.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_export_iphone_contacts",
+  "sections": [
+    {
+      "id": "scope",
+      "title": "Choose a useful export scope",
+      "html": "<p>Decide whether you need a single account, a selected group, or your combined visible address book. For a move from iCloud to Google, exporting the iCloud collection is easier to reason about than exporting everything, including Google contacts already present in the destination.</p><p>Before starting, record the list name and roughly how many cards you expect. If the Contacts app is currently filtered, make sure you are exporting the intended list rather than only the portion you happened to be viewing.</p>"
+    },
+    {
+      "id": "save",
+      "title": "Export and save the file",
+      "html": "<ol><li>Open the Contacts app and go to <strong>Lists</strong> or its sidebar.</li><li>Touch and hold the relevant list, then choose <strong>Export</strong>.</li><li>Select the fields you need and complete the export.</li><li>Choose a save or share destination you control.</li></ol><p>Use a recognizable filename containing the source and date. If your device does not offer the list export interface, the account’s web contact manager may provide an export option; see the iCloud transfer guide for that route.</p>"
+    },
+    {
+      "id": "check",
+      "title": "Check the exported copy before relying on it",
+      "html": "<p>Confirm that the file exists at the intended destination and is not empty. If possible, inspect the file in a contact viewer or text preview without importing it back into your main account. A vCard can include many records in one file.</p><p>Look for a recent contact and a card with several phone numbers. If you selected only a subset of fields, that choice affects what the backup can restore. An export without notes is not a full copy of a card whose notes matter to you.</p>"
+    },
+    {
+      "id": "store",
+      "title": "Keep a copy outside the app or device you may erase",
+      "html": "<p>An export stored only on the phone is vulnerable if that phone is lost or reset. Keep an additional copy in a storage location you can access independently. Avoid publicly shareable links and remove temporary transfer copies when they are no longer needed.</p><p>A contact export is readable personal data, not a harmless settings file. You do not need to upload it to an unknown converter to move it into Google Contacts, which supports vCard imports.</p><p>Label the file as a snapshot. Contacts added afterward will not appear in it, so make a new export before your next major transfer or cleanup.</p>"
+    }
+  ],
+  "related": [
+    "import-vcf-google-contacts",
+    "where-iphone-contacts-stored",
+    "sync-vs-backup-contacts"
+  ],
+  "sources": [
+    {
+      "title": "Apple: export contacts on iPhone",
+      "url": "https://support.apple.com/en-ie/guide/iphone/iph075ddebf2/ios"
+    },
+    {
+      "title": "Apple: import and export contacts on iCloud.com",
+      "url": "https://support.apple.com/guide/icloud/import-export-and-print-contacts-mmfba748b2/icloud"
+    }
+  ],
+  "pillar": {
+    "path": "/icloud-to-google-contacts/",
+    "title": "Move iCloud contacts to Google"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

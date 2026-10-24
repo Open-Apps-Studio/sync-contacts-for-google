@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to Move iCloud Contacts to Google Contacts (2 Ways) | Sync Contacts for Google</title>
-<meta name="description" content="Two ways to get your iCloud contacts into Google Contacts: the manual vCard export/import (step by step), and an automatic free app that keeps them in sync afterwards.">
+<meta name="description" content="Move iCloud contacts to Google with a vCard export and import. Check the copied fields, avoid duplicate imports, and choose a plan for ongoing sync.">
 <link rel="canonical" href="https://sync.openappsstudio.com/icloud-to-google-contacts/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to Move iCloud Contacts to Google Contacts (2 Ways)">
-<meta property="og:description" content="The manual vCard export/import method step by step, plus a free app that keeps iCloud and Google Contacts in sync automatically.">
-<meta property="og:url" content="/icloud-to-google-contacts/">
+<meta property="og:description" content="Move iCloud contacts to Google with a vCard export and import. Check the copied fields, avoid duplicate imports, and choose a plan for ongoing sync.">
+<meta property="og:url" content="https://sync.openappsstudio.com/icloud-to-google-contacts/">
 <meta property="og:site_name" content="Sync Contacts for Google">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Move iCloud Contacts to Google Contacts (2 Ways)">
-<meta name="twitter:description" content="The manual vCard export/import method step by step, plus a free app that keeps iCloud and Google Contacts in sync automatically.">
+<meta name="twitter:description" content="Move iCloud contacts to Google with a vCard export and import. Check the copied fields, avoid duplicate imports, and choose a plan for ongoing sync.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
@@ -21,6 +21,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#2563eb">
 <link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "How to move iCloud contacts to Google Contacts", "url": "https://sync.openappsstudio.com/icloud-to-google-contacts/", "mainEntityOfPage": "https://sync.openappsstudio.com/icloud-to-google-contacts/", "dateModified": "2026-10-24", "author": {"@type": "Organization", "name": "Open Apps Studio", "url": "https://sync.openappsstudio.com/about/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sync.openappsstudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://sync.openappsstudio.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to move iCloud contacts to Google Contacts", "item": "https://sync.openappsstudio.com/icloud-to-google-contacts/"}]}]}</script>
 </head>
 <body>
 
@@ -31,8 +32,8 @@
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <a class="studio-link" href="https://openappsstudio.com">Open Apps Studio ↗</a>
       <a href="/#how-it-works">How it works</a>
+      <a href="/blog/">Guides</a>
       <a href="/support/">Support</a>
-      <!-- TODO: replace with the real App Store URL when the listing is live -->
       <a class="btn btn-small" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=web_icloud_google&amp;mt=8">Get the app</a>
     </nav>
   </div>
@@ -41,40 +42,18 @@
 <main>
   <article class="guide">
     <div class="container">
-      <h1>How to move iCloud contacts to Google Contacts</h1>
-      <p class="lead">There are two ways: a free manual export/import that takes about five minutes, or an app that does it automatically and keeps both sides in sync afterwards. Here's the manual way first.</p>
-
-      <h2>Method 1: Export from iCloud, import into Google (manual)</h2>
-      <p>Apple stores your iPhone contacts in iCloud, and iCloud can export them all as a single vCard (<code>.vcf</code>) file that Google Contacts imports cleanly. You'll need a computer (or desktop mode in a mobile browser).</p>
-      <ol>
-        <li>Go to <code>icloud.com</code> in a browser and sign in with your Apple ID.</li>
-        <li>Open <strong>Contacts</strong>.</li>
-        <li>Select all contacts: click any contact, then press <strong>Ctrl+A</strong> (Windows) or <strong>Cmd+A</strong> (Mac). To move only some, Ctrl/Cmd-click individual contacts instead.</li>
-        <li>Click the gear icon (bottom-left) and choose <strong>Export vCard…</strong>. A <code>.vcf</code> file downloads containing every selected contact.</li>
-        <li>Now go to <code>contacts.google.com</code> and sign in with your Google account.</li>
-        <li>In the left sidebar, click <strong>Import</strong>, choose <strong>Select file</strong>, pick the <code>.vcf</code> you just downloaded, and confirm.</li>
-      </ol>
-      <p>Google labels the imported batch with the import date, so if anything looks wrong you can select that label and delete the whole batch in one go. If you end up with duplicates, run <strong>Merge &amp; fix</strong> in the Google Contacts sidebar afterwards.</p>
-
-      <h3>Limitations of the manual method — worth knowing</h3>
-      <ul>
-        <li><strong>It's a one-time snapshot.</strong> A contact you add or edit on your iPhone tomorrow will not appear in Google. You'd have to repeat the export/import, which creates duplicates.</li>
-        <li><strong>Contact photos can degrade.</strong> vCard exports compress photos, and some fields (linked cards, certain labels) don't survive the round trip perfectly.</li>
-        <li><strong>Nothing flows back.</strong> Edits made in Gmail or Google Contacts never reach your iPhone.</li>
-      </ul>
-      <p>If you just need a one-off copy — say, before leaving a job or switching ecosystems — the manual method is genuinely fine. Stop here and you're done.</p>
-
-      <h2>Method 2: The automatic way (and it stays in sync)</h2>
-      <p>If you want iCloud and Google Contacts to actually stay identical — new contacts, edits, photos, and deletions flowing both ways — a one-time export can't do that. That's what our app is for.</p>
-
-      <div class="cta-block">
-        <h2>Sync Contacts for Google</h2>
-        <p>Sign in with Google, preview exactly what the first sync will change, and confirm. From then on your iPhone and Google Contacts stay in sync automatically — typically within the hour in the background, instantly whenever you open the app. Free for all your contacts, no subscription, and your contacts never touch our servers.</p>
-        <!-- TODO: replace with the real App Store URL when the listing is live -->
-        <a class="btn" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=web_icloud_google&amp;mt=8">Download free on the App Store</a>
-      </div>
-
-      <p class="muted small">Related: <a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing on iPhone?</a> · <a href="/merge-duplicate-contacts-iphone/">Merge duplicate contacts on iPhone</a></p>
+<nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Guides</a></nav><h1>How to move iCloud contacts to Google Contacts</h1><p class="muted small">By <a href="/about/">Open Apps Studio</a> · Updated <time datetime="2026-10-24">October 24, 2026</time></p><p class="lead">To copy iCloud contacts into Google, export the iCloud collection as a vCard and import it into the intended Google account. For ongoing updates, decide separately how the two address books should stay aligned.</p>
+<h2>Method 1: Export from iCloud, import into Google (manual)</h2>
+<p>First check that the contacts you want are actually in iCloud. An iPhone can display Google, work and iCloud accounts together. Use a tablet or computer for Contacts on iCloud.com, and keep an export of the destination Google account if it already contains important cards.</p>
+<ol><li>Open <a href="https://www.icloud.com/contacts/">iCloud Contacts</a> and sign in to the correct Apple Account.</li><li>Select the intended contacts. To copy the whole collection, use the Actions menu and <strong>Select All Contacts</strong>.</li><li>Use the Share menu and choose <strong>Export vCard</strong>. Keep the downloaded .vcf file unchanged.</li><li>Open <a href="https://contacts.google.com/">Google Contacts</a> and confirm the destination email address.</li><li>Choose <strong>Import</strong>, select the vCard file and complete the import.</li></ol>
+<p>Check several cards in Google before doing anything to the source: a recent contact, one with several phone numbers, and one containing notes. If fields are not where you expect, inspect the full card. Use our <a href="/blog/google-contacts-import-problems/">import troubleshooting guide</a> if the upload fails.</p>
+<h3>Limitations of the manual method</h3>
+<ul><li><strong>It is a snapshot.</strong> Later changes in iCloud do not update the independent imported copy.</li><li><strong>Fields can differ between systems.</strong> Check photos, labels and notes that matter to you.</li><li><strong>Repeated imports can overlap.</strong> Review what was imported before uploading the same collection again.</li></ul>
+<p>You can display the resulting Google contacts on your iPhone by <a href="/blog/add-google-contacts-iphone/">connecting that account</a>. That is different from keeping the original iCloud cards and the Google copies synchronized.</p>
+<h2>Method 2: Choose an ongoing sync workflow</h2>
+<p>If you need changes to move between the address books, choose a sync direction and review what the first pass will change. Keep an independent export before connecting a new workflow. Do not assume that changing the iPhone default account moves older cards.</p>
+<div class="cta-block"><h2>Review before you sync</h2><p>Sync Contacts for Google offers a first-sync preview and direction controls. Check the proposed additions and updates before confirming. Background timing depends on iOS and connectivity; open the app and check the result for an urgent change.</p><a class="btn" href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=web_icloud_google&amp;mt=8">View on the App Store</a></div>
+<p>Official references: <a href="https://support.apple.com/guide/icloud/import-export-and-print-contacts-mmfba748b2/icloud">Apple’s iCloud export instructions</a> and <a href="https://support.google.com/contacts/answer/15147365?hl=en">Google’s import instructions</a>.</p><h2>Related guides</h2><ul><li><a href="/blog/export-iphone-contacts/">Export iPhone contacts to a VCF file</a></li><li><a href="/blog/import-vcf-google-contacts/">Import a VCF or vCard file into Google Contacts</a></li><li><a href="/blog/icloud-vs-google-contacts/">iCloud vs Google Contacts: choose your main address book</a></li></ul><p><a href="/blog/">Browse all contact guides →</a></p>
     </div>
   </article>
 </main>
@@ -89,6 +68,7 @@
       <div>
         <p class="footer-h">Guides</p>
         <ul>
+          <li><a href="/blog/">All contact guides</a></li>
           <li><a href="/icloud-to-google-contacts/">iCloud to Google Contacts</a></li>
           <li><a href="/google-contacts-not-syncing-iphone/">Google contacts not syncing</a></li>
           <li><a href="/transfer-contacts-android-to-iphone-gmail/">Android to iPhone via Gmail</a></li>
@@ -98,10 +78,10 @@
       <div>
         <p class="footer-h">App</p>
         <ul>
-          <!-- TODO: replace with the real App Store URL when the listing is live -->
           <li><a href="https://apps.apple.com/app/sync-contacts-for-google/id6790962699?pt=128200624&amp;ct=web_icloud_google&amp;mt=8">Download on the App Store</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/about/">About &amp; editorial policy</a></li>
         </ul>
       </div>
     </div>

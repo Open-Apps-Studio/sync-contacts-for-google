@@ -1,0 +1,54 @@
+{
+  "slug": "where-iphone-contacts-stored",
+  "title": "Where are my iPhone contacts actually stored?",
+  "seo_title": "Where are my iPhone contacts actually stored?",
+  "description": "Find out whether an iPhone contact belongs to iCloud, Google or another account before moving, deleting or backing up your address book.",
+  "category": "Setup & accounts",
+  "answer": "<strong>The Contacts app is a combined view, not proof that every card is saved in iCloud or Gmail.</strong> Identify the account containing a contact before transferring it, removing an account, or choosing a recovery method.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_where_iphone_contacts_stored",
+  "sections": [
+    {
+      "id": "inventory",
+      "title": "Start with an account inventory",
+      "html": "<p>Open Contacts and return to <strong>Lists</strong>. Review the account-specific lists instead of staying in All Contacts. Write down which accounts you recognize: personal iCloud, personal Google, work Google, or another service.</p><p>Then inspect the configured accounts in Contacts settings. A familiar email address can appear in more than one app without supplying the same data. For example, an account used for email is not necessarily enabled for the system address book.</p>"
+    },
+    {
+      "id": "trace",
+      "title": "Trace three representative contacts",
+      "html": "<ol><li>Pick an older contact, a recently added contact, and someone who seems duplicated.</li><li>Look for each person inside each account-specific list.</li><li>Check the corresponding service on the web: Google Contacts for Google, or iCloud Contacts for iCloud.</li><li>Compare the phone numbers and email addresses, not just the displayed name.</li></ol><p>One name can refer to two different cards or two different people. A combined card can also make the phone appear to have fewer entries than the sum of the cloud accounts. Counts are useful clues, but a handful of identifiable records is a better diagnostic test.</p>"
+    },
+    {
+      "id": "choose",
+      "title": "Choose the source before taking action",
+      "html": "<p>If a card exists in Google Contacts on the web but is absent from the phone, investigate account visibility or synchronization. If it exists only in iCloud, use an iCloud export or a deliberate sync workflow. If it belongs to a work account, check the organization’s rules before copying it into a personal account.</p><p>If you cannot find a web copy, export the visible list before removing accounts or erasing the device. Treat the phone’s remaining visible copy as important until you have checked where else it exists.</p>"
+    },
+    {
+      "id": "avoid",
+      "title": "Avoid these common mix-ups",
+      "html": "<ul><li><strong>All Contacts is not a backup:</strong> it is the view you are currently seeing.</li><li><strong>A default account is not a transfer:</strong> changing it does not move older cards.</li><li><strong>A cloud account is not every cloud account:</strong> contacts in one Gmail address do not automatically exist in another.</li></ul><p>After the inventory, keep a short note naming your primary address book and backup location. That makes the next phone change much less ambiguous.</p>"
+    }
+  ],
+  "related": [
+    "icloud-vs-google-contacts",
+    "export-iphone-contacts",
+    "iphone-contacts-missing-after-adding-gmail"
+  ],
+  "sources": [
+    {
+      "title": "Apple: manage contacts accounts on iPhone",
+      "url": "https://support.apple.com/en-us/111793"
+    },
+    {
+      "title": "Apple: keep contacts up to date with iCloud",
+      "url": "https://support.apple.com/guide/icloud/what-you-can-do-with-icloud-and-contacts-mm79e57c3594/icloud"
+    }
+  ],
+  "pillar": {
+    "path": "/icloud-to-google-contacts/",
+    "title": "Move iCloud contacts to Google"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

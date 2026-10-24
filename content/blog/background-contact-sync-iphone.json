@@ -1,0 +1,54 @@
+{
+  "slug": "background-contact-sync-iphone",
+  "title": "Why iPhone contact sync can be delayed in the background",
+  "seo_title": "Why iPhone contact sync can be delayed in the background",
+  "description": "Understand iOS background scheduling, Low Power Mode and manual sync checks without relying on promises of instant contact updates.",
+  "category": "Troubleshooting",
+  "answer": "<strong>iOS controls when apps receive background execution time, so a sync app cannot guarantee a fixed update interval.</strong> For an urgent change, open the relevant app, run the available sync action, and check the result.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_background_contact_sync_iphone",
+  "sections": [
+    {
+      "id": "paths",
+      "title": "Identify which sync path you are using",
+      "html": "<p>There are different routes for contact changes: the Google account connected in iPhone Settings, iCloud Contacts, and a third-party app connecting address books. Knowing which route should carry a particular change is the first step.</p><p>If the card was saved only in iCloud, waiting longer for the built-in Google account connection will not automatically copy it across. Use the account-location guide before treating every missing update as a background delay.</p>"
+    },
+    {
+      "id": "ios",
+      "title": "Understand what iOS controls",
+      "html": "<p>Apple’s background-task documentation explains that the system decides when to give apps time to refresh. Background push notifications can also prompt work, but they do not turn an app into a continuously running process.</p><p>Low Power Mode turns off Background App Refresh. Device settings, network availability and the app’s account connection therefore matter. Enabling refresh is a prerequisite for some background work, not a promise that every change will arrive on a timer.</p>"
+    },
+    {
+      "id": "check",
+      "title": "Check one change while the app is open",
+      "html": "<ol><li>Use a small test card and note the account where you edited it.</li><li>Confirm the source record on the web or in its account-specific list.</li><li>Open the sync app, confirm the intended account and direction, and run its sync action if available.</li><li>Review errors or the last result, then inspect the destination card.</li></ol><p>If foreground sync fails too, investigate sign-in, permissions, network access or a service error. Background scheduling is not the only possible cause.</p>"
+    },
+    {
+      "id": "expectations",
+      "title": "Use timing evidence without promising a deadline",
+      "html": "<p>If foreground sync succeeds but updates repeatedly arrive late while the app is closed, record the source edit time, the next observed destination update and whether Low Power Mode was active. That gives support a useful reproduction pattern.</p><p>A single quick update does not establish a guaranteed interval, and an “instant sync” marketing claim is not a substitute for checking your important change. Before traveling, replacing a phone or relying on a newly saved number, verify the destination explicitly.</p><p>Sync Contacts for Google provides controls for reviewing and running sync. Background timing still depends on iOS and a working connection. Keep an independent export before major contact changes even when routine synchronization appears reliable.</p>"
+    }
+  ],
+  "related": [
+    "add-google-contacts-iphone",
+    "limited-contacts-access-iphone",
+    "sync-vs-backup-contacts"
+  ],
+  "sources": [
+    {
+      "title": "Apple: choosing background strategies for apps",
+      "url": "https://developer.apple.com/documentation/backgroundtasks/choosing-background-strategies-for-your-app"
+    },
+    {
+      "title": "Apple: Low Power Mode and background activity",
+      "url": "https://support.apple.com/en-us/101604"
+    }
+  ],
+  "pillar": {
+    "path": "/google-contacts-not-syncing-iphone/",
+    "title": "Google contacts not syncing on iPhone?"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Use the app’s preview and sync controls to inspect changes. Background execution is scheduled by iOS; no fixed completion interval is promised."
+}

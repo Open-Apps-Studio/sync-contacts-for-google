@@ -1,0 +1,54 @@
+{
+  "slug": "iphone-contacts-missing-after-adding-gmail",
+  "title": "Contacts missing after adding Gmail to iPhone?",
+  "seo_title": "Contacts missing after adding Gmail to iPhone?",
+  "description": "Check account lists and cloud copies when contacts seem to disappear after adding Gmail, before removing accounts or restoring a backup.",
+  "category": "Troubleshooting",
+  "answer": "<strong>First check which contact list is visible and whether the missing cards still exist in their original account.</strong> Adding Gmail can change the view you are looking at; an empty or smaller list is not enough evidence that contacts were deleted.",
+  "published": "2026-10-24",
+  "updated": "2026-10-24",
+  "campaign": "blog_iphone_contacts_missing_after_ad",
+  "sections": [
+    {
+      "id": "pause",
+      "title": "Pause before removing or restoring accounts",
+      "html": "<p>Do not begin by deleting the newly added account, resetting the phone or importing an old backup. Those actions change more variables before you know whether the problem is visibility, account access or actual data loss.</p><p>Pick two missing people whose details you recognize. Write down when you last saw them and whether they were older cards or recently created ones. This gives you a concrete test instead of relying only on the total number displayed.</p>"
+    },
+    {
+      "id": "lists",
+      "title": "Compare the account-specific lists",
+      "html": "<p>In Contacts, return to <strong>Lists</strong> and look at All Contacts, the iCloud list, and the newly added Google list separately. Search for your two sample people in each. If they appear in one account but not another, you have identified their location.</p><p>A Google list can be empty even while iCloud holds your complete address book. Enabling Gmail does not automatically import those iCloud cards. Likewise, a card in a second Google account will not appear in the first account simply because both addresses use Gmail.</p>"
+    },
+    {
+      "id": "web",
+      "title": "Compare with the provider’s web copy",
+      "html": "<ol><li>Check the correct Google account at contacts.google.com.</li><li>Check iCloud Contacts if the missing records belonged to iCloud.</li><li>If the card exists on the web, investigate that account’s phone connection and Contacts setting.</li><li>If it is missing from the web too, check that provider’s recovery tools and your exports.</li></ol><p>Be careful with cards shown only by another app. A mail autocomplete suggestion, a message sender or a work directory result may not be a saved personal contact.</p>"
+    },
+    {
+      "id": "resolution",
+      "title": "Apply the fix that matches the evidence",
+      "html": "<p>If this is a list filter, choose the appropriate view. If the account is not connected for contacts, restore that connection. If the cards belong to iCloud and you want them in Google, use a deliberate transfer.</p><p>Only use recovery after establishing that the underlying records are missing. A broad rollback can affect newer contacts that were working correctly. Before making further changes, export any remaining unique information you can still access.</p><p>Once the original cards are visible, create one harmless test contact in your intended default account and verify its web location. That confirms future additions will be easier to find.</p>"
+    }
+  ],
+  "related": [
+    "where-iphone-contacts-stored",
+    "restore-deleted-google-contacts",
+    "restore-icloud-contacts"
+  ],
+  "sources": [
+    {
+      "title": "Apple: manage contacts accounts on iPhone",
+      "url": "https://support.apple.com/en-us/111793"
+    },
+    {
+      "title": "Google: contacts saved from interactions and suggestions",
+      "url": "https://support.google.com/contacts/answer/7345608"
+    }
+  ],
+  "pillar": {
+    "path": "/google-contacts-not-syncing-iphone/",
+    "title": "Google contacts not syncing on iPhone?"
+  },
+  "cta_title": "Need ongoing iPhone–Google sync?",
+  "cta": "Sync Contacts for Google offers a first-sync preview and sync direction controls. Review the current app details before connecting your address books."
+}

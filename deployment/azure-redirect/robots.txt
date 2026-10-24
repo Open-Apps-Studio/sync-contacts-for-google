@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sync.openappsstudio.com/sitemap.xml
